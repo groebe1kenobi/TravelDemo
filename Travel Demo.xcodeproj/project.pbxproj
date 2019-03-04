@@ -17,6 +17,9 @@
 		19402509222DAEE8004FB30B /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19402508222DAEE8004FB30B /* SideMenuTableViewController.swift */; };
 		1940250B222DB3D0004FB30B /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1940250A222DB3D0004FB30B /* UserProfileViewController.swift */; };
 		1940250D222DB8D1004FB30B /* FacebookAPIManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1940250C222DB8D1004FB30B /* FacebookAPIManger.swift */; };
+		19402511222DCC0F004FB30B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19402510222DCC0F004FB30B /* Login.storyboard */; };
+		19402513222DCC70004FB30B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19402512222DCC70004FB30B /* StartViewController.swift */; };
+		19402515222DCC7D004FB30B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19402514222DCC7D004FB30B /* SignUpViewController.swift */; };
 		195F5BD2222B10FA001CF201 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F5BD1222B10FA001CF201 /* LoginViewController.swift */; };
 		1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E10C220AA0DB00770F79 /* AppDelegate.swift */; };
 		1977E10F220AA0DB00770F79 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E10E220AA0DB00770F79 /* MapViewController.swift */; };
@@ -31,6 +34,7 @@
 		197ABC3D221625C300A7E875 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC3C221625C300A7E875 /* HorizontalScrollerView.swift */; };
 		197ABC3F221626C900A7E875 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC3E221626C900A7E875 /* ImageView.swift */; };
 		197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* HTTPClient.swift */; };
+		19F8B190222DD2E300B13787 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8B18F222DD2E300B13787 /* TestViewController.swift */; };
 		46A22F48092D822A80A4EF6E /* Pods_Travel_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDF3CB73378798DAFBEB6EE /* Pods_Travel_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,9 @@
 		19402508222DAEE8004FB30B /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		1940250A222DB3D0004FB30B /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		1940250C222DB8D1004FB30B /* FacebookAPIManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAPIManger.swift; sourceTree = "<group>"; };
+		19402510222DCC0F004FB30B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "Travel Demo/Login.storyboard"; sourceTree = SOURCE_ROOT; };
+		19402512222DCC70004FB30B /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		19402514222DCC7D004FB30B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		195F5BD1222B10FA001CF201 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1977E109220AA0DB00770F79 /* Travel Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1977E10C220AA0DB00770F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +68,7 @@
 		197ABC3C221625C300A7E875 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
 		197ABC3E221626C900A7E875 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		197ABC40221629DC00A7E875 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		19F8B18F222DD2E300B13787 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		88931C2216620C4A26BA60D3 /* Pods-Travel Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel Demo.debug.xcconfig"; path = "Target Support Files/Pods-Travel Demo/Pods-Travel Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A4D92C15F7D965581CE38AB1 /* Pods-Travel Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel Demo.release.xcconfig"; path = "Target Support Files/Pods-Travel Demo/Pods-Travel Demo.release.xcconfig"; sourceTree = "<group>"; };
 		ABDF3CB73378798DAFBEB6EE /* Pods_Travel_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,9 +139,9 @@
 				1977E10E220AA0DB00770F79 /* MapViewController.swift */,
 				1936517E2217481B000F54F8 /* LandmarkListViewController.swift */,
 				1936518022174829000F54F8 /* SavedLandmarksViewController.swift */,
-				195F5BD1222B10FA001CF201 /* LoginViewController.swift */,
 				19402508222DAEE8004FB30B /* SideMenuTableViewController.swift */,
 				1940250A222DB3D0004FB30B /* UserProfileViewController.swift */,
+				19F8B18F222DD2E300B13787 /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,7 +179,11 @@
 		197ABC6522164DFD00A7E875 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				195F5BD1222B10FA001CF201 /* LoginViewController.swift */,
+				19402510222DCC0F004FB30B /* Login.storyboard */,
 				19402500222B1A60004FB30B /* FacebookLoginButton.swift */,
+				19402512222DCC70004FB30B /* StartViewController.swift */,
+				19402514222DCC7D004FB30B /* SignUpViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -263,6 +275,7 @@
 				1977E117220AA0DC00770F79 /* LaunchScreen.storyboard in Resources */,
 				1977E114220AA0DC00770F79 /* Assets.xcassets in Resources */,
 				1977E128220ACB9C00770F79 /* LocInfo.json in Resources */,
+				19402511222DCC0F004FB30B /* Login.storyboard in Resources */,
 				1977E112220AA0DB00770F79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +355,7 @@
 				1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */,
 				1940250B222DB3D0004FB30B /* UserProfileViewController.swift in Sources */,
 				1936517F2217481B000F54F8 /* LandmarkListViewController.swift in Sources */,
+				19F8B190222DD2E300B13787 /* TestViewController.swift in Sources */,
 				1977E124220AB5D300770F79 /* LandmarkViews.swift in Sources */,
 				19402509222DAEE8004FB30B /* SideMenuTableViewController.swift in Sources */,
 				197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */,
@@ -349,6 +363,8 @@
 				197ABC3F221626C900A7E875 /* ImageView.swift in Sources */,
 				1940250D222DB8D1004FB30B /* FacebookAPIManger.swift in Sources */,
 				1977E122220AAAA500770F79 /* Landmark.swift in Sources */,
+				19402515222DCC7D004FB30B /* SignUpViewController.swift in Sources */,
+				19402513222DCC70004FB30B /* StartViewController.swift in Sources */,
 				193651842217710C000F54F8 /* SideMenuTableViewCell.swift in Sources */,
 				19402501222B1A60004FB30B /* FacebookLoginButton.swift in Sources */,
 				195F5BD2222B10FA001CF201 /* LoginViewController.swift in Sources */,
