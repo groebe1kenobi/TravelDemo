@@ -35,6 +35,7 @@
 		197ABC3F221626C900A7E875 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC3E221626C900A7E875 /* ImageView.swift */; };
 		197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* HTTPClient.swift */; };
 		19F8B190222DD2E300B13787 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8B18F222DD2E300B13787 /* TestViewController.swift */; };
+		19F8B192222DD7EE00B13787 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19F8B191222DD7EE00B13787 /* GoogleService-Info.plist */; };
 		46A22F48092D822A80A4EF6E /* Pods_Travel_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDF3CB73378798DAFBEB6EE /* Pods_Travel_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		197ABC3E221626C900A7E875 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		197ABC40221629DC00A7E875 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		19F8B18F222DD2E300B13787 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		19F8B191222DD7EE00B13787 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88931C2216620C4A26BA60D3 /* Pods-Travel Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel Demo.debug.xcconfig"; path = "Target Support Files/Pods-Travel Demo/Pods-Travel Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		A4D92C15F7D965581CE38AB1 /* Pods-Travel Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel Demo.release.xcconfig"; path = "Target Support Files/Pods-Travel Demo/Pods-Travel Demo.release.xcconfig"; sourceTree = "<group>"; };
 		ABDF3CB73378798DAFBEB6EE /* Pods_Travel_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Travel_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 		1977E10B220AA0DB00770F79 /* Travel Demo */ = {
 			isa = PBXGroup;
 			children = (
+				19F8B191222DD7EE00B13787 /* GoogleService-Info.plist */,
 				1977E129220ACDB800770F79 /* API */,
 				1977E127220ACB9C00770F79 /* LocInfo.json */,
 				1977E11E220AAA5D00770F79 /* Controller */,
@@ -277,6 +280,7 @@
 				1977E128220ACB9C00770F79 /* LocInfo.json in Resources */,
 				19402511222DCC0F004FB30B /* Login.storyboard in Resources */,
 				1977E112220AA0DB00770F79 /* Main.storyboard in Resources */,
+				19F8B192222DD7EE00B13787 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +303,10 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -312,7 +319,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

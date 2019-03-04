@@ -9,12 +9,16 @@
 import UIKit
 import FacebookLogin
 import FacebookCore
+import FBSDKLoginKit
+import FirebaseAuth
+import Firebase
 
 class LoginViewController: UIViewController {
 	
 	private let readPermissions: [ReadPermission] = [.publicProfile, .email, .userFriends]
-	@IBOutlet weak var usernameTextField: UITextField!
-	@IBOutlet weak var passwordTextField: UITextField!
+	@IBOutlet weak var email: UITextField!
+	@IBOutlet weak var password: UITextField!
+
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +27,36 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-	@IBAction func facebookLoginTapped(_ sender: FacebookLoginButton) {
-		let loginManager = LoginManager()
-		loginManager.logIn(readPermissions: readPermissions, viewController: self, completion: didReceiveFacebookLoginResult)
+	
+	
+	
+	
+	@IBAction func loginAction(_ sender: Any) {
+		Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
+			if error == nil{
+				self.performSegue(withIdentifier: "loginToMain", sender: self)
+			}
+			else{
+				let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+				let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+				
+				alertController.addAction(defaultAction)
+				self.present(alertController, animated: true, completion: nil)
+			}
+		}
 	}
 	
-	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		usernameTextField.resignFirstResponder()
-		passwordTextField.resignFirstResponder()
-	}
 	
+	
+
+}
+
+
+
+
+
+
+extension LoginViewController {
 	private func didReceiveFacebookLoginResult(loginResult: LoginResult) {
 		switch loginResult {
 		case .success:
@@ -63,5 +87,4 @@ class LoginViewController: UIViewController {
 		performSegue(withIdentifier: "loginToHome", sender: self)
 		
 	}
-
 }

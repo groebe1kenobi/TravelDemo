@@ -9,6 +9,8 @@ target 'Travel Demo' do
 	pod 'FacebookCore', :inhibit_warnings => true
 	pod 'FacebookLogin', :inhibit_warnings => true
 	pod 'FacebookShare', :inhibit_warnings => true
+	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
   # Pods for Travel Demo
 
 end
