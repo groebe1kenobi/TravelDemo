@@ -1,0 +1,39 @@
+[
+  {
+	  "title": "Wrigley Field",
+	  "name": "Wrigleyville",
+      "type": "Sport",
+	  "imageUrl": "https://www.nbcsports.com/chicago/sites/csnchicago/files/styles/article_hero_image/public/2016/04/12/10-12-wrigley-field.png?itok=GcMst9qK",
+      "latitude": "41.948437",
+      "longitude": "-87.655334"
+  },
+ 
+  {
+	  "title": "Museum of Science and Industry",
+	  "name": "Hyde Park",
+	  "type": "Museum",
+	  "imageUrl": "https://vignette.wikia.nocookie.net/big-city-adventure/images/4/4d/Museum_of_Science_and_Industry_Painting.png/revision/latest?cb=20180506214643",
+	  "latitude": "41.7906",
+	  "longitude": "-87.5831"
+  },
+  
+  {
+	  "title": "Dick's Last Resort",
+	  "name": "River North",
+	  "type": "Restaurant",
+	  "imageUrl": "https://www.cookefamily.us/wp-content/uploads/2012/11/dicks2.png",
+	  "latitude": "41.8878188",
+	  "longitude": "-87.63112"
+  },
+  
+  {
+	  "title": "United Center",
+	  "name": "Near West Side",
+	  "type": "Sport",
+	  "imageUrl": "https://www.unitedcenter.com/assets/1/7/unitedcenter3.png",
+	  "latitude": "41.8806948",
+	  "longitude": "-87.6763646"
+  }
+
+]
+
