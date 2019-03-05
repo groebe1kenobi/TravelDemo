@@ -26,12 +26,12 @@ class StartViewController: UIViewController {
 				return
 			}
 			
-			guard let accessToken = FBSDKAccessToken.current() else {
+			guard let accessToken = AccessToken.current else {
 				print("Failed to get access token")
 				return
 			}
 			
-			let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+			let credential = FacebookAuthProvider.credential(withAccessToken: "\(accessToken)")
 			
 			// Perform login by calling Firebase APIs
 			Auth.auth().signInAndRetrieveData(with: credential, completion: { (user, error) in
@@ -44,19 +44,83 @@ class StartViewController: UIViewController {
 					
 					return
 				}
+				let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
+				facebookAPIManager.requestFacebookUser(completion: { (facebookUser) in
+					if let _ = facebookUser.email {
+						let info = "First name: \(facebookUser.firstName!) \n Last name: \(facebookUser.lastName!) \n Email: \(facebookUser.email!)"
+						//self.didLogin(method: "Facebook", info: info)
+						//print("\(info)")
+						self.performSegue(withIdentifier: "startToMain", sender: nil)
+					}
+				})
 				
-				self.performSegue(withIdentifier: "startToMain", sender: nil)
 				
-				
-				//				// Present the main view
-				//				if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-				//					UIApplication.shared.keyWindow?.rootViewController = viewController
-				//					self.dismiss(animated: true, completion: nil)
-				//				}
 				
 			})
 			
 		}
 	}
+	
+	@IBAction func didTapFacebookLogin(_ sender: UIButton) {
+		let loginManager = LoginManager()
+		loginManager.logIn(readPermissions: [.publicProfile, .email], viewController: self, completion: didReceiveFacebookLoginResult)
+	}
 
+}
+
+
+
+extension StartViewController {
+	private func didReceiveFacebookLoginResult(loginResult: LoginResult) {
+		switch loginResult {
+		case .success:
+			didLoginWithFacebook()
+		case .failed(_): break
+		default: break
+		}
+	}
+	
+	private func didLoginWithFacebook() {
+		// Successful log in with Facebook
+		if let accessToken = AccessToken.current {
+			let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
+			Auth.auth().signInAndRetrieveData(with: credential, completion: { (user, error) in
+				if let error = error {
+					print("Login error: \(error.localizedDescription)")
+					let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+					let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+					alertController.addAction(okayAction)
+					self.present(alertController, animated: true, completion: nil)
+					
+					return
+				}
+				let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
+				facebookAPIManager.requestFacebookUser(completion: { (facebookUser) in
+					if let _ = facebookUser.email {
+						let info = "First name: \(facebookUser.firstName!) \n Last name: \(facebookUser.lastName!) \n Email: \(facebookUser.email!)"
+						//self.didLogin(method: "Facebook", info: info)
+						print("\(info)")
+						self.performSegue(withIdentifier: "startToMain", sender: nil)
+					}
+				})
+				
+				
+				
+			})
+			
+		}
+	}
+	
+	private func didLogin(method: String, info: String) {
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let loginVC = storyboard.instantiateViewController(withIdentifier: "MainStory")
+		self.present(loginVC, animated: true, completion: nil)
+//		let message = "Successfully logged in with \(method). " + info
+//		let alert = UIAlertController(title: "Success", message: message, preferredStyle: UIAlertController.Style.alert)
+//		alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
+//		self.present(alert, animated: true, completion: nil)
+		//performSegue(withIdentifier: "loginToHome", sender: self)
+		//performSegue(withIdentifier: "startToMain", sender: self)
+		
+	}
 }

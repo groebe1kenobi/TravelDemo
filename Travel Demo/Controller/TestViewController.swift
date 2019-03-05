@@ -19,12 +19,13 @@ class TestViewController: UIViewController {
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-//		if Auth.auth().currentUser != nil {
-//			self.presentHomeVC()
-//		} else {
-//			self.presentLoginScreenVC()
-//		}
-		self.presentLoginScreenVC()
+		if Auth.auth().currentUser != nil {
+			print("\(String(describing: Auth.auth().currentUser))")
+			self.presentHomeVC()
+		} else {
+			self.presentLoginScreenVC()
+		}
+		//self.presentLoginScreenVC()
 	}
 
 	

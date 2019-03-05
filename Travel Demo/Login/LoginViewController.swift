@@ -56,35 +56,4 @@ class LoginViewController: UIViewController {
 
 
 
-extension LoginViewController {
-	private func didReceiveFacebookLoginResult(loginResult: LoginResult) {
-		switch loginResult {
-		case .success:
-			didLoginWithFacebook()
-		case .failed(_): break
-		default: break
-		}
-	}
-	
-	private func didLoginWithFacebook() {
-		// Successful log in with Facebook
-		if let accessToken = AccessToken.current {
-			let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
-			facebookAPIManager.requestFacebookUser(completion: { (facebookUser) in
-				if let _ = facebookUser.email {
-					let info = "First name: \(facebookUser.firstName!) \n Last name: \(facebookUser.lastName!) \n Email: \(facebookUser.email!)"
-					self.didLogin(method: "Facebook", info: info)
-				}
-			})
-		}
-	}
-	
-	private func didLogin(method: String, info: String) {
-		let message = "Successfully logged in with \(method). " + info
-		let alert = UIAlertController(title: "Success", message: message, preferredStyle: UIAlertController.Style.alert)
-		alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: nil))
-		self.present(alert, animated: true, completion: nil)
-		performSegue(withIdentifier: "loginToHome", sender: self)
-		
-	}
-}
+

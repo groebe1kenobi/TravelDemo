@@ -14,6 +14,8 @@ class MapViewController: UIViewController {
 	@IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var sideMenuButton: UIButton!
 	@IBOutlet weak var viewAllButton: UIButton!
+	@IBOutlet weak var buttonBackgroundView: UIView!
+	@IBOutlet weak var discoverButton: UIButton!
 	
 	
 	//var landmarks: [Landmark] = []

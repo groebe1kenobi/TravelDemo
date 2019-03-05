@@ -18,76 +18,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-rX-ZBe">
-                                <rect key="frame" x="0.0" y="117" width="375" height="550"/>
-                            </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWn-A6-GV4" userLabel="Side Menu Button View">
-                                <rect key="frame" x="0.0" y="20" width="375" height="36"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="51"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvl-j5-7TY">
-                                        <rect key="frame" x="8" y="6" width="25" height="25"/>
+                                        <rect key="frame" x="12" y="9" width="42" height="37"/>
                                         <state key="normal" image="sideMenu"/>
                                         <connections>
                                             <segue destination="W0w-rp-8pC" kind="presentation" identifier="homeToSideMenu" id="6vl-Q1-hmP"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.6588235294117647" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="Side Menu Button View"/>
                                 <constraints>
-                                    <constraint firstItem="Xvl-j5-7TY" firstAttribute="leading" secondItem="ZWn-A6-GV4" secondAttribute="leading" constant="8" id="B6W-Ia-ZXV"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xvl-j5-7TY" secondAttribute="trailing" constant="342" id="G6A-hu-SE2"/>
-                                    <constraint firstAttribute="height" constant="36" id="JlG-vd-gHQ"/>
-                                    <constraint firstItem="Xvl-j5-7TY" firstAttribute="top" secondItem="ZWn-A6-GV4" secondAttribute="top" constant="6" id="YD9-zy-MB4"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xvl-j5-7TY" secondAttribute="bottom" constant="5" id="Yzx-P1-0Wb"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Xvl-j5-7TY" secondAttribute="bottom" constant="-3" id="4dg-GL-PVc"/>
+                                    <constraint firstAttribute="height" constant="51" id="JlG-vd-gHQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xvl-j5-7TY" secondAttribute="trailing" constant="321" id="Rpx-0X-B7v"/>
+                                    <constraint firstItem="Xvl-j5-7TY" firstAttribute="leading" secondItem="ZWn-A6-GV4" secondAttribute="leadingMargin" constant="4" id="SkH-fU-jV8"/>
+                                    <constraint firstItem="Xvl-j5-7TY" firstAttribute="top" secondItem="ZWn-A6-GV4" secondAttribute="topMargin" constant="1" id="jx9-O1-zTw"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7X-sW-jSg" userLabel="Button View">
-                                <rect key="frame" x="0.0" y="56" width="375" height="61"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISf-UN-7dk">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ib-V6-J9r">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
-                                        <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
-                                        <state key="normal" title="View All ">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="mzr-Zq-ATu" kind="show" identifier="homeToAll" id="ay6-Cm-XYv"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-gf-qMa">
+                                        <rect key="frame" x="164" y="8" width="47" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPj-fR-dlI">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="magnifying-glass"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.87058823529411766" green="0.2627450980392157" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="7Ib-V6-J9r" secondAttribute="bottom" id="3QA-Xz-BAF"/>
-                                    <constraint firstAttribute="trailing" secondItem="7Ib-V6-J9r" secondAttribute="trailing" id="8H6-GQ-ukA"/>
-                                    <constraint firstItem="7Ib-V6-J9r" firstAttribute="top" secondItem="Q7X-sW-jSg" secondAttribute="top" id="8ZC-fh-0fn"/>
-                                    <constraint firstItem="7Ib-V6-J9r" firstAttribute="leading" secondItem="Q7X-sW-jSg" secondAttribute="leading" id="QDZ-Zy-4SB"/>
-                                    <constraint firstAttribute="height" constant="61" id="Wt7-bk-hUu"/>
+                                    <constraint firstItem="8Xf-gf-qMa" firstAttribute="leading" secondItem="ISf-UN-7dk" secondAttribute="leading" constant="164" id="TtR-n1-vfF"/>
+                                    <constraint firstItem="8Xf-gf-qMa" firstAttribute="centerY" secondItem="ISf-UN-7dk" secondAttribute="centerY" id="cQ3-7p-ktq"/>
+                                    <constraint firstItem="8Xf-gf-qMa" firstAttribute="centerX" secondItem="ISf-UN-7dk" secondAttribute="centerX" id="eKH-eT-omH"/>
+                                    <constraint firstItem="8Xf-gf-qMa" firstAttribute="top" secondItem="ISf-UN-7dk" secondAttribute="topMargin" id="yLT-gW-EJB"/>
                                 </constraints>
                             </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-rX-ZBe">
+                                <rect key="frame" x="0.0" y="71" width="375" height="596"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jfA-rX-ZBe" firstAttribute="top" secondItem="Q7X-sW-jSg" secondAttribute="bottom" id="6L7-cz-sya"/>
+                            <constraint firstItem="ISf-UN-7dk" firstAttribute="trailing" secondItem="jfA-rX-ZBe" secondAttribute="trailing" id="9KQ-8O-bvr"/>
                             <constraint firstItem="ZWn-A6-GV4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BhM-Gf-PRX"/>
+                            <constraint firstItem="ISf-UN-7dk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dx8-nZ-Rc8"/>
+                            <constraint firstItem="jfA-rX-ZBe" firstAttribute="top" secondItem="ZWn-A6-GV4" secondAttribute="bottom" id="ELr-0N-wDb"/>
                             <constraint firstItem="ZWn-A6-GV4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K9h-pZ-e9c"/>
+                            <constraint firstItem="ISf-UN-7dk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="607" id="XzT-9t-0Th"/>
                             <constraint firstItem="jfA-rX-ZBe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="apr-DR-oPu"/>
                             <constraint firstItem="ZWn-A6-GV4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b96-Jt-PVS"/>
                             <constraint firstItem="jfA-rX-ZBe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bMX-jW-36E"/>
-                            <constraint firstItem="jfA-rX-ZBe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="j9e-aO-eFF"/>
-                            <constraint firstItem="Q7X-sW-jSg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mdB-Dc-MS9"/>
-                            <constraint firstItem="Q7X-sW-jSg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nYf-Xc-rsW"/>
-                            <constraint firstItem="Q7X-sW-jSg" firstAttribute="top" secondItem="ZWn-A6-GV4" secondAttribute="bottom" id="vjZ-ql-CZe"/>
+                            <constraint firstItem="ISf-UN-7dk" firstAttribute="leading" secondItem="jfA-rX-ZBe" secondAttribute="leading" id="sUh-oq-s3P"/>
+                            <constraint firstItem="jfA-rX-ZBe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="stO-MB-j6w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="fcj-L5-Mzx"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="buttonBackgroundView" destination="8Xf-gf-qMa" id="vId-yn-JDg"/>
+                        <outlet property="discoverButton" destination="qPj-fR-dlI" id="U49-KD-lET"/>
                         <outlet property="mapView" destination="jfA-rX-ZBe" id="8af-hu-JiP"/>
                         <outlet property="sideMenuButton" destination="Xvl-j5-7TY" id="4eK-W3-T3s"/>
-                        <outlet property="viewAllButton" destination="7Ib-V6-J9r" id="4Lw-ZQ-BLl"/>
+                        <segue destination="mzr-Zq-ATu" kind="show" identifier="homeToList" id="Cik-VL-zaE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,6 +135,7 @@
                                         <constraint firstItem="PUt-HJ-gE2" firstAttribute="bottom" secondItem="86Y-fm-W4e" secondAttribute="bottomMargin" id="tm0-RF-Mfw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.68235294117647061" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="iconImageView" destination="PUt-HJ-gE2" id="gHs-vH-9qG"/>
                                     <outlet property="optionLabel" destination="w3i-hd-b0L" id="fsX-sc-QrL"/>
@@ -310,6 +313,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifying-glass" width="26" height="26"/>
         <image name="sideMenu" width="25" height="25"/>
     </resources>
 </document>
