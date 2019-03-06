@@ -27,6 +27,7 @@ class FacebookAPIManager {
 			switch result {
 			case .success(let graphResponse):
 				if let dictionary = graphResponse.dictionaryValue {
+					
 					completion(User(dictionary: dictionary))
 				}
 				break
@@ -34,6 +35,10 @@ class FacebookAPIManager {
 				print("Facebook request user error")
 			}
 		}
+	}
+	
+	func makeFBGraphRequest() {
+		
 	}
 	
 }

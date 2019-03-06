@@ -25,9 +25,6 @@ final class PersistencyManager {
 			landmarks = decodedLandmark
 			saveLandmarks()
 		}
-			
-		
-		
 	}
 	
 	func getLandmark() -> [Landmark] {

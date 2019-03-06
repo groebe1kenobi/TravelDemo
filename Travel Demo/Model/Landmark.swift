@@ -55,7 +55,7 @@ class Landmark:  NSObject, MKAnnotation, Codable {
 		switch type {
 		case "sport":
 			return .blue
-		case "nuseum":
+		case "museum":
 			return .orange
 		case "restaurant":
 			return .purple

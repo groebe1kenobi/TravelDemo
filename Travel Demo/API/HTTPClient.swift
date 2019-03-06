@@ -18,6 +18,7 @@ class HTTPClient {
 	}
 	
 	func downloadImage(_ url: String) -> UIImage? {
+		print("checking this ish out")
 		let aUrl = URL(string: url)
 		guard let data = try? Data(contentsOf: aUrl!),
 			let image = UIImage(data: data) else {

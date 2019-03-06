@@ -14,6 +14,8 @@ class MapViewController: UIViewController {
 	@IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var sideMenuButton: UIButton!
 	@IBOutlet weak var viewAllButton: UIButton!
+	@IBOutlet weak var buttonBackgroundView: UIView!
+	@IBOutlet weak var discoverButton: UIButton!
 	
 	
 	//var landmarks: [Landmark] = []
@@ -27,7 +29,7 @@ class MapViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		print("MAP VIEW TEST \(globalUser?.firstName ?? "Fail")")
 		// set initial location in Wriglwy
 		let initialLocation = CLLocation(latitude: 41.787663516, longitude: -87.576331028 )
 		
@@ -54,6 +56,7 @@ class MapViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(true, animated: animated)
+		buttonBackgroundView.layer.cornerRadius = 10
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
