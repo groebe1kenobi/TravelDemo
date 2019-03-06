@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 import FacebookCore
 import FacebookLogin
-import FBSDKLoginKit
+
 
 var globalUser: User?
 class StartViewController: UIViewController {
 
+	var docRef: DocumentReference! // Firebase Db
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		docRef = Firestore.firestore().collection("users").document("Test")
+	}
 	override func viewDidAppear(_ animated: Bool){
 		super.viewDidAppear(animated)
 		 
@@ -24,12 +31,14 @@ class StartViewController: UIViewController {
 		let loginManager = LoginManager()
 		loginManager.logIn(readPermissions: [.publicProfile, .email], viewController: self, completion: didReceiveFacebookLoginResult)
 	}
+	
 
 }
 
 
 
 extension StartViewController {
+	
 	private func didReceiveFacebookLoginResult(loginResult: LoginResult) {
 		switch loginResult {
 		case .success:
@@ -58,6 +67,7 @@ extension StartViewController {
 					globalUser = facebookUser
 					print(" TEST \(globalUser?.firstName ?? "Fail")")
 					self.performSegue(withIdentifier: "startToMain", sender: nil)
+					self.uploadToFirebase(facebookUser)
 				})
 				
 			})
@@ -69,5 +79,14 @@ extension StartViewController {
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
 		let loginVC = storyboard.instantiateViewController(withIdentifier: "MainStory")
 		self.present(loginVC, animated: true, completion: nil)
+	}
+	
+	private func uploadToFirebase(_ user: User) {
+		let dataToSave: [String: Any] = ["firstName": user.firstName ?? "Fuck", "fbID": user.id ?? "Up"]
+		docRef.setData(dataToSave) { (error) in
+			if let error = error {
+				print("Oh no \(error.localizedDescription)!")
+			}
+		}
 	}
 }

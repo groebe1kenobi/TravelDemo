@@ -9,7 +9,6 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
-import FacebookShare
 import Firebase
 import FBSDKCoreKit
 
