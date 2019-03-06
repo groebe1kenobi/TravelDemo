@@ -26,14 +26,4 @@ class HTTPClient {
 		}
 		return image
 	}
-	
-//	func downloadImage(_ url: String) -> UIImage? {
-//		let aUrl = URL(string: url)
-//		URLSession.shared.dataTask(with: aUrl!) { data, response, error in
-//			guard let data = data else {return}
-//			guard let image = UIImage(data: data)else {return}
-//		}.resume()
-//
-//
-//	}
 }

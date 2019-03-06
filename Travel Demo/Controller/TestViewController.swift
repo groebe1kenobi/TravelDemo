@@ -10,22 +10,24 @@ import UIKit
 import FirebaseAuth
 class TestViewController: UIViewController {
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Do any additional setup after loading the view.
-//		self.presentLoginScreenVC()
-//    }
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		if Auth.auth().currentUser != nil {
-			print("\(String(describing: Auth.auth().currentUser))")
+		let user = Auth.auth().currentUser
+		if user != nil {
+//			user?.delete { error in
+//				if let error = error {
+//					print("\(error)!!!!")
+//				} else {
+//					print("Account deleted")
+//				}
+//			}
+//			print("\(String(describing: Auth.auth().currentUser))")
+			print("\(user?.email ?? "USER EMAIL NIL")")
 			self.presentHomeVC()
 		} else {
 			self.presentLoginScreenVC()
 		}
-		//self.presentLoginScreenVC()
 	}
 
 	

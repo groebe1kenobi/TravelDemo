@@ -29,7 +29,7 @@ class MapViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		print("MAP VIEW TEST \(globalUser?.firstName ?? "Fail")")
 		// set initial location in Wriglwy
 		let initialLocation = CLLocation(latitude: 41.787663516, longitude: -87.576331028 )
 		
