@@ -56,6 +56,7 @@ class MapViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(true, animated: animated)
+		buttonBackgroundView.layer.cornerRadius = 10
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {

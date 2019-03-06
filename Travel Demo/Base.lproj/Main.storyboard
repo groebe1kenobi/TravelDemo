@@ -39,32 +39,30 @@
                                     <constraint firstItem="Xvl-j5-7TY" firstAttribute="top" secondItem="ZWn-A6-GV4" secondAttribute="topMargin" constant="1" id="jx9-O1-zTw"/>
                                 </constraints>
                             </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-rX-ZBe">
+                                <rect key="frame" x="0.0" y="71" width="375" height="596"/>
+                            </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISf-UN-7dk">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="586" width="375" height="81"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-gf-qMa">
-                                        <rect key="frame" x="164" y="8" width="47" height="44"/>
-                                        <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPj-fR-dlI">
-                                                <rect key="frame" x="0.0" y="0.0" width="46" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" backgroundImage="magnifying-glass"/>
-                                            </button>
-                                        </subviews>
+                                        <rect key="frame" x="157" y="8" width="61" height="65"/>
                                         <color key="backgroundColor" red="0.87058823529411766" green="0.2627450980392157" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPj-fR-dlI">
+                                        <rect key="frame" x="164" y="18" width="46" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="magnifying-glass"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="8Xf-gf-qMa" firstAttribute="leading" secondItem="ISf-UN-7dk" secondAttribute="leading" constant="164" id="TtR-n1-vfF"/>
+                                    <constraint firstItem="8Xf-gf-qMa" firstAttribute="leading" secondItem="ISf-UN-7dk" secondAttribute="leading" constant="157" id="TtR-n1-vfF"/>
                                     <constraint firstItem="8Xf-gf-qMa" firstAttribute="centerY" secondItem="ISf-UN-7dk" secondAttribute="centerY" id="cQ3-7p-ktq"/>
                                     <constraint firstItem="8Xf-gf-qMa" firstAttribute="centerX" secondItem="ISf-UN-7dk" secondAttribute="centerX" id="eKH-eT-omH"/>
                                     <constraint firstItem="8Xf-gf-qMa" firstAttribute="top" secondItem="ISf-UN-7dk" secondAttribute="topMargin" id="yLT-gW-EJB"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-rX-ZBe">
-                                <rect key="frame" x="0.0" y="71" width="375" height="596"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -73,7 +71,7 @@
                             <constraint firstItem="ISf-UN-7dk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dx8-nZ-Rc8"/>
                             <constraint firstItem="jfA-rX-ZBe" firstAttribute="top" secondItem="ZWn-A6-GV4" secondAttribute="bottom" id="ELr-0N-wDb"/>
                             <constraint firstItem="ZWn-A6-GV4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K9h-pZ-e9c"/>
-                            <constraint firstItem="ISf-UN-7dk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="607" id="XzT-9t-0Th"/>
+                            <constraint firstItem="ISf-UN-7dk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="586" id="XzT-9t-0Th"/>
                             <constraint firstItem="jfA-rX-ZBe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="apr-DR-oPu"/>
                             <constraint firstItem="ZWn-A6-GV4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b96-Jt-PVS"/>
                             <constraint firstItem="jfA-rX-ZBe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bMX-jW-36E"/>
