@@ -107,7 +107,7 @@ class DiscoverMenuTableViewController: UITableViewController {
 			performSegue(withIdentifier: segueID, sender: self)
 
 		case 1:
-			filteredLandmarks = sharedLandmarks.filter({$0.type == "Drinks"}).map({return $0})
+			filteredLandmarks = sharedLandmarks.filter({$0.type == "Drink"}).map({return $0})
 			performSegue(withIdentifier: segueID, sender: self)
 
 		case 2:
