@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
+//import Firebase
+//import FirebaseAuth
 import FacebookCore
 import FacebookLogin
 
@@ -16,11 +16,11 @@ import FacebookLogin
 var globalUser: User?
 class StartViewController: UIViewController {
 
-	var docRef: DocumentReference! // Firebase Db
+	//var docRef: DocumentReference! // Firebase Db
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		docRef = Firestore.firestore().collection("users").document("Test")
+		//docRef = Firestore.firestore().collection("users").document("Test")
 	}
 	override func viewDidAppear(_ animated: Bool){
 		super.viewDidAppear(animated)
@@ -50,29 +50,29 @@ extension StartViewController {
 	
 	private func didLoginWithFacebook() {
 		// Successful log in with Facebook
-		if let accessToken = AccessToken.current {
-			let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
-			Auth.auth().signInAndRetrieveData(with: credential, completion: { (user, error) in
-				if let error = error {
-					print("Login error: \(error.localizedDescription)")
-					let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
-					let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-					alertController.addAction(okayAction)
-					self.present(alertController, animated: true, completion: nil)
-					
-					return
-				}
-				let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
-				facebookAPIManager.requestFacebookUser(completion: { (facebookUser) in
-					globalUser = facebookUser
-					print(" TEST \(globalUser?.firstName ?? "Fail")")
-					self.performSegue(withIdentifier: "startToMain", sender: nil)
-					self.uploadToFirebase(facebookUser)
-				})
-				
-			})
-			
-		}
+//		if let accessToken = AccessToken.current {
+//			let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.authenticationToken)
+//			Auth.auth().signInAndRetrieveData(with: credential, completion: { (user, error) in
+//				if let error = error {
+//					print("Login error: \(error.localizedDescription)")
+//					let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+//					let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//					alertController.addAction(okayAction)
+//					self.present(alertController, animated: true, completion: nil)
+//
+//					return
+//				}
+//				let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
+//				facebookAPIManager.requestFacebookUser(completion: { (facebookUser) in
+//					globalUser = facebookUser
+//					print(" TEST \(globalUser?.firstName ?? "Fail")")
+//					self.performSegue(withIdentifier: "startToMain", sender: nil)
+//					self.uploadToFirebase(facebookUser)
+//				})
+//
+//			})
+//
+//		}
 	}
 	
 	private func didLogin(method: String, info: String) {
@@ -81,12 +81,12 @@ extension StartViewController {
 		self.present(loginVC, animated: true, completion: nil)
 	}
 	
-	private func uploadToFirebase(_ user: User) {
-		let dataToSave: [String: Any] = ["firstName": user.firstName ?? "Fuck", "fbID": user.id ?? "Up"]
-		docRef.setData(dataToSave) { (error) in
-			if let error = error {
-				print("Oh no \(error.localizedDescription)!")
-			}
-		}
-	}
+//	private func uploadToFirebase(_ user: User) {
+//		let dataToSave: [String: Any] = ["firstName": user.firstName ?? "Fuck", "fbID": user.id ?? "Up"]
+//		docRef.setData(dataToSave) { (error) in
+//			if let error = error {
+//				print("Oh no \(error.localizedDescription)!")
+//			}
+//		}
+//	}
 }

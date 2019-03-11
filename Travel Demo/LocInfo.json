@@ -6,6 +6,7 @@
 	  "imageUrl": "https://www.nbcsports.com/chicago/sites/csnchicago/files/styles/article_hero_image/public/2016/04/12/10-12-wrigley-field.png?itok=GcMst9qK",
       "latitude": "41.948437",
       "longitude": "-87.655334"
+	  
   },
  
   {
@@ -33,7 +34,89 @@
 	  "imageUrl": "https://www.unitedcenter.com/assets/1/7/unitedcenter3.png",
 	  "latitude": "41.8806948",
 	  "longitude": "-87.6763646"
+  },
+  {
+	  "title": "Lula Cafe",
+	  "name": "Logan Square",
+	  "type": "Restaurant",
+	  "imageUrl": "http://lulacafe.com/sites/all/themes/lulacafe/css/images/log2.png",
+	  "latitude": "41.927684",
+	  "longitude": "-87.7089827"
+  },
+  {
+	  "title": "Au Cheval",
+	  "name": "West Loop",
+	  "type": "Restaurant",
+	  "imageUrl": "http://www.hogsalt.com/wp-hogsalt/wp-content/themes/a22_black/images/aucheval-logo.png",
+	  "latitude": "41.8846303",
+	  "longitude": "-87.6497759"
+  },
+  {
+	  "title": "Kingston Mines",
+	  "name": "Lincoln Park",
+	  "type": "Drink",
+	  "imageUrl": "http://www.hogsalt.com/wp-hogsalt/wp-content/themes/a22_black/images/aucheval-logo.png",
+	  "latitude": "41.928695",
+	  "longitude": "-87.6512109"
+  },
+  {
+	  "title": "Revolution Brewing",
+	  "name": "Logan Square",
+	  "type": "Drink",
+	  "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/RevolutionBrewingLogo.png/220px-RevolutionBrewingLogo.png",
+	  "latitude": "41.9235436",
+	  "longitude": "-87.700388"
+  },
+  {
+	  "title": "The Green Mill",
+	  "name": "Uptown",
+	  "type": "Drink",
+	  "imageUrl": "https://roadierecon.com/wp-content/uploads/2014/07/Green-Mill-Restaurant-Bar.png",
+	  "latitude": "41.9691975",
+	  "longitude": "-87.700388"
+  },
+  {
+	  "title": "Second City",
+	  "name": "Old Town",
+	  "type": "Entertainment",
+	  "imageUrl": "https://s3.amazonaws.com/geotix-production-uploads/uploads/e1311d4f-a2a3-4cfa-9742-4482f58ed654.png",
+	  "latitude": "41.9114828",
+	  "longitude": "-87.6370735"
+  },
+  {
+	  "title": "The Field Museum",
+	  "name": "The Loop",
+	  "type": "Museum",
+	  "imageUrl": "http://expeditions.fieldmuseum.org/sites/default/files/SUE%20exhibition.png",
+	  "latitude": "41.866261",
+	  "longitude": "-87.6191692"
+  },
+  
+  {
+	  "title": "Lincoln Park Zoo",
+	  "name": "Lincoln Park",
+	  "type": "Nature",
+	  "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/0ab9f229875353.5608bcd05228b.png",
+	  "latitude": "41.921102",
+	  "longitude": "-87.6356629"
+  },
+  {
+	  "title": "Montrose Point Bird Sanctuary",
+	  "name": "Edgewater",
+	  "type": "Nature",
+	  "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/0ab9f229875353.5608bcd05228b.png",
+	  "latitude": "41.963036",
+	  "longitude": "-87.6352731"
+  },
+  {
+	  "title": "The Chicag Theatre",
+	  "name": "The Loop",
+	  "type": "Entertainment",
+	  "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/0ab9f229875353.5608bcd05228b.png",
+	  "latitude": "41.8852642",
+	  "longitude": "-87.6298355"
   }
+  
 
 ]
 

@@ -1,0 +1,8 @@
+M = Locally Modified
+U = Updated in Repository
+A = Locally Added
+D = Locally Deleted
+I = Ignored
+R = Replaced in Repository
+- = Contents of folder have mixed status; Display contents to see individual status
+? = Not under source control

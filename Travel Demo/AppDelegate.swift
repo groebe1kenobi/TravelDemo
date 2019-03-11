@@ -9,7 +9,7 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
-import Firebase
+//import Firebase
 import FBSDKCoreKit
 
 @UIApplicationMain
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		FirebaseApp.configure()
+//		FirebaseApp.configure()
 		SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 		return true
 		

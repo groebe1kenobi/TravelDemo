@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1936517F2217481B000F54F8 /* LandmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936517E2217481B000F54F8 /* LandmarkListViewController.swift */; };
-		1936518122174829000F54F8 /* SavedLandmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936518022174829000F54F8 /* SavedLandmarksViewController.swift */; };
 		193651842217710C000F54F8 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193651832217710C000F54F8 /* SideMenuTableViewCell.swift */; };
 		194024FD222B1816004FB30B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194024FC222B1816004FB30B /* FBSDKCoreKit.framework */; };
 		194024FF222B1816004FB30B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194024FE222B1816004FB30B /* FBSDKLoginKit.framework */; };
@@ -34,14 +32,17 @@
 		197ABC3D221625C300A7E875 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC3C221625C300A7E875 /* HorizontalScrollerView.swift */; };
 		197ABC3F221626C900A7E875 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC3E221626C900A7E875 /* ImageView.swift */; };
 		197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* HTTPClient.swift */; };
+		19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */; };
+		19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1307222306A930022186A /* DiscoverMenuTableViewCell.swift */; };
+		19F13075223087820022186A /* LandmarkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F13074223087820022186A /* LandmarkListTableViewCell.swift */; };
+		19F13078223087E30022186A /* LandmarkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F13077223087E30022186A /* LandmarkListTableViewController.swift */; };
+		19F1307C223088DE0022186A /* SymbolKey in Resources */ = {isa = PBXBuildFile; fileRef = 19F1307B223088DE0022186A /* SymbolKey */; };
 		19F8B190222DD2E300B13787 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8B18F222DD2E300B13787 /* TestViewController.swift */; };
 		19F8B192222DD7EE00B13787 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19F8B191222DD7EE00B13787 /* GoogleService-Info.plist */; };
 		46A22F48092D822A80A4EF6E /* Pods_Travel_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDF3CB73378798DAFBEB6EE /* Pods_Travel_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1936517E2217481B000F54F8 /* LandmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListViewController.swift; sourceTree = "<group>"; };
-		1936518022174829000F54F8 /* SavedLandmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedLandmarksViewController.swift; sourceTree = "<group>"; };
 		193651832217710C000F54F8 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		194024FC222B1816004FB30B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		194024FE222B1816004FB30B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +70,11 @@
 		197ABC3C221625C300A7E875 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
 		197ABC3E221626C900A7E875 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		197ABC40221629DC00A7E875 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMenuTableViewController.swift; sourceTree = "<group>"; };
+		19F1307222306A930022186A /* DiscoverMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMenuTableViewCell.swift; sourceTree = "<group>"; };
+		19F13074223087820022186A /* LandmarkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListTableViewCell.swift; sourceTree = "<group>"; };
+		19F13077223087E30022186A /* LandmarkListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListTableViewController.swift; sourceTree = "<group>"; };
+		19F1307B223088DE0022186A /* SymbolKey */ = {isa = PBXFileReference; lastKnownFileType = text; path = SymbolKey; sourceTree = "<group>"; };
 		19F8B18F222DD2E300B13787 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		19F8B191222DD7EE00B13787 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88931C2216620C4A26BA60D3 /* Pods-Travel Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Travel Demo.debug.xcconfig"; path = "Target Support Files/Pods-Travel Demo/Pods-Travel Demo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				193651832217710C000F54F8 /* SideMenuTableViewCell.swift */,
+				19F1307222306A930022186A /* DiscoverMenuTableViewCell.swift */,
+				19F13074223087820022186A /* LandmarkListTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -119,6 +127,7 @@
 		1977E10B220AA0DB00770F79 /* Travel Demo */ = {
 			isa = PBXGroup;
 			children = (
+				19F1307A223088BF0022186A /* HelperFiles */,
 				19F8B191222DD7EE00B13787 /* GoogleService-Info.plist */,
 				1977E129220ACDB800770F79 /* API */,
 				1977E127220ACB9C00770F79 /* LocInfo.json */,
@@ -139,12 +148,8 @@
 		1977E11E220AAA5D00770F79 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1977E10E220AA0DB00770F79 /* MapViewController.swift */,
-				1936517E2217481B000F54F8 /* LandmarkListViewController.swift */,
-				1936518022174829000F54F8 /* SavedLandmarksViewController.swift */,
-				19402508222DAEE8004FB30B /* SideMenuTableViewController.swift */,
-				1940250A222DB3D0004FB30B /* UserProfileViewController.swift */,
-				19F8B18F222DD2E300B13787 /* TestViewController.swift */,
+				19F13079223087F60022186A /* ViewControllers */,
+				19F13076223087A90022186A /* TableViews */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +194,34 @@
 				19402514222DCC7D004FB30B /* SignUpViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		19F13076223087A90022186A /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */,
+				19402508222DAEE8004FB30B /* SideMenuTableViewController.swift */,
+				19F13077223087E30022186A /* LandmarkListTableViewController.swift */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		19F13079223087F60022186A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1977E10E220AA0DB00770F79 /* MapViewController.swift */,
+				1940250A222DB3D0004FB30B /* UserProfileViewController.swift */,
+				19F8B18F222DD2E300B13787 /* TestViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		19F1307A223088BF0022186A /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				19F1307B223088DE0022186A /* SymbolKey */,
+			);
+			path = HelperFiles;
 			sourceTree = "<group>";
 		};
 		4C614AFE941949DE1B1FDAED /* Frameworks */ = {
@@ -281,6 +314,7 @@
 				19402511222DCC0F004FB30B /* Login.storyboard in Resources */,
 				1977E112220AA0DB00770F79 /* Main.storyboard in Resources */,
 				19F8B192222DD7EE00B13787 /* GoogleService-Info.plist in Resources */,
+				19F1307C223088DE0022186A /* SymbolKey in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,38 +331,22 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Travel Demo/Pods-Travel Demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,24 +383,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */,
+				19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */,
 				197ABC3D221625C300A7E875 /* HorizontalScrollerView.swift in Sources */,
+				19F13075223087820022186A /* LandmarkListTableViewCell.swift in Sources */,
 				1977E10F220AA0DB00770F79 /* MapViewController.swift in Sources */,
-				1936518122174829000F54F8 /* SavedLandmarksViewController.swift in Sources */,
 				1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */,
 				1940250B222DB3D0004FB30B /* UserProfileViewController.swift in Sources */,
-				1936517F2217481B000F54F8 /* LandmarkListViewController.swift in Sources */,
 				19F8B190222DD2E300B13787 /* TestViewController.swift in Sources */,
 				1977E124220AB5D300770F79 /* LandmarkViews.swift in Sources */,
 				19402509222DAEE8004FB30B /* SideMenuTableViewController.swift in Sources */,
 				197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */,
 				19402507222B1CD1004FB30B /* User.swift in Sources */,
 				197ABC3F221626C900A7E875 /* ImageView.swift in Sources */,
+				19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */,
 				1940250D222DB8D1004FB30B /* FacebookAPIManger.swift in Sources */,
 				1977E122220AAAA500770F79 /* Landmark.swift in Sources */,
 				19402515222DCC7D004FB30B /* SignUpViewController.swift in Sources */,
 				19402513222DCC70004FB30B /* StartViewController.swift in Sources */,
 				193651842217710C000F54F8 /* SideMenuTableViewCell.swift in Sources */,
 				19402501222B1A60004FB30B /* FacebookLoginButton.swift in Sources */,
+				19F13078223087E30022186A /* LandmarkListTableViewController.swift in Sources */,
 				195F5BD2222B10FA001CF201 /* LoginViewController.swift in Sources */,
 				1977E12D220AD02600770F79 /* LibraryAPI.swift in Sources */,
 			);
