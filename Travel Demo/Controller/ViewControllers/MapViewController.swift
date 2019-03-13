@@ -47,6 +47,7 @@ class MapViewController: UIViewController {
 			let distance = distanceOp.getDistance(mark.coordinate, initialLocation)
 			DispatchQueue.main.async {
 				self.mapView.addAnnotation(mark)
+				
 				self.mapView.reloadInputViews()
 				//print("\(mark.title ?? "")")
 				

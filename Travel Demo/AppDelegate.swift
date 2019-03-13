@@ -12,6 +12,11 @@ import FacebookLogin
 //import Firebase
 import FBSDKCoreKit
 
+let myBlue: UIColor = UIColor(red: 0/255, green: 168/255, blue: 181/255, alpha: 1.0)
+let myPurple: UIColor = UIColor(red: 119/255, green: 72/255, blue: 152/255, alpha: 1.0)
+let myOrange: UIColor = UIColor(red: 243/255, green: 174/255, blue: 75/255, alpha: 1.0)
+let myPink: UIColor = UIColor(red: 222/255, green: 67/255, blue: 131/255, alpha: 1.0)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -67,7 +67,15 @@ class Landmark:  NSObject, MKAnnotation, Codable {
 	}
 	
 	var imageName: String? {
-		if type == "Sport" { return "baseball"}
+		if type == "Sport" {
+			if title == "Wrigley Field" {
+				return "baseball"
+			}
+			if title == "United Center" {
+				return "basketball"
+			}
+			
+		}
 		if type == "Restaurant" {return "restaurant"}
 		if type == "Museum"	{return "museum"}
 		if type == "Entertainment" {return "circus"}

@@ -15,6 +15,9 @@ class SideMenuTableViewController: UITableViewController {
         super.viewDidLoad()
 		//SideMenuManager.menuFadeStatusBar = false
 		title = "Menu"
+	//	tableView.rowHeight = UITableView.automaticDimension
+		//tableView.estimatedRowHeight = 130
+	
 		
     }
 
@@ -33,21 +36,30 @@ class SideMenuTableViewController: UITableViewController {
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! SideMenuTableViewCell
-		cell.optionLabel.adjustsFontSizeToFitWidth = true
+		//cell.optionLabel.adjustsFontSizeToFitWidth = true
 		
 		switch indexPath.row {
 		case 0:
 			cell.optionLabel.text = "User Profile"
-			// image
+			cell.iconImageView.image = UIImage(named: "userIcon")
+			cell.backgroundColor = myBlue
+			
+			
 		case 1:
 			cell.optionLabel.text = "Settings"
-			// Settings Image
+			cell.iconImageView.image = UIImage(named: "settings")
+			cell.backgroundColor = myPink
+			
 		case 2:
 			cell.optionLabel.text = "About Us"
-			// About Image
+			cell.backgroundColor = myPurple
+			cell.iconImageView.image = UIImage(named: "about")
+
 		case 3:
 			cell.optionLabel.text = "Terms & Conditions"
-			// T&C Image
+			cell.backgroundColor = myOrange
+			cell.iconImageView.image = UIImage(named: "tos")
+
 		default:
 			print("Error getting here")
 		}
