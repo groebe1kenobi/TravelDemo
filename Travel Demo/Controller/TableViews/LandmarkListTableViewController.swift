@@ -46,7 +46,7 @@ class LandmarkListTableViewController: UITableViewController {
 			
 		
 		let validIndex = filteredLandmarks[indexPath.row].title
-		//let landmarkView = AlbumView(frame: CGRect(x: 0, y: 0, width: 375, height: 151), coverUrl: filteredLandmarks[indexPath.row].imageUrl)
+		
 		if(validIndex != nil) {
 			
 			cell.locationLabel.adjustsFontSizeToFitWidth = true

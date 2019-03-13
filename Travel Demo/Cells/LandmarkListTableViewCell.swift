@@ -13,7 +13,7 @@ class LandmarkListTableViewCell: UITableViewCell {
 	@IBOutlet var locationLabel: UILabel!
 	@IBOutlet var locationDistanceLabel: UILabel!
 	@IBOutlet weak var locationImageView: UIImageView!
-	@IBOutlet weak var landmarkView: AlbumView!
+	
 	
     override func awakeFromNib() {
         super.awakeFromNib()

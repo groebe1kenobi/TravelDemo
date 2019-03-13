@@ -233,55 +233,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7G2-8J-qh9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="167"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Sh-mK-RSj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="261.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T9B-pb-onj">
-                                        <rect key="frame" x="137" y="8" width="100" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-ht-ZxE">
+                                        <rect key="frame" x="112.5" y="55" width="150" height="151.5"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uck-aE-gZb">
-                                        <rect key="frame" x="78" y="116" width="218" height="43"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="43" id="wbZ-r8-7Tk"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.41176470590000003" green="0.70588235290000001" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Uck-aE-gZb" firstAttribute="centerX" secondItem="T9B-pb-onj" secondAttribute="centerX" id="3My-q4-zTv"/>
-                                    <constraint firstItem="Uck-aE-gZb" firstAttribute="leading" secondItem="7G2-8J-qh9" secondAttribute="leading" constant="78" id="5fG-lv-DRa"/>
-                                    <constraint firstAttribute="trailing" secondItem="T9B-pb-onj" secondAttribute="trailing" constant="138" id="6MH-gQ-HgH"/>
-                                    <constraint firstItem="Uck-aE-gZb" firstAttribute="bottom" secondItem="7G2-8J-qh9" secondAttribute="bottomMargin" id="72v-fq-nk6"/>
-                                    <constraint firstItem="Uck-aE-gZb" firstAttribute="top" secondItem="T9B-pb-onj" secondAttribute="bottom" constant="8" id="XEY-pA-pXn"/>
-                                    <constraint firstItem="T9B-pb-onj" firstAttribute="leading" secondItem="7G2-8J-qh9" secondAttribute="leading" constant="137" id="raN-Ga-QuV"/>
-                                    <constraint firstItem="T9B-pb-onj" firstAttribute="top" secondItem="7G2-8J-qh9" secondAttribute="top" constant="8" id="wPf-Ap-M1D"/>
+                                    <constraint firstItem="eOb-ht-ZxE" firstAttribute="leading" secondItem="1Sh-mK-RSj" secondAttribute="leading" constant="112.5" id="0Of-9u-0Oi"/>
+                                    <constraint firstItem="eOb-ht-ZxE" firstAttribute="centerX" secondItem="1Sh-mK-RSj" secondAttribute="centerX" id="7F6-eS-ZsC"/>
+                                    <constraint firstAttribute="trailing" secondItem="eOb-ht-ZxE" secondAttribute="trailing" constant="112.5" id="BDP-Ww-Vx9"/>
+                                    <constraint firstAttribute="bottom" secondItem="eOb-ht-ZxE" secondAttribute="bottom" constant="55" id="Nr0-I9-1kh"/>
+                                    <constraint firstItem="eOb-ht-ZxE" firstAttribute="top" secondItem="1Sh-mK-RSj" secondAttribute="top" constant="55" id="VHY-Uh-h8R"/>
+                                    <constraint firstItem="eOb-ht-ZxE" firstAttribute="centerY" secondItem="1Sh-mK-RSj" secondAttribute="centerY" id="vkU-uD-FtQ"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RR-6J-qBQ" customClass="ProgressBarView" customModule="Travel_Demo" customModuleProvider="target">
-                                <rect key="frame" x="123" y="269" width="128" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1RR-6J-qBQ" firstAttribute="top" secondItem="7G2-8J-qh9" secondAttribute="bottom" constant="38" id="1cS-zV-nrN"/>
-                            <constraint firstItem="7G2-8J-qh9" firstAttribute="leading" secondItem="XJd-cZ-UTj" secondAttribute="leading" id="FWu-MW-Db7"/>
-                            <constraint firstItem="7G2-8J-qh9" firstAttribute="height" secondItem="INq-FB-esS" secondAttribute="height" multiplier="1:4" id="G8t-gR-LIL"/>
-                            <constraint firstItem="1RR-6J-qBQ" firstAttribute="leading" secondItem="XJd-cZ-UTj" secondAttribute="leading" constant="123" id="MrD-8r-Egm"/>
-                            <constraint firstItem="XJd-cZ-UTj" firstAttribute="trailing" secondItem="1RR-6J-qBQ" secondAttribute="trailing" constant="124" id="My7-we-TqA"/>
-                            <constraint firstItem="7G2-8J-qh9" firstAttribute="top" secondItem="XJd-cZ-UTj" secondAttribute="top" id="aUH-4b-89h"/>
-                            <constraint firstItem="XJd-cZ-UTj" firstAttribute="bottom" secondItem="1RR-6J-qBQ" secondAttribute="bottom" constant="270" id="bfy-dm-4Vq"/>
-                            <constraint firstItem="7G2-8J-qh9" firstAttribute="trailing" secondItem="XJd-cZ-UTj" secondAttribute="trailing" id="daK-dc-XvT"/>
+                            <constraint firstItem="1Sh-mK-RSj" firstAttribute="top" secondItem="XJd-cZ-UTj" secondAttribute="top" id="iR1-1a-mkL"/>
+                            <constraint firstItem="1Sh-mK-RSj" firstAttribute="leading" secondItem="XJd-cZ-UTj" secondAttribute="leading" id="izQ-GM-rCa"/>
+                            <constraint firstItem="1Sh-mK-RSj" firstAttribute="height" secondItem="INq-FB-esS" secondAttribute="height" multiplier="1:2.55" id="kQB-r6-Hmf"/>
+                            <constraint firstItem="1Sh-mK-RSj" firstAttribute="trailing" secondItem="XJd-cZ-UTj" secondAttribute="trailing" id="rWd-gC-S5c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XJd-cZ-UTj"/>
                     </view>
                     <connections>
-                        <outlet property="displayNameLabel" destination="Uck-aE-gZb" id="FE7-Dn-PUB"/>
-                        <outlet property="profilePicImageView" destination="T9B-pb-onj" id="g6z-c6-A0S"/>
-                        <outlet property="progressBar" destination="1RR-6J-qBQ" id="q2N-Fx-XHz"/>
+                        <outlet property="profilePicImageView" destination="eOb-ht-ZxE" id="bJc-69-tH2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dH-rd-8hq" userLabel="First Responder" sceneMemberID="firstResponder"/>
