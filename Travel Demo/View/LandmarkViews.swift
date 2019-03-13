@@ -24,6 +24,7 @@ class LandmarkMarkerView: MKMarkerAnnotationView {
 			
 			if let imageName = landmark.imageName {
 				glyphImage = UIImage(named: imageName)
+				
 			} else {
 				glyphImage = nil
 			}
@@ -50,7 +51,13 @@ class ArtworkView: MKAnnotationView {
 			leftCalloutAccessoryView = UIButton(type: .detailDisclosure)
 
 			if let imageName = artwork.imageName {
-				image = UIImage(named: imageName)
+				let pinImage = UIImage(named: imageName)
+				let size = CGSize(width: 35, height: 35)
+				UIGraphicsBeginImageContext(size)
+				pinImage!.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+				let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+				image = resizedImage
+				
 			} else {
 				image = UIImage(named: "skiMask")
 			}

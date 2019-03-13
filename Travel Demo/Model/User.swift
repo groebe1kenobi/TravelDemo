@@ -9,11 +9,16 @@
 import UIKit
 
 class User {
+	
 	let firstName: String?
 	let lastName: String?
 	let email: String?
 	let id: String?
 	let profilePicture: String?
+	var points: Int?
+	var locationsToVisit: [Landmark]?
+	var visitedLocations: [Landmark]?
+	
 	
 	init (dictionary: [String: Any]) {
 		self.firstName = dictionary["first_name"] as? String
@@ -29,12 +34,15 @@ class User {
 		self.profilePicture = ""
 	}
 	
-	init (firstName: String?, lastName: String?, email: String?, id: String?, profilePicture: String?) {
+	init (firstName: String?, lastName: String?, email: String?, id: String?, profilePicture: String?, points: Int?, locationsToVisit: [Landmark]?, visitedLocations: [Landmark]?) {
 		self.firstName = firstName
 		self.lastName = lastName
 		self.email = email
 		self.id = id
 		self.profilePicture = profilePicture
+		self.points = 0
+		self.locationsToVisit = []
+		self.visitedLocations = []
 	}
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1905EB0522371FFB00EF8088 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1905EB0422371FFB00EF8088 /* ProgressBarView.swift */; };
 		193651842217710C000F54F8 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193651832217710C000F54F8 /* SideMenuTableViewCell.swift */; };
 		194024FD222B1816004FB30B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194024FC222B1816004FB30B /* FBSDKCoreKit.framework */; };
 		194024FF222B1816004FB30B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194024FE222B1816004FB30B /* FBSDKLoginKit.framework */; };
@@ -29,6 +30,7 @@
 		1977E128220ACB9C00770F79 /* LocInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1977E127220ACB9C00770F79 /* LocInfo.json */; };
 		1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12A220ACDD700770F79 /* PersistencyManager.swift */; };
 		1977E12D220AD02600770F79 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12C220AD02600770F79 /* LibraryAPI.swift */; };
+		197AA33D22386CC30061DD62 /* LandmarkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197AA33C22386CC30061DD62 /* LandmarkImageView.swift */; };
 		197ABC3D221625C300A7E875 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC3C221625C300A7E875 /* HorizontalScrollerView.swift */; };
 		197ABC3F221626C900A7E875 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC3E221626C900A7E875 /* ImageView.swift */; };
 		197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* HTTPClient.swift */; };
@@ -43,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1905EB0422371FFB00EF8088 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		193651832217710C000F54F8 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		194024FC222B1816004FB30B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		194024FE222B1816004FB30B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +70,7 @@
 		1977E127220ACB9C00770F79 /* LocInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocInfo.json; sourceTree = "<group>"; };
 		1977E12A220ACDD700770F79 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		1977E12C220AD02600770F79 /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		197AA33C22386CC30061DD62 /* LandmarkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkImageView.swift; sourceTree = "<group>"; };
 		197ABC3C221625C300A7E875 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
 		197ABC3E221626C900A7E875 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		197ABC40221629DC00A7E875 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -96,6 +100,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1905EB0622373D1700EF8088 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		19365182221770F1000F54F8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +138,7 @@
 		1977E10B220AA0DB00770F79 /* Travel Demo */ = {
 			isa = PBXGroup;
 			children = (
+				1905EB0622373D1700EF8088 /* Extension */,
 				19F1307A223088BF0022186A /* HelperFiles */,
 				19F8B191222DD7EE00B13787 /* GoogleService-Info.plist */,
 				1977E129220ACDB800770F79 /* API */,
@@ -169,6 +181,8 @@
 				1977E123220AB5D300770F79 /* LandmarkViews.swift */,
 				197ABC3C221625C300A7E875 /* HorizontalScrollerView.swift */,
 				197ABC3E221626C900A7E875 /* ImageView.swift */,
+				1905EB0422371FFB00EF8088 /* ProgressBarView.swift */,
+				197AA33C22386CC30061DD62 /* LandmarkImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,11 +404,13 @@
 				1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */,
 				1940250B222DB3D0004FB30B /* UserProfileViewController.swift in Sources */,
 				19F8B190222DD2E300B13787 /* TestViewController.swift in Sources */,
+				197AA33D22386CC30061DD62 /* LandmarkImageView.swift in Sources */,
 				1977E124220AB5D300770F79 /* LandmarkViews.swift in Sources */,
 				19402509222DAEE8004FB30B /* SideMenuTableViewController.swift in Sources */,
 				197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */,
 				19402507222B1CD1004FB30B /* User.swift in Sources */,
 				197ABC3F221626C900A7E875 /* ImageView.swift in Sources */,
+				1905EB0522371FFB00EF8088 /* ProgressBarView.swift in Sources */,
 				19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */,
 				1940250D222DB8D1004FB30B /* FacebookAPIManger.swift in Sources */,
 				1977E122220AAAA500770F79 /* Landmark.swift in Sources */,
@@ -486,7 +502,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=100 -Xfrontend -warn-long-expression-type-checking=100 -Onone";
+				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-function-bodies=200 -Xfrontend -warn-long-expression-type-checking=200 -Onone";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

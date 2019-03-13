@@ -31,7 +31,7 @@ class DiscoverMenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 5
     }
 
     
@@ -59,6 +59,10 @@ class DiscoverMenuTableViewController: UITableViewController {
 			cell.locationTypeLabel.text = "Entertainment"
 			cell.locationTypeLabel.textColor = UIColor.init(red: 1.0, green: 61/255, blue: 0/255, alpha: 1.0)
 			cell.locationTypeIV.image = UIImage(named: "circus")
+		case 4:
+			cell.locationTypeLabel.text = "Museums"
+			cell.locationTypeLabel.textColor = UIColor.init(red: 232/255, green: 148/255, blue: 25/255, alpha: 1.0)
+			cell.locationTypeIV.image = UIImage(named: "museum")
 		default:
 			print("Should not get here")
 			
@@ -69,37 +73,9 @@ class DiscoverMenuTableViewController: UITableViewController {
         return cell
     }
 	
-//	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//		if segue.identifier == segueID,
-//			//let indexPath = tableView.indexPathForSelectedRow
-//			//let index = indexPath?.row
-//			let landmarkVC = segue.destination as? LandmarkListTableViewController, let index = tableView.indexPathForSelectedRow?.row {
-//			switch index {
-//			case 0:
-//				print("PREPARE FOR SEGUE ENGAGED")
-//				landmarkVC.filteredLandmarks = sharedLandmarks.filter({$0.type == "Restaurant"}).map({return $0})
-//			case 1:
-//				landmarkVC.filteredLandmarks = sharedLandmarks.filter({$0.type == "Drinks"}).map({return $0})
-//			case 2:
-//				landmarkVC.filteredLandmarks = sharedLandmarks.filter({$0.type == "Nature"}).map({return $0})
-//			case 4:
-//				landmarkVC.filteredLandmarks = sharedLandmarks.filter({$0.type == "Entertainment"}).map({return $0})
-//			default:
-//				print("ERROR SELECTING LANDMARK TYPES")
-//			}
-//		}
-//	}
-//
+
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//		let cell = tableView.cellForRow(at: indexPath)
-//
-//		if cell != nil {
-//			self.performSegue(withIdentifier: segueID, sender: nil)
-//		}
-//		tableView.deselectRow(at: indexPath, animated: true)
-//		let row = indexPath.row
-//		print(sharedLandmarks[row])
-//		self.performSegue(withIdentifier: segueID, sender: nil)
+
 		switch indexPath.row {
 		case 0:
 			print("PREPARE FOR SEGUE ENGAGED")
@@ -114,10 +90,13 @@ class DiscoverMenuTableViewController: UITableViewController {
 			filteredLandmarks = sharedLandmarks.filter({$0.type == "Nature"}).map({return $0})
 			performSegue(withIdentifier: segueID, sender: self)
 
-		case 4:
+		case 3:
 			filteredLandmarks = sharedLandmarks.filter({$0.type == "Entertainment"}).map({return $0})
 			performSegue(withIdentifier: segueID, sender: self)
-
+			
+		case 4:
+			filteredLandmarks = sharedLandmarks.filter({$0.type == "Museum"}).map({return $0})
+			performSegue(withIdentifier: segueID, sender: self)
 		default:
 			print("ERROR SELECTING LANDMARK TYPES")
 		}
