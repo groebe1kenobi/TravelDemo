@@ -77,7 +77,8 @@ class TestViewController: UIViewController {
 			let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
 			facebookAPIManager.makeFbGraphRequest()
 			
-			self.presentHomeVC()
+			//self.presentHomeVC()
+			self.performSegue(withIdentifier: "splashToMap", sender: self)
 		}
 	}
 	
@@ -90,7 +91,7 @@ class TestViewController: UIViewController {
 	
 	private func presentHomeVC() {
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let loginVC = storyboard.instantiateViewController(withIdentifier: "MainStory")
+		let loginVC = storyboard.instantiateViewController(withIdentifier: "<#T##String#>")
 		self.present(loginVC, animated: true, completion: nil)
 	}
 
@@ -178,7 +179,7 @@ extension UserDefaults {
 		
 		
 		
-		printDefaults()
+	//	printDefaults()
 		
 	}
 	
