@@ -10,11 +10,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
 	@IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var sideMenuButton: UIButton!
-	@IBOutlet weak var viewAllButton: UIButton!
+	@IBOutlet weak var cameraButton: UIButton!
 	@IBOutlet weak var buttonBackgroundView: UIView!
 	@IBOutlet weak var discoverButton: UIButton!
 	
@@ -25,8 +25,8 @@ class MapViewController: UIViewController {
 	private var landmarks = [Landmark]()
 	let regionRadius: CLLocationDistance = 1000
 	let distanceOp = DistanceOperators()
-
-
+	let imagePicker = UIImagePickerController()
+	var imageToSend: UIImage?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -41,7 +41,8 @@ class MapViewController: UIViewController {
 						 forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 		
 		landmarks = LibraryAPI.shared.getLandmark()
-
+		
+		
 		
 		for mark in landmarks {
 			let distance = distanceOp.getDistance(mark.coordinate, initialLocation)
@@ -65,7 +66,7 @@ class MapViewController: UIViewController {
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		navigationController?.setNavigationBarHidden(false, animated: animated)
+		//navigationController?.setNavigationBarHidden(false, animated: animated)
 	}
 	
 	
@@ -76,7 +77,33 @@ class MapViewController: UIViewController {
 		mapView.setRegion(coordinateRegion, animated: true)
 	}
 	
-	
+	@IBAction func openCameraButton(_ sender: UIButton) {
+		if UIImagePickerController.isSourceTypeAvailable(.camera) {
+			
+			imagePicker.delegate = self
+			imagePicker.sourceType = .camera
+			imagePicker.allowsEditing = false
+			self.present(imagePicker, animated: true, completion: nil)
+		}
+	}
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if (segue.identifier == "mapToCamera") {
+			if let destinationVC = segue.destination as? CameraViewController {
+				destinationVC.imageToShow = imageToSend
+				
+			}
+		}
+	}
+	func imagePickerController(_ picker: UIImagePickerController,
+							   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+		imagePicker.dismiss(animated: true, completion: nil)
+		guard let selectedImage = info[.originalImage] as? UIImage else {
+			fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+		}
+		imageToSend = selectedImage
+		self.performSegue(withIdentifier: "mapToCamera", sender: self)
+		//imageView.image = selectedImage
+	}
 	
 
 	

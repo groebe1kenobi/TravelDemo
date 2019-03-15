@@ -10,41 +10,47 @@ import UIKit
 
 class User {
 	
-	let firstName: String?
-	let lastName: String?
-	let email: String?
-	let id: String?
-	let profilePicture: String?
+	var firstName: String?
+	var lastName: String?
+	var email: String?
+	var fbId: String?
+	var fbProPicURL: String?
+	var fbAccessToken: String?
 	var points: Int?
 	var locationsToVisit: [Landmark]?
 	var visitedLocations: [Landmark]?
+	var proPic: UIImage?
+	var wasPrevLoggedIn: Bool = false
 	
-	
-	init (dictionary: [String: Any]) {
-		self.firstName = dictionary["first_name"] as? String
-		self.lastName = dictionary["last_name"] as? String
-		self.email = dictionary["email"] as? String
-		self.id = dictionary["id"] as? String
-		if let pictureDict = dictionary["picture"] as? [String: Any] {
-			if let dataDict = pictureDict["data"] as? [String: Any] {
-				self.profilePicture = dataDict["url"] as? String
-				return
-			}
+	func isProfilePicture() -> Bool {
+		if proPic != nil {
+			return true
 		}
-		self.profilePicture = ""
+		return false
 	}
 	
-	init (firstName: String?, lastName: String?, email: String?, id: String?, profilePicture: String?, points: Int?, locationsToVisit: [Landmark]?, visitedLocations: [Landmark]?) {
-		self.firstName = firstName
-		self.lastName = lastName
-		self.email = email
-		self.id = id
-		self.profilePicture = profilePicture
-		self.points = 0
-		self.locationsToVisit = []
-		self.visitedLocations = []
+	func isProfilePicAsset() -> Bool {
+		if proPic != nil {
+			return true
+		}
+		return false
 	}
+	
 }
+
+class CurrentUser: User {
+	
+	// Creates static shared instance of current user
+	static let sharedInstance = CurrentUser()
+	
+	// Prevents others from using default '()' init
+	fileprivate override init() {}
+	
+	// Holds authorization Dictionary returned from FB upon login
+	var fbAuthDict: [String: Any]?
+	
+}
+
 
 
 

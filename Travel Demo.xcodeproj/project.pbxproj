@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191F3397223AD03B00BD7813 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F3396223AD03B00BD7813 /* CameraViewController.swift */; };
+		191F3399223ADFF700BD7813 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F3398223ADFF700BD7813 /* LandmarkViewController.swift */; };
 		193651842217710C000F54F8 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193651832217710C000F54F8 /* SideMenuTableViewCell.swift */; };
 		194024FD222B1816004FB30B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194024FC222B1816004FB30B /* FBSDKCoreKit.framework */; };
 		194024FF222B1816004FB30B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194024FE222B1816004FB30B /* FBSDKLoginKit.framework */; };
@@ -30,6 +32,8 @@
 		1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12A220ACDD700770F79 /* PersistencyManager.swift */; };
 		1977E12D220AD02600770F79 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12C220AD02600770F79 /* LibraryAPI.swift */; };
 		197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* HTTPClient.swift */; };
+		19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */; };
+		19E47C83223B3E1D00744CC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E47C82223B3E1D00744CC2 /* Constants.swift */; };
 		19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */; };
 		19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1307222306A930022186A /* DiscoverMenuTableViewCell.swift */; };
 		19F13075223087820022186A /* LandmarkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F13074223087820022186A /* LandmarkListTableViewCell.swift */; };
@@ -41,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		191F3396223AD03B00BD7813 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		191F3398223ADFF700BD7813 /* LandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
 		193651832217710C000F54F8 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		194024FC222B1816004FB30B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		194024FE222B1816004FB30B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +72,8 @@
 		1977E12A220ACDD700770F79 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		1977E12C220AD02600770F79 /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		197ABC40221629DC00A7E875 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
+		19E47C82223B3E1D00744CC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMenuTableViewController.swift; sourceTree = "<group>"; };
 		19F1307222306A930022186A /* DiscoverMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMenuTableViewCell.swift; sourceTree = "<group>"; };
 		19F13074223087820022186A /* LandmarkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,6 +103,7 @@
 		1905EB0622373D1700EF8088 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -214,6 +223,8 @@
 				1977E10E220AA0DB00770F79 /* MapViewController.swift */,
 				1940250A222DB3D0004FB30B /* UserProfileViewController.swift */,
 				19F8B18F222DD2E300B13787 /* TestViewController.swift */,
+				191F3396223AD03B00BD7813 /* CameraViewController.swift */,
+				191F3398223ADFF700BD7813 /* LandmarkViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				19F1307B223088DE0022186A /* SymbolKey */,
+				19E47C82223B3E1D00744CC2 /* Constants.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -384,8 +396,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E47C83223B3E1D00744CC2 /* Constants.swift in Sources */,
+				19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */,
 				1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */,
 				19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */,
+				191F3399223ADFF700BD7813 /* LandmarkViewController.swift in Sources */,
 				19F13075223087820022186A /* LandmarkListTableViewCell.swift in Sources */,
 				1977E10F220AA0DB00770F79 /* MapViewController.swift in Sources */,
 				1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */,
@@ -395,6 +410,7 @@
 				19402509222DAEE8004FB30B /* SideMenuTableViewController.swift in Sources */,
 				197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */,
 				19402507222B1CD1004FB30B /* User.swift in Sources */,
+				191F3397223AD03B00BD7813 /* CameraViewController.swift in Sources */,
 				19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */,
 				1940250D222DB8D1004FB30B /* FacebookAPIManger.swift in Sources */,
 				1977E122220AAAA500770F79 /* Landmark.swift in Sources */,

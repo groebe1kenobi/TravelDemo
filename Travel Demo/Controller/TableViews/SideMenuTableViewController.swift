@@ -21,6 +21,9 @@ class SideMenuTableViewController: UITableViewController {
 		
     }
 
+	override func viewWillAppear(_ animated: Bool) {
+		navigationController?.setNavigationBarHidden(false, animated: animated)
+	}
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,7 +73,7 @@ class SideMenuTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		switch indexPath.row {
 		case 0:
-			self.performSegue(withIdentifier: "menuToProfile", sender: nil)
+			self.performSegue(withIdentifier: "menuToProfile", sender: self)
 		case 1:
 			print("Nothing to do yet")
 		case 2:

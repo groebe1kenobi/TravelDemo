@@ -22,6 +22,9 @@ class DiscoverMenuTableViewController: UITableViewController {
 		tableView.dataSource = self
     }
 
+	override func viewWillAppear(_ animated: Bool) {
+		navigationController?.setNavigationBarHidden(false, animated: animated)
+	}
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
