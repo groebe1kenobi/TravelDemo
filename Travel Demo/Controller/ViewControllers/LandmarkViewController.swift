@@ -14,6 +14,7 @@ class LandmarkViewController: UIViewController {
 	@IBOutlet weak var descriptionTextView: UITextView!
 	@IBOutlet weak var tableView: UITableView!
 	
+	var landmark: Landmark?
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,10 @@ class LandmarkViewController: UIViewController {
     
 	override func viewWillAppear(_ animated: Bool) {
 		navigationController?.setNavigationBarHidden(false, animated: animated)
+		ImageService.getImage(withURL: (landmark?.imageUrl)!) { image in
+			self.landmarkImageView.image = image
+		}
+		
 	}
 	
 	@IBAction func addLandmarkButton(_ sender: Any) {

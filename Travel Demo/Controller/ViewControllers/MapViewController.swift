@@ -27,7 +27,8 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	let distanceOp = DistanceOperators()
 	let imagePicker = UIImagePickerController()
 	var imageToSend: UIImage?
-	
+	let yelp = CDYelpFusionKitManager()
+	var selectedLandmark: Landmark?
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		print("MAP VIEW TEST \(globalUser?.firstName ?? "Fail")")
@@ -42,7 +43,13 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 		
 		landmarks = LibraryAPI.shared.getLandmark()
 		
-		
+		CDYelpFusionKitManager.shared.apiClient.fetchBusiness(forId: "KbZ9cSMoAIsTWASs6m5mJw", locale: nil) { (data) in
+			if let data = data {
+				print(data.name!)
+			}
+			
+		}
+
 		
 		for mark in landmarks {
 			let distance = distanceOp.getDistance(mark.coordinate, initialLocation)
@@ -70,7 +77,6 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	}
 	
 	
-	
 	func centerMapOnLocation(location: CLLocation) {
 		let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
 												  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
@@ -91,6 +97,12 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 			if let destinationVC = segue.destination as? CameraViewController {
 				destinationVC.imageToShow = imageToSend
 				
+			}
+		}
+		
+		if (segue.identifier == "mapToLandmark") {
+			if let destinationVC = segue.destination as? LandmarkViewController {
+				destinationVC.landmark = selectedLandmark
 			}
 		}
 	}
@@ -118,7 +130,8 @@ extension MapViewController: MKMapViewDelegate {
 		let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] // currently driving directions
 		
 		if(control == view.leftCalloutAccessoryView) {
-			performSegue(withIdentifier: "mapTest", sender: nil)
+			selectedLandmark = location
+			self.performSegue(withIdentifier: "mapToLandmark", sender: nil)
 		} else if(control == view.rightCalloutAccessoryView) {
 			location.mapItem().openInMaps(launchOptions: launchOptions)
 		} else {

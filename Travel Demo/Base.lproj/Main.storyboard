@@ -445,10 +445,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG9-85-AbV">
                                 <rect key="frame" x="81" y="277" width="252" height="182"/>
                                 <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="182" id="fSs-lT-Xle"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="252" id="oug-JT-Wdb"/>
-                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="didTapFacebookLogin:" destination="NF7-yK-nGx" eventType="touchUpInside" id="HN6-Cm-RWO"/>
