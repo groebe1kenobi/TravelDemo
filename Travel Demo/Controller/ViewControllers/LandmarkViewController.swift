@@ -24,7 +24,7 @@ class LandmarkViewController: UIViewController {
     }
     
 	override func viewWillAppear(_ animated: Bool) {
-		navigationController?.setNavigationBarHidden(false, animated: animated)
+		navigationController?.setNavigationBarHidden(true, animated: animated)
 		ImageService.getImage(withURL: (landmark?.imageUrl)!) { image in
 			self.landmarkImageView.image = image
 		}

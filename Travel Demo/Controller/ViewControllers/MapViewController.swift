@@ -15,8 +15,7 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	@IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var sideMenuButton: UIButton!
 	@IBOutlet weak var cameraButton: UIButton!
-	@IBOutlet weak var buttonBackgroundView: UIView!
-	@IBOutlet weak var discoverButton: UIButton!
+
 	
 	
 	//var landmarks: [Landmark] = []
@@ -68,7 +67,7 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(true, animated: animated)
-		buttonBackgroundView.layer.cornerRadius = 10
+		
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
