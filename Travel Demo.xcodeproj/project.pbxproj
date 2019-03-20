@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191F3397223AD03B00BD7813 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F3396223AD03B00BD7813 /* CameraViewController.swift */; };
+		191F3399223ADFF700BD7813 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F3398223ADFF700BD7813 /* LandmarkViewController.swift */; };
 		193651842217710C000F54F8 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193651832217710C000F54F8 /* SideMenuTableViewCell.swift */; };
 		194024FD222B1816004FB30B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194024FC222B1816004FB30B /* FBSDKCoreKit.framework */; };
 		194024FF222B1816004FB30B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 194024FE222B1816004FB30B /* FBSDKLoginKit.framework */; };
@@ -18,6 +20,10 @@
 		19402511222DCC0F004FB30B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19402510222DCC0F004FB30B /* Login.storyboard */; };
 		19402513222DCC70004FB30B /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19402512222DCC70004FB30B /* StartViewController.swift */; };
 		19402515222DCC7D004FB30B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19402514222DCC7D004FB30B /* SignUpViewController.swift */; };
+		1950621B224007EB000A97C3 /* Yelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950621A224007EB000A97C3 /* Yelp.swift */; };
+		1950621F22400F9C000A97C3 /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950621E22400F9C000A97C3 /* YelpAPI.swift */; };
+		1950628B22414D0F000A97C3 /* Travel-Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1950628922414D0F000A97C3 /* Travel-Demo.xcdatamodeld */; };
+		1950628D2242BC6A000A97C3 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950628C2242BC6A000A97C3 /* CoreDataHelper.swift */; };
 		195F5BD2222B10FA001CF201 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F5BD1222B10FA001CF201 /* LoginViewController.swift */; };
 		1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E10C220AA0DB00770F79 /* AppDelegate.swift */; };
 		1977E10F220AA0DB00770F79 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E10E220AA0DB00770F79 /* MapViewController.swift */; };
@@ -30,6 +36,8 @@
 		1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12A220ACDD700770F79 /* PersistencyManager.swift */; };
 		1977E12D220AD02600770F79 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12C220AD02600770F79 /* LibraryAPI.swift */; };
 		197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* HTTPClient.swift */; };
+		19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */; };
+		19E47C83223B3E1D00744CC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E47C82223B3E1D00744CC2 /* Constants.swift */; };
 		19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */; };
 		19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1307222306A930022186A /* DiscoverMenuTableViewCell.swift */; };
 		19F13075223087820022186A /* LandmarkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F13074223087820022186A /* LandmarkListTableViewCell.swift */; };
@@ -41,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		191F3396223AD03B00BD7813 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		191F3398223ADFF700BD7813 /* LandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
 		193651832217710C000F54F8 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		194024FC222B1816004FB30B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		194024FE222B1816004FB30B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +62,10 @@
 		19402510222DCC0F004FB30B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Login.storyboard; path = "Travel Demo/Login.storyboard"; sourceTree = SOURCE_ROOT; };
 		19402512222DCC70004FB30B /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		19402514222DCC7D004FB30B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1950621A224007EB000A97C3 /* Yelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yelp.swift; sourceTree = "<group>"; };
+		1950621E22400F9C000A97C3 /* YelpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
+		1950628A22414D0F000A97C3 /* Travel Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Travel Demo.xcdatamodel"; sourceTree = "<group>"; };
+		1950628C2242BC6A000A97C3 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		195F5BD1222B10FA001CF201 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1977E109220AA0DB00770F79 /* Travel Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1977E10C220AA0DB00770F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +80,8 @@
 		1977E12A220ACDD700770F79 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		1977E12C220AD02600770F79 /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		197ABC40221629DC00A7E875 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
+		19E47C82223B3E1D00744CC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMenuTableViewController.swift; sourceTree = "<group>"; };
 		19F1307222306A930022186A /* DiscoverMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMenuTableViewCell.swift; sourceTree = "<group>"; };
 		19F13074223087820022186A /* LandmarkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListTableViewCell.swift; sourceTree = "<group>"; };
@@ -95,6 +111,7 @@
 		1905EB0622373D1700EF8088 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -145,6 +162,7 @@
 				1977E115220AA0DC00770F79 /* LaunchScreen.storyboard */,
 				1977E118220AA0DC00770F79 /* Info.plist */,
 				1977E113220AA0DC00770F79 /* Assets.xcassets */,
+				1950628922414D0F000A97C3 /* Travel-Demo.xcdatamodeld */,
 			);
 			path = "Travel Demo";
 			sourceTree = "<group>";
@@ -163,6 +181,7 @@
 			children = (
 				1977E121220AAAA500770F79 /* Landmark.swift */,
 				19402506222B1CD1004FB30B /* User.swift */,
+				1950621A224007EB000A97C3 /* Yelp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +201,8 @@
 				1977E12A220ACDD700770F79 /* PersistencyManager.swift */,
 				1977E12C220AD02600770F79 /* LibraryAPI.swift */,
 				197ABC40221629DC00A7E875 /* HTTPClient.swift */,
+				1950621E22400F9C000A97C3 /* YelpAPI.swift */,
+				1950628C2242BC6A000A97C3 /* CoreDataHelper.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -214,6 +235,8 @@
 				1977E10E220AA0DB00770F79 /* MapViewController.swift */,
 				1940250A222DB3D0004FB30B /* UserProfileViewController.swift */,
 				19F8B18F222DD2E300B13787 /* TestViewController.swift */,
+				191F3396223AD03B00BD7813 /* CameraViewController.swift */,
+				191F3398223ADFF700BD7813 /* LandmarkViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -222,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				19F1307B223088DE0022186A /* SymbolKey */,
+				19E47C82223B3E1D00744CC2 /* Constants.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -332,22 +356,30 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Travel Demo/Pods-Travel Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CDYelpFusionKit/CDYelpFusionKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDYelpFusionKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,8 +416,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E47C83223B3E1D00744CC2 /* Constants.swift in Sources */,
+				19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */,
+				1950628D2242BC6A000A97C3 /* CoreDataHelper.swift in Sources */,
 				1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */,
 				19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */,
+				191F3399223ADFF700BD7813 /* LandmarkViewController.swift in Sources */,
 				19F13075223087820022186A /* LandmarkListTableViewCell.swift in Sources */,
 				1977E10F220AA0DB00770F79 /* MapViewController.swift in Sources */,
 				1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */,
@@ -393,8 +429,12 @@
 				19F8B190222DD2E300B13787 /* TestViewController.swift in Sources */,
 				1977E124220AB5D300770F79 /* LandmarkViews.swift in Sources */,
 				19402509222DAEE8004FB30B /* SideMenuTableViewController.swift in Sources */,
+				1950621F22400F9C000A97C3 /* YelpAPI.swift in Sources */,
 				197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */,
+				1950621B224007EB000A97C3 /* Yelp.swift in Sources */,
+				1950628B22414D0F000A97C3 /* Travel-Demo.xcdatamodeld in Sources */,
 				19402507222B1CD1004FB30B /* User.swift in Sources */,
+				191F3397223AD03B00BD7813 /* CameraViewController.swift in Sources */,
 				19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */,
 				1940250D222DB8D1004FB30B /* FacebookAPIManger.swift in Sources */,
 				1977E122220AAAA500770F79 /* Landmark.swift in Sources */,
@@ -610,6 +650,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1950628922414D0F000A97C3 /* Travel-Demo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1950628A22414D0F000A97C3 /* Travel Demo.xcdatamodel */,
+			);
+			currentVersion = 1950628A22414D0F000A97C3 /* Travel Demo.xcdatamodel */;
+			path = "Travel-Demo.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1977E101220AA0DB00770F79 /* Project object */;
 }

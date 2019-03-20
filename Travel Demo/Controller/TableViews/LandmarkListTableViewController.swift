@@ -22,9 +22,12 @@ class LandmarkListTableViewController: UITableViewController {
 		
    
     }
+	
+	
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		navigationController?.setNavigationBarHidden(false, animated: animated)
 		for landmark in filteredLandmarks {
 			print(landmark.title!)
 		}
@@ -53,7 +56,7 @@ class LandmarkListTableViewController: UITableViewController {
 			cell.locationDistanceLabel.adjustsFontSizeToFitWidth = true
 			cell.locationLabel.text = filteredLandmarks[indexPath.row].title
 			cell.locationDistanceLabel.text = "\(distanceOperator.getDistance(filteredLandmarks[indexPath.row].coordinate, userLocation))"
-			ImageService.downloadImage(withURL: filteredLandmarks[indexPath.row].imageUrl) { image in
+			ImageService.getImage(withURL: filteredLandmarks[indexPath.row].imageUrl) { image in
 				//cell.locationImageView.image = image
 				cell.backgroundView = UIImageView(image: image)
 			}

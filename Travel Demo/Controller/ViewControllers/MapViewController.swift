@@ -10,11 +10,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
 	@IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var sideMenuButton: UIButton!
-	@IBOutlet weak var viewAllButton: UIButton!
+	@IBOutlet weak var cameraButton: UIButton!
 	@IBOutlet weak var buttonBackgroundView: UIView!
 	@IBOutlet weak var discoverButton: UIButton!
 	
@@ -25,9 +25,10 @@ class MapViewController: UIViewController {
 	private var landmarks = [Landmark]()
 	let regionRadius: CLLocationDistance = 1000
 	let distanceOp = DistanceOperators()
-
-
-	
+	let imagePicker = UIImagePickerController()
+	var imageToSend: UIImage?
+	let yelp = CDYelpFusionKitManager()
+	var selectedLandmark: Landmark?
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		print("MAP VIEW TEST \(globalUser?.firstName ?? "Fail")")
@@ -41,6 +42,13 @@ class MapViewController: UIViewController {
 						 forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 		
 		landmarks = LibraryAPI.shared.getLandmark()
+		
+		CDYelpFusionKitManager.shared.apiClient.fetchBusiness(forId: "KbZ9cSMoAIsTWASs6m5mJw", locale: nil) { (data) in
+			if let data = data {
+				print(data.name!)
+			}
+			
+		}
 
 		
 		for mark in landmarks {
@@ -65,9 +73,8 @@ class MapViewController: UIViewController {
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		navigationController?.setNavigationBarHidden(false, animated: animated)
+		//navigationController?.setNavigationBarHidden(false, animated: animated)
 	}
-	
 	
 	
 	func centerMapOnLocation(location: CLLocation) {
@@ -76,7 +83,39 @@ class MapViewController: UIViewController {
 		mapView.setRegion(coordinateRegion, animated: true)
 	}
 	
-	
+	@IBAction func openCameraButton(_ sender: UIButton) {
+		if UIImagePickerController.isSourceTypeAvailable(.camera) {
+			
+			imagePicker.delegate = self
+			imagePicker.sourceType = .camera
+			imagePicker.allowsEditing = false
+			self.present(imagePicker, animated: true, completion: nil)
+		}
+	}
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if (segue.identifier == "mapToCamera") {
+			if let destinationVC = segue.destination as? CameraViewController {
+				destinationVC.imageToShow = imageToSend
+				
+			}
+		}
+		
+		if (segue.identifier == "mapToLandmark") {
+			if let destinationVC = segue.destination as? LandmarkViewController {
+				destinationVC.landmark = selectedLandmark
+			}
+		}
+	}
+	func imagePickerController(_ picker: UIImagePickerController,
+							   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+		imagePicker.dismiss(animated: true, completion: nil)
+		guard let selectedImage = info[.originalImage] as? UIImage else {
+			fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+		}
+		imageToSend = selectedImage
+		self.performSegue(withIdentifier: "mapToCamera", sender: self)
+		//imageView.image = selectedImage
+	}
 	
 
 	
@@ -91,7 +130,8 @@ extension MapViewController: MKMapViewDelegate {
 		let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] // currently driving directions
 		
 		if(control == view.leftCalloutAccessoryView) {
-			performSegue(withIdentifier: "mapTest", sender: nil)
+			selectedLandmark = location
+			self.performSegue(withIdentifier: "mapToLandmark", sender: nil)
 		} else if(control == view.rightCalloutAccessoryView) {
 			location.mapItem().openInMaps(launchOptions: launchOptions)
 		} else {

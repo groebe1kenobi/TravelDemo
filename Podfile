@@ -9,6 +9,7 @@ target 'Travel Demo' do
 	pod 'SideMenu'
 	pod 'FacebookCore'
 	pod 'FacebookLogin'
+	pod 'CDYelpFusionKit', '1.5.1'
   # Pods for Travel Demo
 
 end
