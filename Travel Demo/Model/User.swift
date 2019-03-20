@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class User {
 	
 	var firstName: String?
@@ -17,7 +17,8 @@ class User {
 	var fbProPicURL: String?
 	var fbAccessToken: String?
 	var points: Int?
-	var locationsToVisit: [Landmark]?
+	var savedLandmarks: [Landmark]?
+	var cdLandmarks: [NSManagedObject] = []
 	var visitedLocations: [Landmark]?
 	var proPic: UIImage?
 	var wasPrevLoggedIn: Bool = false

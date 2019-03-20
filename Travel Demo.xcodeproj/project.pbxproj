@@ -22,6 +22,8 @@
 		19402515222DCC7D004FB30B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19402514222DCC7D004FB30B /* SignUpViewController.swift */; };
 		1950621B224007EB000A97C3 /* Yelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950621A224007EB000A97C3 /* Yelp.swift */; };
 		1950621F22400F9C000A97C3 /* YelpAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950621E22400F9C000A97C3 /* YelpAPI.swift */; };
+		1950628B22414D0F000A97C3 /* Travel-Demo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1950628922414D0F000A97C3 /* Travel-Demo.xcdatamodeld */; };
+		1950628D2242BC6A000A97C3 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950628C2242BC6A000A97C3 /* CoreDataHelper.swift */; };
 		195F5BD2222B10FA001CF201 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F5BD1222B10FA001CF201 /* LoginViewController.swift */; };
 		1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E10C220AA0DB00770F79 /* AppDelegate.swift */; };
 		1977E10F220AA0DB00770F79 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E10E220AA0DB00770F79 /* MapViewController.swift */; };
@@ -62,6 +64,8 @@
 		19402514222DCC7D004FB30B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1950621A224007EB000A97C3 /* Yelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yelp.swift; sourceTree = "<group>"; };
 		1950621E22400F9C000A97C3 /* YelpAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpAPI.swift; sourceTree = "<group>"; };
+		1950628A22414D0F000A97C3 /* Travel Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Travel Demo.xcdatamodel"; sourceTree = "<group>"; };
+		1950628C2242BC6A000A97C3 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		195F5BD1222B10FA001CF201 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1977E109220AA0DB00770F79 /* Travel Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1977E10C220AA0DB00770F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 				1977E115220AA0DC00770F79 /* LaunchScreen.storyboard */,
 				1977E118220AA0DC00770F79 /* Info.plist */,
 				1977E113220AA0DC00770F79 /* Assets.xcassets */,
+				1950628922414D0F000A97C3 /* Travel-Demo.xcdatamodeld */,
 			);
 			path = "Travel Demo";
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				1977E12C220AD02600770F79 /* LibraryAPI.swift */,
 				197ABC40221629DC00A7E875 /* HTTPClient.swift */,
 				1950621E22400F9C000A97C3 /* YelpAPI.swift */,
+				1950628C2242BC6A000A97C3 /* CoreDataHelper.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 			files = (
 				19E47C83223B3E1D00744CC2 /* Constants.swift in Sources */,
 				19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */,
+				1950628D2242BC6A000A97C3 /* CoreDataHelper.swift in Sources */,
 				1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */,
 				19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */,
 				191F3399223ADFF700BD7813 /* LandmarkViewController.swift in Sources */,
@@ -425,6 +432,7 @@
 				1950621F22400F9C000A97C3 /* YelpAPI.swift in Sources */,
 				197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */,
 				1950621B224007EB000A97C3 /* Yelp.swift in Sources */,
+				1950628B22414D0F000A97C3 /* Travel-Demo.xcdatamodeld in Sources */,
 				19402507222B1CD1004FB30B /* User.swift in Sources */,
 				191F3397223AD03B00BD7813 /* CameraViewController.swift in Sources */,
 				19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */,
@@ -642,6 +650,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1950628922414D0F000A97C3 /* Travel-Demo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1950628A22414D0F000A97C3 /* Travel Demo.xcdatamodel */,
+			);
+			currentVersion = 1950628A22414D0F000A97C3 /* Travel Demo.xcdatamodel */;
+			path = "Travel-Demo.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1977E101220AA0DB00770F79 /* Project object */;
 }

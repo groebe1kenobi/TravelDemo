@@ -9,24 +9,15 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
-//import FirebaseAuth
 
 class TestViewController: UIViewController {
-//	func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-//		switch result {
-//		case .success:
-//			didLoginWithFacebook()
-//
-//		case .failed(_): break
-//
-//		default: break
-//		}
-//	}
+
 	
 	func loginButtonDidLogOut(_ loginButton: LoginButton) {
 		print("Not much to do here")
 	}
 	
+//	let cdHelper = CoreDataHelper()
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
@@ -37,17 +28,12 @@ class TestViewController: UIViewController {
 			currentUser.wasPrevLoggedIn = true
 			defaults.getUserDefaults()
 			
+			cdHelper.fetch()
+			
+			
 			self.performSegue(withIdentifier: "splashToMap", sender: self)
 		}
-		//else {
-			
-//			print("FB NOT LOGGED IN")
-////			fbLoginButton.delegate = self
-////			fbLoginButton.frame.size = CGSize(width: self.view.frame.size.width, height: 64)
-////			fbLoginButton.center = CGPoint(x: self.view.center.x, y: self.view.frame.size.height - fbLoginButton.frame.size.height / 2 - 64)
-////			view.addSubview(fbLoginButton)
-//
-//		}
+
 	}
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
