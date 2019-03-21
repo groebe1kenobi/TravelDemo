@@ -83,5 +83,7 @@ class Landmark:  NSObject, MKAnnotation, Codable {
 		if type == "Nature" {return "nature"}
 		return "skiMask"
 	}
+	
+	
 
 }

@@ -11,12 +11,13 @@ import UIKit
 
 final class PersistencyManager {
 	private var landmarks =  [Landmark]()
+	private var userLandmarks = [Landmark]()
 	
 	init() {
 		//let savedURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("LocInfo.json")
-		let savedURL = documents.appendingPathComponent("LocInfo.json")
+		let savedURL = documents.appendingPathComponent(Filenames.AllLandmarks)
 		var data = try? Data(contentsOf: savedURL)
-		if data == nil, let bundleURL = Bundle.main.url(forResource: "LocInfo.json", withExtension: nil) {
+		if data == nil, let bundleURL = Bundle.main.url(forResource: Filenames.AllLandmarks, withExtension: nil) {
 			data = try? Data(contentsOf: bundleURL)
 		}
 		
@@ -25,10 +26,30 @@ final class PersistencyManager {
 			landmarks = decodedLandmark
 			saveLandmarks()
 		}
+		
+		let userSavedUrl = documents.appendingPathComponent(Filenames.UserLandmarks)
+		var userData = try? Data(contentsOf: userSavedUrl)
+		if userData == nil, let bundleURL2 = Bundle.main.url(forResource: Filenames.UserLandmarks, withExtension: nil) {
+			userData = try? Data(contentsOf: bundleURL2)
+		}
+		
+		if let userLandmarkData = userData,
+			let decodedUserLandmrks = try? JSONDecoder().decode([Landmark].self, from: userLandmarkData) {
+			userLandmarks = decodedUserLandmrks
+			saveMyLandmarks()
+		}
 	}
 	
 	func getLandmark() -> [Landmark] {
 		return landmarks
+	}
+	
+	func getSavedLandmarks() -> [Landmark] {
+		return userLandmarks
+	}
+	
+	func addLandmarkToSave(_ landmark: Landmark) {
+		userLandmarks.append(landmark)
 	}
 
 	func addLandmark(_ landmark: Landmark, at index: Int) {
@@ -42,6 +63,10 @@ final class PersistencyManager {
 	func deleteLandmark(at index: Int) {
 		landmarks.remove(at: index)
 	}
+	
+	
+	
+	
 	
 	// returns URL of the cache directory, where u store files to re-download
 	private var cache: URL {
@@ -65,7 +90,10 @@ final class PersistencyManager {
 	}
 	
 	
-	
+	private enum Filenames {
+		static let AllLandmarks = "LocInfo.json"
+		static let UserLandmarks = "userLoc.json"
+	}
 	
 	/// defining URL where file is saved
 	private var documents: URL {
@@ -74,12 +102,23 @@ final class PersistencyManager {
 
 	func saveLandmarks() {
 		//let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("LocInfo.json")
-		let url = documents.appendingPathComponent("LocInfo.json")
+		let url = documents.appendingPathComponent(Filenames.AllLandmarks)
 		let encoder = JSONEncoder()
 		guard let encodedData = try? encoder.encode(landmarks) else {
 			print(" Couldn't return")
 			return
 		}
+		try? encodedData.write(to: url)
+	}
+	
+	func saveMyLandmarks() {
+		let url = documents.appendingPathComponent(Filenames.UserLandmarks)
+		let encoder = JSONEncoder()
+		guard let encodedData = try? encoder.encode(userLandmarks) else {
+			print("Couldn't encode User Landmarks")
+			return
+		}
+		
 		try? encodedData.write(to: url)
 	}
 }

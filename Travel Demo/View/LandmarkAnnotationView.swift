@@ -8,32 +8,7 @@
 
 import MapKit
 
-class LandmarkMarkerView: MKMarkerAnnotationView {
-	override var annotation: MKAnnotation? {
-		willSet {
-			
-			
-			// Configures Callout like mapView(_:viewFor:)
-			guard let landmark = newValue as? Landmark else {return}
-			canShowCallout = true
-			calloutOffset = CGPoint(x: -5, y: 5)
-			rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-			
-			// Set marker's tint color, replace pin icon (glyph) w/ first letter of annotation type
-			markerTintColor = landmark.markerTintColor
-			
-			if let imageName = landmark.imageName {
-				glyphImage = UIImage(named: imageName)
-				
-			} else {
-				glyphImage = nil
-			}
-		}
-	}
-}
-
-
-class ArtworkView: MKAnnotationView {
+class LandmarkAnnotationView: MKAnnotationView {
 	override var annotation: MKAnnotation? {
 		willSet {
 			guard let artwork = newValue as? Landmark else {return}

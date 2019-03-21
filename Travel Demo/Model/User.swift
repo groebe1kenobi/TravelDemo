@@ -50,8 +50,18 @@ class CurrentUser: User {
 	// Holds authorization Dictionary returned from FB upon login
 	var fbAuthDict: [String: Any]?
 	
+	
+	
 }
 
 
-
+extension User {
+	func addLandmark(_ landmark: Landmark) {
+		guard !(savedLandmarks?.contains(landmark))! else {
+			return
+		}
+		
+		savedLandmarks?.append(landmark)
+	}
+}
 

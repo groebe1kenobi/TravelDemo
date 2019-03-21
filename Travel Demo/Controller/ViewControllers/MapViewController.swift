@@ -15,8 +15,7 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	@IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var sideMenuButton: UIButton!
 	@IBOutlet weak var cameraButton: UIButton!
-	@IBOutlet weak var buttonBackgroundView: UIView!
-	@IBOutlet weak var discoverButton: UIButton!
+
 	
 	
 	//var landmarks: [Landmark] = []
@@ -29,16 +28,20 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	var imageToSend: UIImage?
 	let yelp = CDYelpFusionKitManager()
 	var selectedLandmark: Landmark?
+	
+	
 	override func viewDidLoad() {
+		
 		super.viewDidLoad()
-		print("MAP VIEW TEST \(globalUser?.firstName ?? "Fail")")
+		
+		//let tabBar = tabBarController as! GlobalTabBarController
 		// set initial location in Wriglwy
 		let initialLocation = CLLocation(latitude: 41.787663516, longitude: -87.576331028 )
 		
 		centerMapOnLocation(location: initialLocation)
 		mapView.delegate = self
 		
-		mapView.register(ArtworkView.self,
+		mapView.register(LandmarkAnnotationView.self,
 						 forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 		
 		landmarks = LibraryAPI.shared.getLandmark()
@@ -68,7 +71,7 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(true, animated: animated)
-		buttonBackgroundView.layer.cornerRadius = 10
+		
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {

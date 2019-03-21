@@ -16,6 +16,7 @@ class LandmarkViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 	
 	var landmark: Landmark?
+	
 	//let cdHelper = CoreDataHelper()
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +26,18 @@ class LandmarkViewController: UIViewController {
     
 	override func viewWillAppear(_ animated: Bool) {
 		navigationController?.setNavigationBarHidden(false, animated: animated)
+	
 		ImageService.getImage(withURL: (landmark?.imageUrl)!) { image in
 			self.landmarkImageView.image = image
 		}
 		
 	}
 	
+	override func viewWillDisappear(_ animated: Bool) {
+		
+	}
+	
 	@IBAction func addLandmarkButton(_ sender: Any) {
-		//currentUser.savedLandmarks?.append(landmark!)
 		
 		let alert = UIAlertController(title: "New Landmark", message: "Add Landmark to your list", preferredStyle: .alert)
 		let addAction = UIAlertAction(title: "Add", style: .default) {
@@ -41,18 +46,23 @@ class LandmarkViewController: UIViewController {
 				return
 			}
 			
-			currentUser.savedLandmarks?.append(landmarkToAdd)
-		
+			//currentUser.savedLandmarks?.append(landmarkToAdd)
+			LibraryAPI.shared.addLandmarkToSave(landmarkToAdd)
 			//cdHelper.save(landmarkToAdd)
 			print("Added: \(landmarkToAdd)")
 			//currentUser.locationsToVisit?.append(landmarkToAdd)
+			
 		}
+		
+		
 		
 		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
 		
 		alert.addAction(addAction)
 		alert.addAction(cancelAction)
 		present(alert, animated: true)
+		
+		
 		
 		print("Landmark \((landmark?.title)!) added to visited array")
 	}
