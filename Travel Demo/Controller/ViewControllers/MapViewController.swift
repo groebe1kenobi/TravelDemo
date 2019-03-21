@@ -28,16 +28,20 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	var imageToSend: UIImage?
 	let yelp = CDYelpFusionKitManager()
 	var selectedLandmark: Landmark?
+	
+	
 	override func viewDidLoad() {
+		
 		super.viewDidLoad()
-		print("MAP VIEW TEST \(globalUser?.firstName ?? "Fail")")
+		
+		//let tabBar = tabBarController as! GlobalTabBarController
 		// set initial location in Wriglwy
 		let initialLocation = CLLocation(latitude: 41.787663516, longitude: -87.576331028 )
 		
 		centerMapOnLocation(location: initialLocation)
 		mapView.delegate = self
 		
-		mapView.register(ArtworkView.self,
+		mapView.register(LandmarkAnnotationView.self,
 						 forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 		
 		landmarks = LibraryAPI.shared.getLandmark()

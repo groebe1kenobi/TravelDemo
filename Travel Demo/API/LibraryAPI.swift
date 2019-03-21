@@ -22,6 +22,19 @@ final class LibraryAPI {
 		return persistencyManager.getLandmark()
 	}
 	
+	func getSavedLandmarks() -> [Landmark] {
+		return persistencyManager.getSavedLandmarks()
+	}
+	
+	func addLandmarkToSave(_ landmark: Landmark) {
+		persistencyManager.addLandmarkToSave(landmark)
+	}
+	
+	func saveMyLandmarks() {
+		persistencyManager.saveMyLandmarks()
+	}
+	
+	
 	@objc func downloadImage(with notification: Notification) {
 		
 		guard let userInfo = notification.userInfo,
