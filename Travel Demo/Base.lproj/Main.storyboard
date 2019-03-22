@@ -18,11 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-rX-ZBe">
+                                <rect key="frame" x="0.0" y="71" width="414" height="616"/>
+                            </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWn-A6-GV4" userLabel="Top Bar View">
-                                <rect key="frame" x="0.0" y="20" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvl-j5-7TY">
-                                        <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
+                                        <rect key="frame" x="0.0" y="20" width="51" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="width" priority="750" constant="51" id="1vj-ts-FeE"/>
                                         </constraints>
@@ -32,7 +35,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsX-MZ-MvZ">
-                                        <rect key="frame" x="359" y="0.0" width="55" height="51"/>
+                                        <rect key="frame" x="351" y="20" width="55" height="51"/>
                                         <state key="normal" image="camera"/>
                                         <connections>
                                             <action selector="openCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QwW-LQ-fEI"/>
@@ -44,24 +47,21 @@
                                 <constraints>
                                     <constraint firstItem="Xvl-j5-7TY" firstAttribute="leading" secondItem="ZWn-A6-GV4" secondAttribute="leading" id="3b9-IW-USM"/>
                                     <constraint firstItem="Xvl-j5-7TY" firstAttribute="top" secondItem="QsX-MZ-MvZ" secondAttribute="top" id="AXC-SX-lzX"/>
-                                    <constraint firstAttribute="trailing" secondItem="QsX-MZ-MvZ" secondAttribute="trailing" id="DYR-NU-6yy"/>
-                                    <constraint firstItem="QsX-MZ-MvZ" firstAttribute="height" secondItem="ZWn-A6-GV4" secondAttribute="height" id="FIp-Wl-F9y"/>
-                                    <constraint firstAttribute="height" constant="51" id="JlG-vd-gHQ"/>
-                                    <constraint firstItem="QsX-MZ-MvZ" firstAttribute="leading" secondItem="Xvl-j5-7TY" secondAttribute="trailing" constant="308" id="MaW-Zz-L5g"/>
+                                    <constraint firstAttribute="trailing" secondItem="QsX-MZ-MvZ" secondAttribute="trailing" constant="8" id="DYR-NU-6yy"/>
+                                    <constraint firstItem="QsX-MZ-MvZ" firstAttribute="height" secondItem="ZWn-A6-GV4" secondAttribute="height" constant="-20" id="FIp-Wl-F9y"/>
+                                    <constraint firstAttribute="height" constant="71" id="JlG-vd-gHQ"/>
+                                    <constraint firstItem="QsX-MZ-MvZ" firstAttribute="leading" secondItem="Xvl-j5-7TY" secondAttribute="trailing" constant="300" id="MaW-Zz-L5g"/>
                                     <constraint firstAttribute="bottom" secondItem="QsX-MZ-MvZ" secondAttribute="bottom" id="Psj-m4-uif"/>
-                                    <constraint firstItem="QsX-MZ-MvZ" firstAttribute="top" secondItem="ZWn-A6-GV4" secondAttribute="top" id="ZZI-vj-h2Z"/>
-                                    <constraint firstItem="Xvl-j5-7TY" firstAttribute="height" secondItem="ZWn-A6-GV4" secondAttribute="height" id="o0f-TL-Ivb"/>
+                                    <constraint firstItem="QsX-MZ-MvZ" firstAttribute="top" secondItem="ZWn-A6-GV4" secondAttribute="top" constant="20" id="ZZI-vj-h2Z"/>
+                                    <constraint firstItem="Xvl-j5-7TY" firstAttribute="height" secondItem="ZWn-A6-GV4" secondAttribute="height" constant="-20" id="o0f-TL-Ivb"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-rX-ZBe">
-                                <rect key="frame" x="0.0" y="71" width="414" height="616"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ZWn-A6-GV4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BhM-Gf-PRX"/>
                             <constraint firstItem="jfA-rX-ZBe" firstAttribute="top" secondItem="ZWn-A6-GV4" secondAttribute="bottom" id="ELr-0N-wDb"/>
-                            <constraint firstItem="ZWn-A6-GV4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="K9h-pZ-e9c"/>
+                            <constraint firstItem="ZWn-A6-GV4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="K9h-pZ-e9c"/>
                             <constraint firstItem="jfA-rX-ZBe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="apr-DR-oPu"/>
                             <constraint firstItem="ZWn-A6-GV4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b96-Jt-PVS"/>
                             <constraint firstItem="jfA-rX-ZBe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bMX-jW-36E"/>
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299" y="1826"/>
+            <point key="canvasLocation" x="298.55072463768118" y="1825.271739130435"/>
         </scene>
         <!--Title-->
         <scene sceneID="pis-Nd-cFv">
@@ -531,6 +531,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="0.46666666666666667" green="0.28235294117647058" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.94509803921568625" green="0.67843137254901964" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="Y7A-gA-dne" kind="relationship" relationship="viewControllers" id="LYs-mL-aUv"/>
@@ -546,7 +551,9 @@
         <scene sceneID="jwm-ZP-65O">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y7A-gA-dne" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="oVa-nM-zVE"/>
+                    <tabBarItem key="tabBarItem" image="homeIcon" id="oVa-nM-zVE">
+                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-10"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Z1-PN-xnE">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -608,6 +615,7 @@
     <resources>
         <image name="CityScout_Logo1" width="375" height="375"/>
         <image name="camera" width="45" height="45"/>
+        <image name="homeIcon" width="45" height="45"/>
         <image name="magnifying-glass" width="39" height="39"/>
         <image name="rightArrow" width="45" height="45"/>
         <image name="sideMenu" width="37.5" height="37.5"/>

@@ -16,6 +16,7 @@ final class LibraryAPI {
 	
 	private let persistencyManager = PersistencyManager()
 	private let httpClient = HTTPClient()
+	private let imageService = ImageService()
 	private let isOnline = false // determines if server should be updated with changes
 	
 	func getLandmark() -> [Landmark] {

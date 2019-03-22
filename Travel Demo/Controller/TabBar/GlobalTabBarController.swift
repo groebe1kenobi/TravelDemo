@@ -18,8 +18,9 @@ class GlobalTabBarController: UITabBarController {
 		tabBar.barTintColor = my.purple
 		tabBar.isTranslucent = false
 		
+		//tabBar.selectedItem?.badgeColor = my.orange
 		tabBar.unselectedItemTintColor = my.lightOrange
-		tabBar.selectedItem?.badgeColor = my.orange
+		
 		
 		
         // Do any additional setup after loading the view.
