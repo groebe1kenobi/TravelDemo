@@ -15,18 +15,22 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	@IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var sideMenuButton: UIButton!
 	@IBOutlet weak var cameraButton: UIButton!
+	@IBOutlet weak var tobBarView: UIView!
+	
+	
+	
 
-	
-	
-	//var landmarks: [Landmark] = []
-	private var currLandmarkIndex = 0
-	private var currLandmarkData: [Landmark]?
 	private var landmarks = [Landmark]()
+	
 	let regionRadius: CLLocationDistance = 1000
 	let distanceOp = DistanceOperators()
+	let my = MyColors()
+	let initialLocation = CLLocation(latitude: 41.787663516, longitude: -87.576331028 )
 	let imagePicker = UIImagePickerController()
-	var imageToSend: UIImage?
 	let yelp = CDYelpFusionKitManager()
+	
+	var imageToSend: UIImage?
+	
 	var selectedLandmark: Landmark?
 	
 	
@@ -34,38 +38,18 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 		
 		super.viewDidLoad()
 		
-		//let tabBar = tabBarController as! GlobalTabBarController
-		// set initial location in Wriglwy
-		let initialLocation = CLLocation(latitude: 41.787663516, longitude: -87.576331028 )
+		tobBarView.backgroundColor = my.purple
+	
+		
 		
 		centerMapOnLocation(location: initialLocation)
 		mapView.delegate = self
-		
 		mapView.register(LandmarkAnnotationView.self,
 						 forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 		
 		landmarks = LibraryAPI.shared.getLandmark()
+		placeAnnotations()
 		
-		CDYelpFusionKitManager.shared.apiClient.fetchBusiness(forId: "KbZ9cSMoAIsTWASs6m5mJw", locale: nil) { (data) in
-			if let data = data {
-				print(data.name!)
-			}
-			
-		}
-
-		
-		for mark in landmarks {
-			let distance = distanceOp.getDistance(mark.coordinate, initialLocation)
-			DispatchQueue.main.async {
-				self.mapView.addAnnotation(mark)
-				
-				self.mapView.reloadInputViews()
-				//print("\(mark.title ?? "")")
-				
-				print("\(mark.title ?? "MIssing location") is aprox: \(distance) away from you!")
-			
-			}
-		}
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -99,7 +83,6 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 		if (segue.identifier == "mapToCamera") {
 			if let destinationVC = segue.destination as? CameraViewController {
 				destinationVC.imageToShow = imageToSend
-				
 			}
 		}
 		
@@ -109,6 +92,7 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 			}
 		}
 	}
+	
 	func imagePickerController(_ picker: UIImagePickerController,
 							   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		imagePicker.dismiss(animated: true, completion: nil)
@@ -117,7 +101,7 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 		}
 		imageToSend = selectedImage
 		self.performSegue(withIdentifier: "mapToCamera", sender: self)
-		//imageView.image = selectedImage
+		
 	}
 	
 
@@ -143,6 +127,23 @@ extension MapViewController: MKMapViewDelegate {
 		
 	}
 	
+}
+
+extension MapViewController {
+	func placeAnnotations() {
+		for mark in landmarks {
+			let distance = distanceOp.getDistance(mark.coordinate, initialLocation)
+			DispatchQueue.main.async {
+				self.mapView.addAnnotation(mark)
+				
+				self.mapView.reloadInputViews()
+				//print("\(mark.title ?? "")")
+				
+				print("\(mark.title ?? "MIssing location") is aprox: \(distance) away from you!")
+				
+			}
+		}
+	}
 }
 
 class DistanceOperators {

@@ -40,6 +40,8 @@
 		1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12A220ACDD700770F79 /* PersistencyManager.swift */; };
 		1977E12D220AD02600770F79 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12C220AD02600770F79 /* LibraryAPI.swift */; };
 		197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* HTTPClient.swift */; };
+		19DB16FC22446C62008A15DD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB16FB22446C62008A15DD /* SplashViewController.swift */; };
+		19DB16FE22446E11008A15DD /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB16FD22446E11008A15DD /* MyColors.swift */; };
 		19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */; };
 		19E47C83223B3E1D00744CC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E47C82223B3E1D00744CC2 /* Constants.swift */; };
 		19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */; };
@@ -100,6 +102,8 @@
 		1977E12A220ACDD700770F79 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		1977E12C220AD02600770F79 /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		197ABC40221629DC00A7E875 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		19DB16FB22446C62008A15DD /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		19DB16FD22446E11008A15DD /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
 		19E47C82223B3E1D00744CC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 				19F8B18F222DD2E300B13787 /* TestViewController.swift */,
 				191F3396223AD03B00BD7813 /* CameraViewController.swift */,
 				191F3398223ADFF700BD7813 /* LandmarkViewController.swift */,
+				19DB16FB22446C62008A15DD /* SplashViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			children = (
 				19F1307B223088DE0022186A /* SymbolKey */,
 				19E47C82223B3E1D00744CC2 /* Constants.swift */,
+				19DB16FD22446E11008A15DD /* MyColors.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -510,6 +516,7 @@
 				1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */,
 				19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */,
 				191F3399223ADFF700BD7813 /* LandmarkViewController.swift in Sources */,
+				19DB16FE22446E11008A15DD /* MyColors.swift in Sources */,
 				195062A02242FD80000A97C3 /* GlobalTabBarController.swift in Sources */,
 				19F13075223087820022186A /* LandmarkListTableViewCell.swift in Sources */,
 				195062A22242FF53000A97C3 /* State.swift in Sources */,
@@ -524,6 +531,7 @@
 				1950621B224007EB000A97C3 /* Yelp.swift in Sources */,
 				1950628B22414D0F000A97C3 /* Travel-Demo.xcdatamodeld in Sources */,
 				19402507222B1CD1004FB30B /* User.swift in Sources */,
+				19DB16FC22446C62008A15DD /* SplashViewController.swift in Sources */,
 				191F3397223AD03B00BD7813 /* CameraViewController.swift in Sources */,
 				19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */,
 				1940250D222DB8D1004FB30B /* FacebookAPIManger.swift in Sources */,

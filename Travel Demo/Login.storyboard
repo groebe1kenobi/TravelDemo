@@ -209,6 +209,36 @@
             </objects>
             <point key="canvasLocation" x="2613" y="-24"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="0pi-K8-Hoa">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="c9Z-Iu-CCw" customClass="TestViewController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dIE-oa-ap4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-bj-hb4">
+                                <rect key="frame" x="119" y="288" width="136" height="91"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapFacebookLogin:" destination="c9Z-Iu-CCw" eventType="touchUpInside" id="UDP-6H-cEj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RMM-Kp-qLT" firstAttribute="bottom" secondItem="cdj-bj-hb4" secondAttribute="bottom" constant="288" id="GZi-d2-lGs"/>
+                            <constraint firstItem="RMM-Kp-qLT" firstAttribute="trailing" secondItem="cdj-bj-hb4" secondAttribute="trailing" constant="120" id="akh-WS-U7n"/>
+                            <constraint firstItem="cdj-bj-hb4" firstAttribute="top" secondItem="RMM-Kp-qLT" secondAttribute="top" constant="268" id="bf6-t8-JPO"/>
+                            <constraint firstItem="cdj-bj-hb4" firstAttribute="leading" secondItem="RMM-Kp-qLT" secondAttribute="leading" constant="119" id="uLt-dN-iAr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RMM-Kp-qLT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djw-Fg-8ve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="1160"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="YJr-wd-tli">
             <objects>

@@ -14,6 +14,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	
 	@IBOutlet weak var savePhotoButton: UIButton!
 	
+	let my = MyColors()
+	
 	var imageToShow: UIImage?
 	let imagePicker = UIImagePickerController()
 	var firstLoad: Bool = false
@@ -22,11 +24,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
         // Do any additional setup after loading the view.
 		
-		retakeButton.backgroundColor = myBlue
-		retakeButton.setTitleColor(myPurple, for: .normal)
+		retakeButton.backgroundColor = my.blue
+		retakeButton.setTitleColor(my.purple, for: .normal)
 		
-		savePhotoButton.backgroundColor = myBlue
-		savePhotoButton.setTitleColor(myPink, for: .normal)
+		savePhotoButton.backgroundColor = my.blue
+		savePhotoButton.setTitleColor(my.pink, for: .normal)
 		
     }
 	

@@ -10,13 +10,16 @@ import UIKit
 
 class GlobalTabBarController: UITabBarController {
 	
-	 
-
+	let my = MyColors()
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		tabBar.barTintColor = myBlue
+		tabBar.barTintColor = my.purple
 		tabBar.isTranslucent = false
+		
+		tabBar.unselectedItemTintColor = my.lightOrange
+		tabBar.selectedItem?.badgeColor = my.orange
 		
 		
         // Do any additional setup after loading the view.

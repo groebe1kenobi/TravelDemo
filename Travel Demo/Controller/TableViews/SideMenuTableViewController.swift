@@ -10,6 +10,8 @@ import UIKit
 import SideMenu
 
 class SideMenuTableViewController: UITableViewController {
+	
+	let my = MyColors()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,22 +48,22 @@ class SideMenuTableViewController: UITableViewController {
 		case 0:
 			cell.optionLabel.text = "User Profile"
 			cell.iconImageView.image = UIImage(named: "userIcon")
-			cell.backgroundColor = myBlue
+			cell.backgroundColor = my.blue
 			
 			
 		case 1:
 			cell.optionLabel.text = "Settings"
 			cell.iconImageView.image = UIImage(named: "settings")
-			cell.backgroundColor = myPink
+			cell.backgroundColor = my.pink
 			
 		case 2:
 			cell.optionLabel.text = "About Us"
-			cell.backgroundColor = myPurple
+			cell.backgroundColor = my.purple
 			cell.iconImageView.image = UIImage(named: "about")
 
 		case 3:
 			cell.optionLabel.text = "Terms & Conditions"
-			cell.backgroundColor = myOrange
+			cell.backgroundColor = my.orange
 			cell.iconImageView.image = UIImage(named: "tos")
 
 		default:

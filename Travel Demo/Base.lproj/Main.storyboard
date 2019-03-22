@@ -75,6 +75,7 @@
                         <outlet property="cameraButton" destination="QsX-MZ-MvZ" id="lrz-vN-T7O"/>
                         <outlet property="mapView" destination="jfA-rX-ZBe" id="8af-hu-JiP"/>
                         <outlet property="sideMenuButton" destination="Xvl-j5-7TY" id="4eK-W3-T3s"/>
+                        <outlet property="tobBarView" destination="ZWn-A6-GV4" id="mhK-5P-0IE"/>
                         <segue destination="Guz-Pu-mXA" kind="show" identifier="mapToCamera" id="hj8-UB-4AR"/>
                         <segue destination="cZJ-18-rUL" kind="show" identifier="mapToLandmark" id="CFC-9t-1aI"/>
                     </connections>
@@ -389,30 +390,20 @@
             </objects>
             <point key="canvasLocation" x="4716" y="2420"/>
         </scene>
-        <!--Test View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="ZXK-7P-1fn">
             <objects>
-                <viewController id="NF7-yK-nGx" customClass="TestViewController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NF7-yK-nGx" customClass="SplashViewController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="saY-I7-8XK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG9-85-AbV">
-                                <rect key="frame" x="81" y="233" width="252" height="226"/>
-                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="didTapFacebookLogin:" destination="NF7-yK-nGx" eventType="touchUpInside" id="HN6-Cm-RWO"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CityScout_Logo1" translatesAutoresizingMaskIntoConstraints="NO" id="0Ae-n1-R3G">
+                                <rect key="frame" x="50" y="232" width="315" height="273"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="zG9-85-AbV" firstAttribute="leading" secondItem="QIX-DU-joE" secondAttribute="leading" constant="81" id="5Qx-ol-YVt"/>
-                            <constraint firstItem="zG9-85-AbV" firstAttribute="top" secondItem="QIX-DU-joE" secondAttribute="top" constant="213" id="Pca-jr-0Ce"/>
-                            <constraint firstItem="QIX-DU-joE" firstAttribute="bottom" secondItem="zG9-85-AbV" secondAttribute="bottom" constant="277" id="Sd0-Ak-Lwn"/>
-                            <constraint firstItem="QIX-DU-joE" firstAttribute="trailing" secondItem="zG9-85-AbV" secondAttribute="trailing" constant="81" id="hDh-6t-Krv"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QIX-DU-joE"/>
                     </view>
                     <navigationItem key="navigationItem" id="baD-af-dqf"/>
@@ -422,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYI-Be-HUk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1383" y="121"/>
+            <point key="canvasLocation" x="-1384.0579710144928" y="120.65217391304348"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="bOc-FO-q0d">
@@ -527,7 +518,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Juh-JI-sCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2167" y="121"/>
+            <point key="canvasLocation" x="-2639" y="121"/>
         </scene>
         <!--Global Tab Bar Controller-->
         <scene sceneID="F21-9T-X2j">
@@ -535,6 +526,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vht-Cs-T1f" customClass="GlobalTabBarController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P7O-MM-kKH">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -614,6 +606,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CityScout_Logo1" width="375" height="375"/>
         <image name="camera" width="45" height="45"/>
         <image name="magnifying-glass" width="39" height="39"/>
         <image name="rightArrow" width="45" height="45"/>
