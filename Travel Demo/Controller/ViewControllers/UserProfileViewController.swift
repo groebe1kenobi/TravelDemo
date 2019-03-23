@@ -14,10 +14,28 @@ class UserProfileViewController: UIViewController {
 
 	@IBOutlet weak var profilePicImageView: UIImageView!
 	
-	private var myLandmarks = [Landmark]()
-
+	var myLandmarks = [Landmark]()
 	
-
+	private var landmarkTableViewController: ToVisitTableViewController?
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		
+		guard let landmarkController = children.first as? ToVisitTableViewController else {
+			fatalError()
+		}
+		landmarkTableViewController = landmarkController
+		//landmarkController.delegate = self
+		navigationController?.title = currentUser.firstName
+		profilePicImageView.image = currentUser.proPic
+		
+		
+		
+		
+		
+	}
+	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -31,24 +49,7 @@ class UserProfileViewController: UIViewController {
 		//defaults.getUserDefaults()
 	}
 	
-	override func viewDidLoad() {
-        super.viewDidLoad()
-		
-		
-		
-		navigationController?.title = currentUser.firstName 
-		profilePicImageView.image = currentUser.proPic
-		profilePicImageView.layer.borderWidth = 1
-		profilePicImageView.layer.masksToBounds = false
-		profilePicImageView.layer.cornerRadius = profilePicImageView.frame.height/2
-		profilePicImageView.clipsToBounds = true
-		
-
-		
 	
-		
-		
-    }
 	
 	
 	

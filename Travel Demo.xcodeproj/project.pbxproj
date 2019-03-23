@@ -40,6 +40,7 @@
 		1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12A220ACDD700770F79 /* PersistencyManager.swift */; };
 		1977E12D220AD02600770F79 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12C220AD02600770F79 /* LibraryAPI.swift */; };
 		197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* HTTPClient.swift */; };
+		197C014C2246EB4600FBF481 /* ToVisitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C014B2246EB4600FBF481 /* ToVisitTableViewController.swift */; };
 		19DB16FC22446C62008A15DD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB16FB22446C62008A15DD /* SplashViewController.swift */; };
 		19DB16FE22446E11008A15DD /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB16FD22446E11008A15DD /* MyColors.swift */; };
 		19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */; };
@@ -102,6 +103,7 @@
 		1977E12A220ACDD700770F79 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		1977E12C220AD02600770F79 /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		197ABC40221629DC00A7E875 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		197C014B2246EB4600FBF481 /* ToVisitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToVisitTableViewController.swift; sourceTree = "<group>"; };
 		19DB16FB22446C62008A15DD /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		19DB16FD22446E11008A15DD /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */,
 				19402508222DAEE8004FB30B /* SideMenuTableViewController.swift */,
 				19F13077223087E30022186A /* LandmarkListTableViewController.swift */,
+				197C014B2246EB4600FBF481 /* ToVisitTableViewController.swift */,
 			);
 			path = TableViews;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				19402507222B1CD1004FB30B /* User.swift in Sources */,
 				19DB16FC22446C62008A15DD /* SplashViewController.swift in Sources */,
 				191F3397223AD03B00BD7813 /* CameraViewController.swift in Sources */,
+				197C014C2246EB4600FBF481 /* ToVisitTableViewController.swift in Sources */,
 				19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */,
 				1940250D222DB8D1004FB30B /* FacebookAPIManger.swift in Sources */,
 				1977E122220AAAA500770F79 /* Landmark.swift in Sources */,
