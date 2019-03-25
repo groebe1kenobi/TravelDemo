@@ -24,9 +24,9 @@ class UserProfileViewController: UIViewController {
 		return viewController
 	}()
 	
-	private lazy var secondViewController: SecondViewController = {
+	private lazy var statsViewController: UserStatsCollectionViewController = {
 		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		let viewController = storyboard.instantiateViewController(withIdentifier: "SecondVC") as! SecondViewController
+		let viewController = storyboard.instantiateViewController(withIdentifier: "StatsCollection") as! UserStatsCollectionViewController
 		self.add(asChildViewController: viewController)
 		return viewController
 	}()
@@ -66,7 +66,7 @@ class UserProfileViewController: UIViewController {
 	private func setupSegmentedControl() {
 		segControl.removeAllSegments()
 		segControl.insertSegment(withTitle: "ToVisit", at: 0, animated: false)
-		segControl.insertSegment(withTitle: "Photos", at: 1, animated: false)
+		segControl.insertSegment(withTitle: "Stats", at: 1, animated: false)
 		segControl.addTarget(self, action: #selector(selectionDidChange(_:)), for: .valueChanged)
 		
 		segControl.selectedSegmentIndex = 0
@@ -78,11 +78,11 @@ class UserProfileViewController: UIViewController {
 	
 	func updateView() {
 		if segControl.selectedSegmentIndex == 0 {
-			remove(asChildViewController: secondViewController)
+			remove(asChildViewController: statsViewController)
 			add(asChildViewController: toVisitViewController)
 		} else {
 			remove(asChildViewController: toVisitViewController)
-			add(asChildViewController: secondViewController)
+			add(asChildViewController: statsViewController)
 		}
 	}
 	

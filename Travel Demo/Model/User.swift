@@ -22,6 +22,11 @@ class User {
 	var visitedLocations: [Landmark]?
 	var proPic: UIImage?
 	var wasPrevLoggedIn: Bool = false
+	var entertainmentVisited: Int = 0
+	var natureVisited: Int = 0
+	var museumVisited: Int = 0
+	var foodVisited: Int = 0
+	var drinkVisited: Int = 0
 	
 	func isProfilePicture() -> Bool {
 		if proPic != nil {

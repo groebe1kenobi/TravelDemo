@@ -466,20 +466,75 @@
             </objects>
             <point key="canvasLocation" x="4646" y="3120"/>
         </scene>
-        <!--Second View Controller-->
-        <scene sceneID="tE9-f7-LZq">
+        <!--User Stats Collection View Controller-->
+        <scene sceneID="H05-Qa-YqF">
             <objects>
-                <viewController storyboardIdentifier="SecondVC" id="L3K-uq-9gZ" customClass="SecondViewController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KlS-QB-U2h">
+                <collectionViewController storyboardIdentifier="StatsCollection" clearsSelectionOnViewWillAppear="NO" id="w9f-tU-70j" customClass="UserStatsCollectionViewController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="H7S-2Q-dZJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                        <viewLayoutGuide key="safeArea" id="Zna-b2-sfn"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ki6-yb-Hf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bdx-zD-biX">
+                            <size key="itemSize" width="155" height="172"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="3YZ-BC-AWs" customClass="StatsCell" customModule="Travel_Demo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="155" height="172"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yyt-Rg-5KW">
+                                            <rect key="frame" x="20" y="35.000000000000007" width="115" height="98.666666666666686"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WK6-cI-6MP">
+                                            <rect key="frame" x="20" y="140.66666666666666" width="115" height="26.333333333333343"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entertainment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZt-Gn-neu">
+                                            <rect key="frame" x="20" y="10" width="115" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="WK6-cI-6MP" firstAttribute="top" secondItem="Yyt-Rg-5KW" secondAttribute="bottom" constant="7" id="5xK-1N-NRb"/>
+                                    <constraint firstItem="WK6-cI-6MP" firstAttribute="leading" secondItem="3YZ-BC-AWs" secondAttribute="leading" constant="20" id="9Ua-Iq-HjS"/>
+                                    <constraint firstAttribute="bottom" secondItem="WK6-cI-6MP" secondAttribute="bottom" constant="5" id="AFo-Po-Kef"/>
+                                    <constraint firstItem="HZt-Gn-neu" firstAttribute="top" secondItem="3YZ-BC-AWs" secondAttribute="top" constant="10" id="PSX-qD-7vD"/>
+                                    <constraint firstAttribute="trailing" secondItem="HZt-Gn-neu" secondAttribute="trailing" constant="20" id="Qc6-oW-Aoe"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yyt-Rg-5KW" secondAttribute="trailing" constant="20" id="XEc-uu-6jt"/>
+                                    <constraint firstItem="Yyt-Rg-5KW" firstAttribute="leading" secondItem="3YZ-BC-AWs" secondAttribute="leading" constant="20" id="Z1Z-O6-68C"/>
+                                    <constraint firstItem="HZt-Gn-neu" firstAttribute="width" secondItem="Yyt-Rg-5KW" secondAttribute="width" id="gxf-gP-S76"/>
+                                    <constraint firstItem="Yyt-Rg-5KW" firstAttribute="top" secondItem="3YZ-BC-AWs" secondAttribute="top" constant="35" id="l8v-ow-Zfk"/>
+                                    <constraint firstItem="Yyt-Rg-5KW" firstAttribute="top" secondItem="HZt-Gn-neu" secondAttribute="bottom" constant="4.0000000000000071" id="o3R-J7-K8m"/>
+                                    <constraint firstAttribute="trailing" secondItem="WK6-cI-6MP" secondAttribute="trailing" constant="20" id="wKg-wg-HrA"/>
+                                    <constraint firstItem="HZt-Gn-neu" firstAttribute="leading" secondItem="3YZ-BC-AWs" secondAttribute="leading" constant="20" id="ytL-tK-vX0"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="HZt-Gn-neu" id="DHC-j1-vmZ"/>
+                                    <outlet property="completionLabel" destination="WK6-cI-6MP" id="QpR-sh-HCr"/>
+                                    <outlet property="iconImageView" destination="Yyt-Rg-5KW" id="2zS-cU-5FN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="w9f-tU-70j" id="WHQ-Hl-uH4"/>
+                            <outlet property="delegate" destination="w9f-tU-70j" id="ThL-QZ-CWv"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQE-I8-X2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5645" y="3120"/>
+            <point key="canvasLocation" x="5868" y="3205"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="ZXK-7P-1fn">
