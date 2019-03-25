@@ -16,7 +16,7 @@ class UserProfileViewController: UIViewController {
 	@IBOutlet weak var segControl: UISegmentedControl!
 	@IBOutlet weak var containerView: UIView!
 	
-	
+	let my = MyColors()
 	private lazy var toVisitViewController: ToVisitTableViewController = {
 		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
 		let viewController = storyboard.instantiateViewController(withIdentifier: "ToVisitTableView") as! ToVisitTableViewController
@@ -48,6 +48,8 @@ class UserProfileViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(false, animated: animated)
+		segControl.backgroundColor = my.blue
+		segControl.tintColor = my.lightPink
 		
 		myLandmarks = LibraryAPI.shared.getSavedLandmarks()
 		
@@ -64,12 +66,16 @@ class UserProfileViewController: UIViewController {
 	}
 	
 	private func setupSegmentedControl() {
+		
+		let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 		segControl.removeAllSegments()
 		segControl.insertSegment(withTitle: "ToVisit", at: 0, animated: false)
 		segControl.insertSegment(withTitle: "Stats", at: 1, animated: false)
 		segControl.addTarget(self, action: #selector(selectionDidChange(_:)), for: .valueChanged)
 		
 		segControl.selectedSegmentIndex = 0
+		segControl.setTitleTextAttributes(textAttributes, for: .normal)
+		segControl.setTitleTextAttributes(textAttributes, for: .selected)
 	}
 	
 	@objc func selectionDidChange(_ sender: UISegmentedControl) {

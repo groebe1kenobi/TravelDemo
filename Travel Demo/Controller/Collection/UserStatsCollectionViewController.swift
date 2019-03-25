@@ -12,12 +12,17 @@ import UIKit
 
 class UserStatsCollectionViewController: UICollectionViewController {
 
+	let my = MyColors()
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
-	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewDidAppear(true)
+		self.view.backgroundColor = my.lightOrange
+	}
 
     // MARK: UICollectionViewDataSource
 
@@ -40,18 +45,23 @@ class UserStatsCollectionViewController: UICollectionViewController {
 			cell.iconImageView.image = UIImage(named: "restaurant")
 			cell.categoryLabel.text = "Food"
 			cell.completionLabel.text = "\(currentUser.foodVisited) / 8"
+			cell.backgroundColor = my.lightPink
 		case 1:
 			cell.iconImageView.image = UIImage(named: "cocktail")
 			cell.categoryLabel.text = "Drink"
 			cell.completionLabel.text = "\(currentUser.drinkVisited) / 10"
+			cell.backgroundColor = my.lightOrange
 		case 2:
 			cell.iconImageView.image = UIImage(named: "circus")
 			cell.categoryLabel.text = "Entertainment"
 			cell.completionLabel.text = "\(currentUser.entertainmentVisited) / 5"
+			cell.backgroundColor = my.lightPurple
 		case 3:
 			cell.iconImageView.image = UIImage(named: "nature")
 			cell.categoryLabel.text = "Nature"
 			cell.completionLabel.text = "\(currentUser.natureVisited) / 3"
+			cell.backgroundColor = my.lightBlue
+			
 		case 4:
 			cell.iconImageView.image = UIImage(named: "museum")
 			cell.categoryLabel.text = "Museum"
