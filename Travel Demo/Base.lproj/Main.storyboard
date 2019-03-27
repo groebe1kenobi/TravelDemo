@@ -359,12 +359,32 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eOb-ht-ZxE">
                                         <rect key="frame" x="8" y="8" width="100" height="100"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-LE-yaA">
+                                        <rect key="frame" x="116" y="8" width="268" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite City: Chicago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWq-qQ-hTb">
+                                        <rect key="frame" x="116" y="54" width="268" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="eOb-ht-ZxE" secondAttribute="trailing" constant="306" id="43q-Ve-cqQ"/>
                                     <constraint firstAttribute="bottom" secondItem="eOb-ht-ZxE" secondAttribute="bottom" constant="39.333333333333343" id="75V-9H-4KQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ovd-LE-yaA" secondAttribute="bottom" constant="101.33" id="FxZ-9K-VHT"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ovd-LE-yaA" secondAttribute="trailing" constant="30" id="IJE-TE-XLw"/>
+                                    <constraint firstItem="oWq-qQ-hTb" firstAttribute="leading" secondItem="eOb-ht-ZxE" secondAttribute="trailing" constant="8" id="McL-rs-6TW"/>
+                                    <constraint firstItem="oWq-qQ-hTb" firstAttribute="top" secondItem="ovd-LE-yaA" secondAttribute="bottom" constant="8" id="bDz-Dk-zPc"/>
+                                    <constraint firstAttribute="bottom" secondItem="oWq-qQ-hTb" secondAttribute="bottom" constant="55.329999999999998" id="ezr-2z-cqF"/>
+                                    <constraint firstItem="ovd-LE-yaA" firstAttribute="top" secondItem="1Sh-mK-RSj" secondAttribute="top" constant="8" id="fMC-0O-yBJ"/>
                                     <constraint firstItem="eOb-ht-ZxE" firstAttribute="top" secondItem="1Sh-mK-RSj" secondAttribute="topMargin" id="hHU-So-9QC"/>
+                                    <constraint firstItem="ovd-LE-yaA" firstAttribute="leading" secondItem="eOb-ht-ZxE" secondAttribute="trailing" constant="8" id="ocD-FY-b8S"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="oWq-qQ-hTb" secondAttribute="trailing" constant="30" id="qAg-8m-cnV"/>
                                     <constraint firstItem="eOb-ht-ZxE" firstAttribute="leading" secondItem="1Sh-mK-RSj" secondAttribute="leadingMargin" id="xh4-Rj-yu3"/>
                                 </constraints>
                             </view>
@@ -405,6 +425,7 @@
                         <outlet property="containerView" destination="N2e-pd-xet" id="UeV-MT-unK"/>
                         <outlet property="profilePicImageView" destination="eOb-ht-ZxE" id="bJc-69-tH2"/>
                         <outlet property="segControl" destination="fWM-o5-Jl4" id="D4i-pp-Qr6"/>
+                        <outlet property="userName" destination="ovd-LE-yaA" id="Y72-di-LwX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dH-rd-8hq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -669,7 +690,7 @@
         <!--Global Tab Bar Controller-->
         <scene sceneID="F21-9T-X2j">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vht-Cs-T1f" customClass="GlobalTabBarController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="GlobalTab" automaticallyAdjustsScrollViewInsets="NO" id="vht-Cs-T1f" customClass="GlobalTabBarController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P7O-MM-kKH">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -768,6 +789,6 @@
         <image name="userIcon" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rjq-ot-yuW"/>
+        <segue reference="CFC-9t-1aI"/>
     </inferredMetricsTieBreakers>
 </document>

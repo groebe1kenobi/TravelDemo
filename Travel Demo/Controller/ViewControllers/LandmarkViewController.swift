@@ -15,6 +15,12 @@ class LandmarkViewController: UIViewController {
 	@IBOutlet weak var descriptionTextView: UITextView!
 	@IBOutlet weak var tableView: UITableView!
 	
+	var stateController = StateController.shared
+	
+	var userLandmarks: [Landmark] {
+		return stateController.userLandmarks 
+	}
+	
 	var landmark: Landmark?
 	
 	//let cdHelper = CoreDataHelper()
@@ -46,11 +52,10 @@ class LandmarkViewController: UIViewController {
 				return
 			}
 			
-			//currentUser.savedLandmarks?.append(landmarkToAdd)
-			LibraryAPI.shared.addLandmarkToSave(landmarkToAdd)
+			self.stateController.addLandmarkToSave(landmarkToAdd)
+			
 			//cdHelper.save(landmarkToAdd)
 			print("Added: \(landmarkToAdd)")
-			//currentUser.locationsToVisit?.append(landmarkToAdd)
 			
 		}
 		

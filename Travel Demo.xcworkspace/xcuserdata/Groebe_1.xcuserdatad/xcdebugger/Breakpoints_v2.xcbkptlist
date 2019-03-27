@@ -19,11 +19,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Travel Demo/Controller/ViewControllers/LandmarkViewController.swift"
-            timestampString = "575248737.158082"
+            timestampString = "575361886.8649451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73">
+            startingLineNumber = "78"
+            endingLineNumber = "78">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

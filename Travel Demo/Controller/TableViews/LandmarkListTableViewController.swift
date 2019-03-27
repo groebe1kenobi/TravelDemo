@@ -12,8 +12,33 @@ import CoreLocation
 class LandmarkListTableViewController: UITableViewController {
 
 	//var filteredLandmarks: [Landmark] = [Landmark]()
+	var filterType: String?
+	var stateController = StateController.shared
+	var landmarks: [Landmark] {
+		switch filterType {
+		case let filterType where filterType == "Restaurant":
+			return stateController.filter(filterType!)
+			
+		case let filterType where filterType == "Drink":
+			return stateController.filter(filterType!)
+			
+		case let filterType where filterType == "Nature":
+			return stateController.filter(filterType!)
+			
+		case let filterType where filterType == "Entertainment":
+			return stateController.filter(filterType!)
+			
+		case let filterType where filterType == "Museum":
+			return stateController.filter(filterType!) 
+			
+		default:
+			return []
+		}
+	}
 	let userLocation = CLLocation(latitude: 41.787663516, longitude: -87.576331028 )
 	let distanceOperator = DistanceOperators()
+	var selectedLandmark: Landmark?
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +53,11 @@ class LandmarkListTableViewController: UITableViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(false, animated: animated)
-		for landmark in filteredLandmarks {
-			print(landmark.title!)
-		}
+		tableView.reloadData()
+//		for landmark in filteredLandmarks {
+//			print(landmark.title!)
+//		}
+		
 	}
     // MARK: - Table view data source
 
@@ -42,7 +69,21 @@ class LandmarkListTableViewController: UITableViewController {
 		
 		return filteredLandmarks.count
     }
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "listToLandmark" {
+			let destination = segue.destination as! LandmarkViewController
+			destination.landmark = self.selectedLandmark
+		}
+	}
 
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		if (landmarks.indices.contains(indexPath.row)) {
+			selectedLandmark = landmarks[indexPath.row]
+			self.performSegue(withIdentifier: "listToLandmark", sender: self)
+		}
+	}
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "landmarkCell", for: indexPath) as! LandmarkListTableViewCell

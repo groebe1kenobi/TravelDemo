@@ -15,6 +15,9 @@ class UserProfileViewController: UIViewController {
 	@IBOutlet weak var profilePicImageView: UIImageView!
 	@IBOutlet weak var segControl: UISegmentedControl!
 	@IBOutlet weak var containerView: UIView!
+	@IBOutlet weak var userName: UILabel!
+	
+	var stateController = StateController.shared
 	
 	let my = MyColors()
 	private lazy var toVisitViewController: ToVisitTableViewController = {
@@ -31,14 +34,17 @@ class UserProfileViewController: UIViewController {
 		return viewController
 	}()
 	
-	var myLandmarks = [Landmark]()
+	var myLandmarks: [Landmark] {
+		return stateController.userLandmarks 
+	}
 	
 	//private var landmarkTableViewController: ToVisitTableViewController?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		profilePicImageView.image = currentUser.proPic
 		
+		//profilePicImageView.image = currentUser.proPic
+		userName.text = "\(currentUser.firstName ?? "First") \(currentUser.lastName ?? "Last")"
 		setupView()
 		
 		
@@ -48,16 +54,17 @@ class UserProfileViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		navigationController?.setNavigationBarHidden(false, animated: animated)
+		
 		segControl.backgroundColor = my.blue
 		segControl.tintColor = my.lightPink
 		
-		myLandmarks = LibraryAPI.shared.getSavedLandmarks()
+		//myLandmarks = LibraryAPI.shared.getSavedLandmarks()
 		
-		for landmark in myLandmarks {
-			print(landmark.title!)
+		ImageService.getImage(withURL: currentUser.fbProPicURL!) { image in
+			self.profilePicImageView.image = image
 		}
 		
-		//defaults.getUserDefaults()
+		
 	}
 	
 	private func setupView() {

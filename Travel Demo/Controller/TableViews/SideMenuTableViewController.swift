@@ -65,6 +65,8 @@ class SideMenuTableViewController: UITableViewController {
 			cell.optionLabel.text = "Terms & Conditions"
 			cell.backgroundColor = my.orange
 			cell.iconImageView.image = UIImage(named: "tos")
+			
+		
 
 		default:
 			print("Error getting here")

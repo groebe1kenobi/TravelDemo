@@ -50,6 +50,7 @@ final class PersistencyManager {
 	
 	func addLandmarkToSave(_ landmark: Landmark) {
 		userLandmarks.append(landmark)
+		saveMyLandmarks()
 	}
 
 	func addLandmark(_ landmark: Landmark, at index: Int) {
@@ -63,6 +64,8 @@ final class PersistencyManager {
 	func deleteLandmark(at index: Int) {
 		landmarks.remove(at: index)
 	}
+	
+	
 	
 	
 	

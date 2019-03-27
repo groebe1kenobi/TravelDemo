@@ -16,4 +16,5 @@ class StrConstant {
 	static let fbAccessToken = "fbAccessToken"
 	static let points = "points"
 	static let email = "email"
+	static let proPic = "proPic"
 }

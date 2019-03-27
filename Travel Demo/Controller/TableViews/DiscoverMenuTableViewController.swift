@@ -12,9 +12,14 @@ var filteredLandmarks = [Landmark]()
 
 class DiscoverMenuTableViewController: UITableViewController {
 	
-	var selectedLandmarks = [Landmark]()
+	
+	var stateController = StateController.shared
+	var landmarks: [Landmark] {
+		return stateController.allLandmarks 
+	}
 	
 	private let segueID = "menuToType"
+	
 	let sharedLandmarks = LibraryAPI.shared.getLandmark()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +33,12 @@ class DiscoverMenuTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+		
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return 5
     }
 
@@ -71,35 +76,52 @@ class DiscoverMenuTableViewController: UITableViewController {
 			
 		}
 
-        // Configure the cell...
+		
 
         return cell
     }
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if(segue.identifier == segueID) {
+			let destination = segue.destination as! LandmarkListTableViewController
+			if let indexPath = tableView.indexPathForSelectedRow {
+				switch indexPath.row {
+				case 0:
+					destination.filterType = "Restaurant"
+				case 1:
+					destination.filterType = "Drink"
+				case 2:
+					destination.filterType = "Nature"
+				case 3:
+					destination.filterType = "Entertainment"
+				case 4:
+					destination.filterType = "Museum"
+				default:
+					destination.filterType = ""
+					print("No landmarks so show... shouldn't get here")
+				}
+			}
+		}
+	}
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
 		switch indexPath.row {
 		case 0:
-			print("PREPARE FOR SEGUE ENGAGED")
-			filteredLandmarks = sharedLandmarks.filter({$0.type == "Restaurant"}).map({return $0})
 			performSegue(withIdentifier: segueID, sender: self)
 
 		case 1:
-			filteredLandmarks = sharedLandmarks.filter({$0.type == "Drink"}).map({return $0})
 			performSegue(withIdentifier: segueID, sender: self)
 
 		case 2:
-			filteredLandmarks = sharedLandmarks.filter({$0.type == "Nature"}).map({return $0})
 			performSegue(withIdentifier: segueID, sender: self)
 
 		case 3:
-			filteredLandmarks = sharedLandmarks.filter({$0.type == "Entertainment"}).map({return $0})
 			performSegue(withIdentifier: segueID, sender: self)
 			
 		case 4:
-			filteredLandmarks = sharedLandmarks.filter({$0.type == "Museum"}).map({return $0})
 			performSegue(withIdentifier: segueID, sender: self)
+			
 		default:
 			print("ERROR SELECTING LANDMARK TYPES")
 		}

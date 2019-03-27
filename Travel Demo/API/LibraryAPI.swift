@@ -15,7 +15,7 @@ final class LibraryAPI {
 	
 	
 	private let persistencyManager = PersistencyManager()
-	private let httpClient = HTTPClient()
+	
 	private let imageService = ImageService()
 	private let isOnline = false // determines if server should be updated with changes
 	
@@ -35,32 +35,7 @@ final class LibraryAPI {
 		persistencyManager.saveMyLandmarks()
 	}
 	
-	
-	@objc func downloadImage(with notification: Notification) {
-		
-		guard let userInfo = notification.userInfo,
-			let imageView = userInfo["imageView"] as? UIImageView,
-			let imageUrl = userInfo["imageUrl"] as? String,
-			let filename = URL(string: imageUrl)?.lastPathComponent else {
-				return
-		}
-		
-		// if image prev downloaded, retrive from persistency mgr
-		if let savedImage = persistencyManager.getImage(with: filename) {
-			imageView.image = savedImage
-			return
-		}
-		
-		
-		// else when downlad complete disp. image in IV
-		// save locally using persistency mgr
-		DispatchQueue.global().async {
-			let downloadedImage = self.httpClient.downloadImage(imageUrl) ?? UIImage()
-			DispatchQueue.main.async {
-				imageView.image = downloadedImage
-				self.persistencyManager.saveImage(downloadedImage, filename: filename)
-			}
-		}
+	var userLandmarks: [Landmark] {
+		return persistencyManager.getSavedLandmarks()
 	}
-
 }

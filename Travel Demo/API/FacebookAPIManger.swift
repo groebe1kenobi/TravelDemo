@@ -65,13 +65,17 @@ class FacebookAPIManager {
 		if let pictureDict = result["picture"] as? [String: Any] {
 			if let dataDict = pictureDict["data"] as? [String: Any] {
 				currentUser.fbProPicURL = dataDict["url"] as? String
-				
+				ImageService.getImage(withURL: currentUser.fbProPicURL!) { image in
+					currentUser.proPic = image
+				}
 			}
 		}
 		
-		if currentUser.fbProPicURL != nil {
+		if currentUser.proPic == nil {
 			ImageService.getImage(withURL: currentUser.fbProPicURL!) { image in
 				currentUser.proPic = image
+				debugPrint(currentUser.proPic as Any)
+				print("Line 76 FacebookAPIManager: currentUserPropic \(String(describing: currentUser.proPic))")
 			}
 		}
 		

@@ -9,26 +9,6 @@
 import UIKit
 import Foundation
 
-class HTTPClient {
-	@discardableResult func getRequest(_ url: String) -> AnyObject {
-		return Data() as AnyObject
-	}
-	
-	@discardableResult func postRequest(_ url: String, body: String) -> AnyObject {
-		return Data() as AnyObject
-	}
-	
-	func downloadImage(_ url: String) -> UIImage? {
-		print("checking this ish out")
-		let aUrl = URL(string: url)
-		guard let data = try? Data(contentsOf: aUrl!),
-			let image = UIImage(data: data) else {
-				return nil
-		}
-		return image
-	}
-}
-
 class ImageService {
 	
 	static let cache = NSCache<NSString, UIImage>()

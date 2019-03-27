@@ -26,7 +26,6 @@
 		1950628D2242BC6A000A97C3 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950628C2242BC6A000A97C3 /* CoreDataHelper.swift */; };
 		195062952242FBE4000A97C3 /* Travel_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195062942242FBE4000A97C3 /* Travel_DemoTests.swift */; };
 		195062A02242FD80000A97C3 /* GlobalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1950629F2242FD80000A97C3 /* GlobalTabBarController.swift */; };
-		195062A22242FF53000A97C3 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195062A12242FF53000A97C3 /* State.swift */; };
 		195062A422441A72000A97C3 /* UserContoroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195062A322441A72000A97C3 /* UserContoroller.swift */; };
 		195F5BD2222B10FA001CF201 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195F5BD1222B10FA001CF201 /* LoginViewController.swift */; };
 		1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E10C220AA0DB00770F79 /* AppDelegate.swift */; };
@@ -39,11 +38,15 @@
 		1977E128220ACB9C00770F79 /* LocInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 1977E127220ACB9C00770F79 /* LocInfo.json */; };
 		1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12A220ACDD700770F79 /* PersistencyManager.swift */; };
 		1977E12D220AD02600770F79 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1977E12C220AD02600770F79 /* LibraryAPI.swift */; };
-		197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* HTTPClient.swift */; };
+		197ABC41221629DC00A7E875 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ABC40221629DC00A7E875 /* ImageService.swift */; };
 		197C014C2246EB4600FBF481 /* ToVisitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C014B2246EB4600FBF481 /* ToVisitTableViewController.swift */; };
 		197C014E2246F5FB00FBF481 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C014D2246F5FB00FBF481 /* SecondViewController.swift */; };
 		197C015822498F0F00FBF481 /* UserStatsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C015722498F0F00FBF481 /* UserStatsCollectionViewController.swift */; };
 		197C015A2249917B00FBF481 /* StatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C01592249917B00FBF481 /* StatsCell.swift */; };
+		197C015C224AC54100FBF481 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C015B224AC54100FBF481 /* UserLocation.swift */; };
+		197C015E224ACB0200FBF481 /* TestLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C015D224ACB0200FBF481 /* TestLocation.swift */; };
+		197C0160224B214E00FBF481 /* UserProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 197C015F224B214E00FBF481 /* UserProperties.plist */; };
+		197C0162224B277C00FBF481 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C0161224B277C00FBF481 /* StateController.swift */; };
 		19DB16FC22446C62008A15DD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB16FB22446C62008A15DD /* SplashViewController.swift */; };
 		19DB16FE22446E11008A15DD /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB16FD22446E11008A15DD /* MyColors.swift */; };
 		19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */; };
@@ -90,7 +93,6 @@
 		195062942242FBE4000A97C3 /* Travel_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_DemoTests.swift; sourceTree = "<group>"; };
 		195062962242FBE4000A97C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1950629F2242FD80000A97C3 /* GlobalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
-		195062A12242FF53000A97C3 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		195062A322441A72000A97C3 /* UserContoroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContoroller.swift; sourceTree = "<group>"; };
 		195F5BD1222B10FA001CF201 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1977E109220AA0DB00770F79 /* Travel Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,11 +107,15 @@
 		1977E127220ACB9C00770F79 /* LocInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocInfo.json; sourceTree = "<group>"; };
 		1977E12A220ACDD700770F79 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		1977E12C220AD02600770F79 /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
-		197ABC40221629DC00A7E875 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		197ABC40221629DC00A7E875 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		197C014B2246EB4600FBF481 /* ToVisitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToVisitTableViewController.swift; sourceTree = "<group>"; };
 		197C014D2246F5FB00FBF481 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		197C015722498F0F00FBF481 /* UserStatsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsCollectionViewController.swift; sourceTree = "<group>"; };
 		197C01592249917B00FBF481 /* StatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCell.swift; sourceTree = "<group>"; };
+		197C015B224AC54100FBF481 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		197C015D224ACB0200FBF481 /* TestLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLocation.swift; sourceTree = "<group>"; };
+		197C015F224B214E00FBF481 /* UserProperties.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserProperties.plist; sourceTree = "<group>"; };
+		197C0161224B277C00FBF481 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		19DB16FB22446C62008A15DD /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		19DB16FD22446E11008A15DD /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				1950629F2242FD80000A97C3 /* GlobalTabBarController.swift */,
+				197C0161224B277C00FBF481 /* StateController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 				1977E118220AA0DC00770F79 /* Info.plist */,
 				1977E113220AA0DC00770F79 /* Assets.xcassets */,
 				1950628922414D0F000A97C3 /* Travel-Demo.xcdatamodeld */,
+				197C015F224B214E00FBF481 /* UserProperties.plist */,
 			);
 			path = "Travel Demo";
 			sourceTree = "<group>";
@@ -243,7 +251,8 @@
 				1977E121220AAAA500770F79 /* Landmark.swift */,
 				19402506222B1CD1004FB30B /* User.swift */,
 				1950621A224007EB000A97C3 /* Yelp.swift */,
-				195062A12242FF53000A97C3 /* State.swift */,
+				197C015B224AC54100FBF481 /* UserLocation.swift */,
+				197C015D224ACB0200FBF481 /* TestLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,7 +272,7 @@
 				1940250C222DB8D1004FB30B /* FacebookAPIManger.swift */,
 				1977E12A220ACDD700770F79 /* PersistencyManager.swift */,
 				1977E12C220AD02600770F79 /* LibraryAPI.swift */,
-				197ABC40221629DC00A7E875 /* HTTPClient.swift */,
+				197ABC40221629DC00A7E875 /* ImageService.swift */,
 				1950621E22400F9C000A97C3 /* YelpAPI.swift */,
 				1950628C2242BC6A000A97C3 /* CoreDataHelper.swift */,
 			);
@@ -441,6 +450,7 @@
 			files = (
 				1977E117220AA0DC00770F79 /* LaunchScreen.storyboard in Resources */,
 				1977E114220AA0DC00770F79 /* Assets.xcassets in Resources */,
+				197C0160224B214E00FBF481 /* UserProperties.plist in Resources */,
 				1977E128220ACB9C00770F79 /* LocInfo.json in Resources */,
 				19402511222DCC0F004FB30B /* Login.storyboard in Resources */,
 				1977E112220AA0DB00770F79 /* Main.storyboard in Resources */,
@@ -529,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197C0162224B277C00FBF481 /* StateController.swift in Sources */,
 				19E47C83223B3E1D00744CC2 /* Constants.swift in Sources */,
 				19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */,
 				195062A422441A72000A97C3 /* UserContoroller.swift in Sources */,
@@ -540,16 +551,17 @@
 				195062A02242FD80000A97C3 /* GlobalTabBarController.swift in Sources */,
 				197C015822498F0F00FBF481 /* UserStatsCollectionViewController.swift in Sources */,
 				19F13075223087820022186A /* LandmarkListTableViewCell.swift in Sources */,
-				195062A22242FF53000A97C3 /* State.swift in Sources */,
 				1977E10F220AA0DB00770F79 /* MapViewController.swift in Sources */,
 				197C014E2246F5FB00FBF481 /* SecondViewController.swift in Sources */,
+				197C015E224ACB0200FBF481 /* TestLocation.swift in Sources */,
 				1977E10D220AA0DB00770F79 /* AppDelegate.swift in Sources */,
 				1940250B222DB3D0004FB30B /* UserProfileViewController.swift in Sources */,
 				19F8B190222DD2E300B13787 /* TestViewController.swift in Sources */,
 				1977E124220AB5D300770F79 /* LandmarkAnnotationView.swift in Sources */,
+				197C015C224AC54100FBF481 /* UserLocation.swift in Sources */,
 				19402509222DAEE8004FB30B /* SideMenuTableViewController.swift in Sources */,
 				1950621F22400F9C000A97C3 /* YelpAPI.swift in Sources */,
-				197ABC41221629DC00A7E875 /* HTTPClient.swift in Sources */,
+				197ABC41221629DC00A7E875 /* ImageService.swift in Sources */,
 				1950621B224007EB000A97C3 /* Yelp.swift in Sources */,
 				1950628B22414D0F000A97C3 /* Travel-Demo.xcdatamodeld in Sources */,
 				19402507222B1CD1004FB30B /* User.swift in Sources */,

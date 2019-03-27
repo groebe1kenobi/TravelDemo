@@ -22,17 +22,17 @@ class TestViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
 		//self.presentHomeVC()
-		if fbLoginManager.isLoggedIn() {
-			
-			print("FB MANAGER LOGGED IN")
-			currentUser.wasPrevLoggedIn = true
-			defaults.getUserDefaults()
-			
-			cdHelper.fetch()
-			
-			
-			self.performSegue(withIdentifier: "splashToMap", sender: self)
-		}
+//		if fbLoginManager.isLoggedIn() {
+//			
+//			print("FB MANAGER LOGGED IN")
+//			currentUser.wasPrevLoggedIn = true
+//			defaults.getUserDefaults()
+//			
+//			cdHelper.fetch()
+//			
+//			
+//			self.performSegue(withIdentifier: "splashToMap", sender: self)
+//		}
 
 	}
 	override func viewDidAppear(_ animated: Bool) {
@@ -63,8 +63,8 @@ class TestViewController: UIViewController {
 			let facebookAPIManager = FacebookAPIManager(accessToken: accessToken)
 			facebookAPIManager.makeFbGraphRequest()
 			
-			//self.presentHomeVC()
-			self.performSegue(withIdentifier: "splashToMap", sender: self)
+			self.presentHomeVC()
+			//self.performSegue(withIdentifier: "splashToMap", sender: self)
 		}
 	}
 	
@@ -77,8 +77,8 @@ class TestViewController: UIViewController {
 	
 	private func presentHomeVC() {
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let loginVC = storyboard.instantiateViewController(withIdentifier: "<#T##String#>")
-		self.present(loginVC, animated: true, completion: nil)
+		let homeVC = storyboard.instantiateViewController(withIdentifier: "GlobalTab")
+		self.present(homeVC, animated: true, completion: nil)
 	}
 
 }
@@ -119,6 +119,10 @@ extension UserDefaults {
 			defaults.set(currentUser.lastName, forKey: StrConstant.lastName)
 		}
 		
+		if currentUser.proPic != nil {
+			defaults.set(currentUser.proPic, forKey: StrConstant.proPic )
+		} 
+		
 		if let points = currentUser.points  {
 			defaults.set(points, forKey: StrConstant.points)
 		}
@@ -143,12 +147,13 @@ extension UserDefaults {
 			currentUser.email = email as? String
 		}
 		
-		if let proPicURL = defaults.object(forKey: StrConstant.fbProPicURL) {
-			currentUser.fbProPicURL = proPicURL as? String
-			ImageService.getImage(withURL: currentUser.fbProPicURL!) { image in
-				currentUser.proPic = image
-				
-			}
+		if let proPic = defaults.object(forKey: StrConstant.proPic) {
+			currentUser.proPic = proPic as? UIImage
+			
+		}
+		
+		if let fbProPicURL = defaults.object(forKey: StrConstant.fbProPicURL) {
+			currentUser.fbProPicURL = fbProPicURL as? String 
 		}
 		
 		if let firstName = defaults.object(forKey: StrConstant.firstName) {

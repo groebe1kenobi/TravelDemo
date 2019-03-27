@@ -19,15 +19,18 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	
 	
 	
-
-	private var landmarks = [Landmark]()
+	var stateController = StateController.shared
+	//private var landmarks = [Landmark]()
+	var landmarks: [Landmark] {
+		return stateController.allLandmarks
+	}
 	
 	let regionRadius: CLLocationDistance = 1000
 	let distanceOp = DistanceOperators()
 	let my = MyColors()
 	let initialLocation = CLLocation(latitude: 41.787663516, longitude: -87.576331028 )
 	let imagePicker = UIImagePickerController()
-	let yelp = CDYelpFusionKitManager()
+
 	
 	var imageToSend: UIImage?
 	
@@ -47,7 +50,7 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 		mapView.register(LandmarkAnnotationView.self,
 						 forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
 		
-		landmarks = LibraryAPI.shared.getLandmark()
+		//landmarks = LibraryAPI.shared.getLandmark()
 		placeAnnotations()
 		
 	}
@@ -146,6 +149,11 @@ extension MapViewController {
 	}
 }
 
+extension MapViewController: CLLocationManagerDelegate {
+	func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+		mapView.showsUserLocation = (status == .authorizedAlways)
+	}
+}
 class DistanceOperators {
 	func getDistance(_ landmarkLoc: CLLocationCoordinate2D, _ userLoc: CLLocation) -> Double {
 		

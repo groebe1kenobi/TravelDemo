@@ -24,6 +24,10 @@ class SplashViewController: UIViewController {
 		if fbLoginManager.isLoggedIn() {
 			defaults.getUserDefaults()
 			self.performSegue(withIdentifier: "splashToMap", sender: self)
+		} else {
+			let storyboard = UIStoryboard(name: "Login", bundle: nil)
+			let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+			self.present(loginVC, animated: true, completion: nil)
 		}
 	}
 

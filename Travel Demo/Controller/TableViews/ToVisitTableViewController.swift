@@ -10,20 +10,28 @@ import UIKit
 
 class ToVisitTableViewController: UITableViewController {
 
-	var landmarks = [Landmark]()
+	var stateController = StateController.shared
+	var landmarks: [Landmark] {
+		return stateController.userLandmarks
+	}
+	//var landmarks = [Landmark]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
 //		tableView.rowHeight = UITableView.automaticDimension
 //		tableView.estimatedRowHeight = 152
 		
-		landmarks = LibraryAPI.shared.getSavedLandmarks()
+		//landmarks = LibraryAPI.shared.getSavedLandmarks()
 		//tableView.dataSource = self
 		tableView.delegate = self
 		
+	
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		tableView.reloadData()
-		
-    }
+	}
 	
 
     // MARK: - Table view data source
@@ -34,7 +42,7 @@ class ToVisitTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+		
         return landmarks.count
     }
 

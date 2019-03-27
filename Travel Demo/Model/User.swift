@@ -42,6 +42,9 @@ class User {
 		return false
 	}
 	
+	
+	
+
 }
 
 class CurrentUser: User {

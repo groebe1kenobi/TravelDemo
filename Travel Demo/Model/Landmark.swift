@@ -85,5 +85,7 @@ class Landmark:  NSObject, MKAnnotation, Codable {
 	}
 	
 	
+	
+	
 
 }
