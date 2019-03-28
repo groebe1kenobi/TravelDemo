@@ -82,25 +82,25 @@ class DiscoverMenuTableViewController: UITableViewController {
     }
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if(segue.identifier == segueID) {
-			let destination = segue.destination as! LandmarkListTableViewController
-			if let indexPath = tableView.indexPathForSelectedRow {
-				switch indexPath.row {
-				case 0:
-					destination.filterType = "Restaurant"
-				case 1:
-					destination.filterType = "Drink"
-				case 2:
-					destination.filterType = "Nature"
-				case 3:
-					destination.filterType = "Entertainment"
-				case 4:
-					destination.filterType = "Museum"
-				default:
-					destination.filterType = ""
-					print("No landmarks so show... shouldn't get here")
-				}
+		if segue.identifier == segueID {
+			let destinationVC = segue.destination as! LandmarkListViewController
+			let selectedIndex = self.tableView.indexPathForSelectedRow!
+			let row = selectedIndex.row
+			switch row {
+			case 0:
+				destinationVC.landmarks2 = stateController.filter("Restaurant")
+			case 1:
+				destinationVC.landmarks2 = stateController.filter("Drink")
+			case 2:
+				destinationVC.landmarks2 = stateController.filter("Nature")
+			case 3:
+				destinationVC.landmarks2 = stateController.filter("Entertainment")
+			case 4:
+				destinationVC.landmarks2 = stateController.filter("Museum")
+			default:
+				destinationVC.landmarks2 = stateController.allLandmarks
 			}
+			
 		}
 	}
 

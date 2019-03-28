@@ -90,7 +90,7 @@ class LandmarkListTableViewController: UITableViewController {
 	}
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "landmarkCell", for: indexPath) as! LandmarkListTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "landmarkCell", for: indexPath) as! LandmarkCell
 			
 		
 		let validIndex = filteredLandmarks[indexPath.row].title

@@ -205,13 +205,13 @@
         <!--Landmark List Table View Controller-->
         <scene sceneID="6ZM-NN-KcZ">
             <objects>
-                <tableViewController id="8on-dL-gze" customClass="LandmarkListTableViewController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Dummy" id="8on-dL-gze" customClass="LandmarkListTableViewController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sdN-zi-wWU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="landmarkCell" rowHeight="152" id="n9A-x8-hTx" customClass="LandmarkListTableViewCell" customModule="Travel_Demo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="landmarkCell" rowHeight="152" id="n9A-x8-hTx" customClass="LandmarkCell" customModule="Travel_Demo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n9A-x8-hTx" id="poV-Tv-f25">
@@ -255,13 +255,102 @@
                             <outlet property="delegate" destination="8on-dL-gze" id="y7D-DM-4EY"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="cZJ-18-rUL" kind="show" identifier="listToLandmark" id="rjq-ot-yuW"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPe-yH-pK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2035" y="2657"/>
+            <point key="canvasLocation" x="1591" y="2293"/>
+        </scene>
+        <!--Landmark List View Controller-->
+        <scene sceneID="xPy-51-50u">
+            <objects>
+                <viewController id="ikZ-Do-2lx" customClass="LandmarkListViewController" customModule="Travel_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wLr-c4-Mlr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="47z-RL-yij">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LandmarkCell" rowHeight="152" id="kpi-Ge-bjZ" customClass="LandmarkCell" customModule="Travel_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="152"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kpi-Ge-bjZ" id="gbj-wp-O89">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="151.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hke-tO-10g">
+                                                    <rect key="frame" x="20" y="11" width="374" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Chicago Theater" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raZ-vi-nMa">
+                                                    <rect key="frame" x="20" y="111" width="374" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="raZ-vi-nMa" firstAttribute="leading" secondItem="gbj-wp-O89" secondAttribute="leadingMargin" id="As5-Gu-OXd"/>
+                                                <constraint firstItem="raZ-vi-nMa" firstAttribute="trailing" secondItem="gbj-wp-O89" secondAttribute="trailingMargin" id="CsL-0d-HG3"/>
+                                                <constraint firstItem="raZ-vi-nMa" firstAttribute="bottom" secondItem="gbj-wp-O89" secondAttribute="bottomMargin" id="PNU-V7-O0y"/>
+                                                <constraint firstItem="raZ-vi-nMa" firstAttribute="top" secondItem="Hke-tO-10g" secondAttribute="bottom" constant="70" id="RPe-X0-if6"/>
+                                                <constraint firstItem="Hke-tO-10g" firstAttribute="top" secondItem="gbj-wp-O89" secondAttribute="topMargin" id="SL5-Q5-N6c"/>
+                                                <constraint firstItem="Hke-tO-10g" firstAttribute="leading" secondItem="gbj-wp-O89" secondAttribute="leadingMargin" id="bS1-4q-TGv"/>
+                                                <constraint firstItem="Hke-tO-10g" firstAttribute="trailing" secondItem="gbj-wp-O89" secondAttribute="trailingMargin" id="wzN-nL-JRl"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="SL5-Q5-N6c"/>
+                                                    <exclude reference="bS1-4q-TGv"/>
+                                                    <exclude reference="wzN-nL-JRl"/>
+                                                    <exclude reference="As5-Gu-OXd"/>
+                                                    <exclude reference="CsL-0d-HG3"/>
+                                                    <exclude reference="PNU-V7-O0y"/>
+                                                    <exclude reference="RPe-X0-if6"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="SL5-Q5-N6c"/>
+                                                    <include reference="bS1-4q-TGv"/>
+                                                    <include reference="wzN-nL-JRl"/>
+                                                    <include reference="As5-Gu-OXd"/>
+                                                    <include reference="CsL-0d-HG3"/>
+                                                    <include reference="PNU-V7-O0y"/>
+                                                    <include reference="RPe-X0-if6"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="locationDistanceLabel" destination="Hke-tO-10g" id="53p-2x-hDS"/>
+                                            <outlet property="locationLabel" destination="raZ-vi-nMa" id="A0F-I5-ZjP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="47z-RL-yij" firstAttribute="top" secondItem="1zf-9X-e3z" secondAttribute="top" id="FFL-6j-xdu"/>
+                            <constraint firstItem="47z-RL-yij" firstAttribute="leading" secondItem="1zf-9X-e3z" secondAttribute="leading" id="Ut8-dK-h25"/>
+                            <constraint firstItem="47z-RL-yij" firstAttribute="bottom" secondItem="1zf-9X-e3z" secondAttribute="bottom" id="bDe-CL-MAn"/>
+                            <constraint firstItem="47z-RL-yij" firstAttribute="trailing" secondItem="1zf-9X-e3z" secondAttribute="trailing" id="wgI-15-qrH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1zf-9X-e3z"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <connections>
+                        <outlet property="tableView" destination="47z-RL-yij" id="MXK-V7-myC"/>
+                        <segue destination="cZJ-18-rUL" kind="show" identifier="listToLandmark" id="m1c-hQ-c0c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbP-Kb-ElC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828.985507246377" y="2616.0326086956525"/>
         </scene>
         <!--Title-->
         <scene sceneID="CxW-Ro-uZ6">
@@ -441,7 +530,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toVisitCell" rowHeight="121" id="EzD-kA-TeJ" customClass="LandmarkListTableViewCell" customModule="Travel_Demo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toVisitCell" rowHeight="121" id="EzD-kA-TeJ" customClass="LandmarkCell" customModule="Travel_Demo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="121"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EzD-kA-TeJ" id="T6q-s9-k36">
@@ -522,7 +611,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yyt-Rg-5KW">
-                                            <rect key="frame" x="20" y="37" width="131" height="98.666666666666686"/>
+                                            <rect key="frame" x="20" y="37.000000000000007" width="131" height="98.666666666666686"/>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -663,12 +752,12 @@
                     <navigationItem key="navigationItem" id="YVb-dx-rBb"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <segue destination="8on-dL-gze" kind="show" identifier="menuToType" id="6IM-8A-5RO"/>
+                        <segue destination="ikZ-Do-2lx" kind="show" identifier="menuToType" id="13d-8H-3WX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iff-J3-esM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2035" y="1774"/>
+            <point key="canvasLocation" x="2443" y="1769"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YXn-3N-9oB">
@@ -789,6 +878,6 @@
         <image name="userIcon" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CFC-9t-1aI"/>
+        <segue reference="m1c-hQ-c0c"/>
     </inferredMetricsTieBreakers>
 </document>
