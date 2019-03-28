@@ -108,19 +108,19 @@ class DiscoverMenuTableViewController: UITableViewController {
 
 		switch indexPath.row {
 		case 0:
-			performSegue(withIdentifier: segueID, sender: self)
+			performSegue(withIdentifier: segueID, sender: indexPath.row)
 
 		case 1:
-			performSegue(withIdentifier: segueID, sender: self)
+			performSegue(withIdentifier: segueID, sender: indexPath.row)
 
 		case 2:
-			performSegue(withIdentifier: segueID, sender: self)
+			performSegue(withIdentifier: segueID, sender: indexPath.row)
 
 		case 3:
-			performSegue(withIdentifier: segueID, sender: self)
+			performSegue(withIdentifier: segueID, sender: indexPath.row)
 			
 		case 4:
-			performSegue(withIdentifier: segueID, sender: self)
+			performSegue(withIdentifier: segueID, sender: indexPath.row)
 			
 		default:
 			print("ERROR SELECTING LANDMARK TYPES")

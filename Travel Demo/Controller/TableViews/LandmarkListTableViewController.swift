@@ -44,7 +44,11 @@ class LandmarkListTableViewController: UITableViewController {
         super.viewDidLoad()
 		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 152
+		tableView.reloadData()
 		
+		for landmark in landmarks {
+			print("LandmarkListTableViewMember: \(String(describing: landmark.title))")
+		}
    
     }
 	
