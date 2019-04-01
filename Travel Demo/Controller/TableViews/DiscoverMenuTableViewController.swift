@@ -29,6 +29,9 @@ class DiscoverMenuTableViewController: UITableViewController {
 
 	override func viewWillAppear(_ animated: Bool) {
 		navigationController?.setNavigationBarHidden(false, animated: animated)
+		if let index = self.tableView.indexPathForSelectedRow {
+			self.tableView.deselectRow(at: index, animated: true)
+		}
 	}
     // MARK: - Table view data source
 

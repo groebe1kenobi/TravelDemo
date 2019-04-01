@@ -42,6 +42,9 @@ class StateController {
 		return persistencyManager.getSavedLandmarks()
 	}
 	
+	func updateLandmarks() {
+		persistencyManager.saveLandmarks()
+	}
 	
 }
 
@@ -56,7 +59,7 @@ extension StateController {
 		case let type where type == "Nature":
 			return allLandmarks.filter({$0.type == "Nature" }).map({return $0})
 		case let type where type == "Entertainment":
-			return allLandmarks.filter({$0.type == "Entertainment" }).map({return $0})
+			return allLandmarks.filter({$0.type == "Entertainment" || $0.type == "Sport" }).map({return $0})
 		case let type where type == "Museum":
 			return allLandmarks.filter({$0.type == "Museum" }).map({return $0})
 		default:

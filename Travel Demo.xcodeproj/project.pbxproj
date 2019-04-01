@@ -61,7 +61,6 @@
 		19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */; };
 		19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F1307222306A930022186A /* DiscoverMenuTableViewCell.swift */; };
 		19F13075223087820022186A /* LandmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F13074223087820022186A /* LandmarkCell.swift */; };
-		19F13078223087E30022186A /* LandmarkListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F13077223087E30022186A /* LandmarkListTableViewController.swift */; };
 		19F1307C223088DE0022186A /* SymbolKey in Resources */ = {isa = PBXBuildFile; fileRef = 19F1307B223088DE0022186A /* SymbolKey */; };
 		19F8B190222DD2E300B13787 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8B18F222DD2E300B13787 /* TestViewController.swift */; };
 		19F8B192222DD7EE00B13787 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19F8B191222DD7EE00B13787 /* GoogleService-Info.plist */; };
@@ -137,7 +136,6 @@
 		19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMenuTableViewController.swift; sourceTree = "<group>"; };
 		19F1307222306A930022186A /* DiscoverMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverMenuTableViewCell.swift; sourceTree = "<group>"; };
 		19F13074223087820022186A /* LandmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkCell.swift; sourceTree = "<group>"; };
-		19F13077223087E30022186A /* LandmarkListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListTableViewController.swift; sourceTree = "<group>"; };
 		19F1307B223088DE0022186A /* SymbolKey */ = {isa = PBXFileReference; lastKnownFileType = text; path = SymbolKey; sourceTree = "<group>"; };
 		19F8B18F222DD2E300B13787 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		19F8B191222DD7EE00B13787 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -331,7 +329,6 @@
 			isa = PBXGroup;
 			children = (
 				19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */,
-				19F13077223087E30022186A /* LandmarkListTableViewController.swift */,
 				19402508222DAEE8004FB30B /* SideMenuTableViewController.swift */,
 				197C014B2246EB4600FBF481 /* ToVisitTableViewController.swift */,
 			);
@@ -611,7 +608,6 @@
 				19402513222DCC70004FB30B /* StartViewController.swift in Sources */,
 				193651842217710C000F54F8 /* SideMenuTableViewCell.swift in Sources */,
 				19402501222B1A60004FB30B /* FacebookLoginButton.swift in Sources */,
-				19F13078223087E30022186A /* LandmarkListTableViewController.swift in Sources */,
 				195F5BD2222B10FA001CF201 /* LoginViewController.swift in Sources */,
 				1977E12D220AD02600770F79 /* LibraryAPI.swift in Sources */,
 				197C015A2249917B00FBF481 /* StatsCell.swift in Sources */,

@@ -11,7 +11,7 @@ import UIKit
 class LandmarkDataSource: NSObject {
 	private var landmarks = [Landmark]()
 	private let tableView: UITableView
-	
+	let my = MyColors()
 	init(tableView: UITableView, landmarks: [Landmark]) {
 		self.tableView = tableView
 		self.landmarks = landmarks
@@ -29,11 +29,9 @@ extension LandmarkDataSource: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
 		let cell = tableView.dequeueReusableCell(withIdentifier: LandmarkCell.reuseIdentifier, for: indexPath)
-		let landmark = landmarks[indexPath.row]
+		//let landmark = landmarks[indexPath.row]
 		
-		ImageService.getImage(withURL: landmark.imageUrl) { image in
-			cell.backgroundView = UIImageView(image: image)
-		}
+		//cell.backgroundColor = my.purple
 		configure(cell: cell, indexPath: indexPath)
 		
 		return cell

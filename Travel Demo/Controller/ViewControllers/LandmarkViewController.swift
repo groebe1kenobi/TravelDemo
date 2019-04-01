@@ -66,6 +66,8 @@ class LandmarkViewController: UIViewController {
 			} else {
 				print("Successfully added Landmark: \(landmarkToAdd.title!)")
 				self.stateController.addLandmarkToSave(landmarkToAdd)
+				//self.stateController.updateLandmarks()
+				self.stateController.saveMyLandmarks()
 			}
 			
 		}
@@ -86,6 +88,7 @@ class LandmarkViewController: UIViewController {
 	
 	
 }
+
 
 extension StateController {
 	func landmarkIsSaved(_ landmark: Landmark) -> Bool {

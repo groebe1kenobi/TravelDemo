@@ -21,15 +21,29 @@ class ToVisitViewController: UIViewController {
         super.viewDidLoad()
 
 		tableView.estimatedRowHeight = UITableView.automaticDimension
-		tableView.rowHeight = UITableView.automaticDimension
+		tableView.rowHeight = 150
 		self.dataSource = LandmarkDataSource(tableView: tableView, landmarks: toVisitLandmarks)
 		tableView.dataSource = dataSource
-		tableView.reloadData()
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+			self.tableView.reloadData()
+			DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+				self.tableView.reloadData()
+				
+			}
+		}
+		
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		tableView.reloadData()
+		
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+			self.tableView.reloadData()
+			DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+				self.tableView.reloadData()
+				
+			}
+		}
 	}
 	
 	
