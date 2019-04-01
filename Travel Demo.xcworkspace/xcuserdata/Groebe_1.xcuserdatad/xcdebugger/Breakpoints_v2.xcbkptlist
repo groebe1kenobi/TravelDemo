@@ -19,11 +19,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Travel Demo/Controller/ViewControllers/LandmarkViewController.swift"
-            timestampString = "575784264.807793"
+            timestampString = "575852668.3568031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
             endingLineNumber = "102">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Travel DemoTests/Travel_DemoTests.swift"
+            timestampString = "575841273.354261"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "testLandmarkDecoding()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

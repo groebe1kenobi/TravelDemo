@@ -79,11 +79,11 @@ class Landmark:  NSObject, MKAnnotation, Codable {
 			}
 			
 		}
-		if type == "Restaurant" {return "restaurant"}
-		if type == "Museum"	{return "museum"}
-		if type == "Entertainment" {return "circusCircle"}
-		if type == "Drink" {return "newCocktail"}
-		if type == "Nature" {return "nature"}
+		if type == "Restaurant" {return "pizza"}
+		if type == "Museum"	{return "building"}
+		if type == "Entertainment" {return "ferrisWheel"}
+		if type == "Drink" {return "beer"}
+		if type == "Nature" {return "leaf"}
 		return "skiMask"
 	}
 	

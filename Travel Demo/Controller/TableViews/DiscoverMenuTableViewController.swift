@@ -12,7 +12,7 @@ var filteredLandmarks = [Landmark]()
 
 class DiscoverMenuTableViewController: UITableViewController {
 	
-	
+	let cellSpacingHeight: CGFloat = 5
 	var stateController = StateController.shared
 	var landmarks: [Landmark] {
 		return stateController.allLandmarks 
@@ -44,7 +44,15 @@ class DiscoverMenuTableViewController: UITableViewController {
         
         return 5
     }
-
+	
+	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+		return cellSpacingHeight
+	}
+	override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		let headerView = UIView()
+		headerView.backgroundColor = UIColor.clear
+		return headerView
+	}
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "typeCell", for: indexPath) as! DiscoverMenuTableViewCell
@@ -53,34 +61,39 @@ class DiscoverMenuTableViewController: UITableViewController {
 		switch indexPath.row {
 		case 0:
 			cell.locationTypeLabel.text = "Food"
-			cell.locationTypeLabel.textColor = UIColor.init(red: 33/255, green: 150/255, blue: 243/255, alpha: 1.0)
-			cell.locationTypeIV.image = UIImage(named: "restaurant")
+			cell.locationTypeLabel.textColor = my.lightOrange
+			let image = UIImage(named: "pizza")
+			cell.locationTypeIV.image = image?.tint(with: my.lightOrange)
 			
 		case 1:
 			cell.locationTypeLabel.text = "Drinks"
-			cell.locationTypeLabel.textColor = UIColor.init(red: 245/255, green: 0/255, blue: 87/255, alpha: 1.0)
-			cell.locationTypeIV.image = UIImage(named: "cocktail")
+			cell.locationTypeLabel.textColor = my.orange
+			let image = UIImage(named: "beer")
+			cell.locationTypeIV.image = image?.tint(with: my.orange)
 			
 		case 2:
 			cell.locationTypeLabel.text = "Nature"
-			cell.locationTypeLabel.textColor = UIColor.init(red: 104/255, green: 159/255, blue: 56/255, alpha: 1.0)
-			cell.locationTypeIV.image = UIImage(named: "nature")
+			cell.locationTypeLabel.textColor = my.green
+			let image = UIImage(named: "leaf")
+			cell.locationTypeIV.image = image?.tint(with: my.green)
 			
 		case 3:
 			cell.locationTypeLabel.text = "Entertainment"
-			cell.locationTypeLabel.textColor = UIColor.init(red: 1.0, green: 61/255, blue: 0/255, alpha: 1.0)
-			cell.locationTypeIV.image = UIImage(named: "circus")
+			cell.locationTypeLabel.textColor = my.pink
+			let image = UIImage(named: "ferrisWheel")
+			cell.locationTypeIV.image = image?.tint(with: my.pink)
 		case 4:
 			cell.locationTypeLabel.text = "Museums"
-			cell.locationTypeLabel.textColor = UIColor.init(red: 232/255, green: 148/255, blue: 25/255, alpha: 1.0)
-			cell.locationTypeIV.image = UIImage(named: "museum")
+			cell.locationTypeLabel.textColor = my.purple
+			let image = UIImage(named: "building")
+			cell.locationTypeIV.image = image?.tint(with: my.purple)
 		default:
 			print("Should not get here")
 			
 		}
 
 		
-
+		cell.layer.borderColor = my.blue.cgColor
         return cell
     }
 	
