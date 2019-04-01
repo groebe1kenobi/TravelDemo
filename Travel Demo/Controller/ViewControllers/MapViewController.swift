@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CDYelpFusionKit
 
 class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
@@ -53,6 +54,8 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 		//landmarks = LibraryAPI.shared.getLandmark()
 		placeAnnotations()
 		
+		
+		
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -92,8 +95,12 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 		if (segue.identifier == "mapToLandmark") {
 			if let destinationVC = segue.destination as? LandmarkViewController {
 				destinationVC.landmark = selectedLandmark
+			
+				
 			}
 		}
+		
+		
 	}
 	
 	func imagePickerController(_ picker: UIImagePickerController,
@@ -135,14 +142,14 @@ extension MapViewController: MKMapViewDelegate {
 extension MapViewController {
 	func placeAnnotations() {
 		for mark in landmarks {
-			let distance = distanceOp.getDistance(mark.coordinate, initialLocation)
+			//let distance = distanceOp.getDistance(mark.coordinate, initialLocation)
 			DispatchQueue.main.async {
 				self.mapView.addAnnotation(mark)
 				
 				self.mapView.reloadInputViews()
 				//print("\(mark.title ?? "")")
 				
-				print("\(mark.title ?? "MIssing location") is aprox: \(distance) away from you!")
+				//print("\(mark.title ?? "MIssing location") is aprox: \(distance) away from you!")
 				
 			}
 		}

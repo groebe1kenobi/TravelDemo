@@ -20,9 +20,9 @@ class UserProfileViewController: UIViewController {
 	var stateController = StateController.shared
 	
 	let my = MyColors()
-	private lazy var toVisitViewController: ToVisitTableViewController = {
+	private lazy var toVisitViewController: ToVisitViewController = {
 		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		let viewController = storyboard.instantiateViewController(withIdentifier: "ToVisitTableView") as! ToVisitTableViewController
+		let viewController = storyboard.instantiateViewController(withIdentifier: "ToVisit") as! ToVisitViewController
 		self.add(asChildViewController: viewController)
 		return viewController
 	}()

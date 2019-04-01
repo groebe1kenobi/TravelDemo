@@ -21,6 +21,7 @@ let defaults = UserDefaults.standard
 let fbLoginButton: LoginButton = LoginButton(readPermissions: [.publicProfile, .email])
 let fbLoginManager: LoginManager = LoginManager()
 let cdHelper = CoreDataHelper()
+//let SharedUserLocation = LocationSingleton()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,40 +30,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	// Location Variables
 	let center = UNUserNotificationCenter.current()
-	let locationManager = CLLocationManager()
+	//let locationManager = CLLocationManager()
 	let stateController = StateController.shared
 	static let geoCoder = CLGeocoder()
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		//CDYelpFusionKitManager.shared.configure()
+		CDYelpFusionKitManager.shared.configure()
 		
-		
-//		guard let tabBarController = window?.rootViewController as? GlobalTabBarController,
-//			let viewControllers = tabBarController.viewControllers else {
-//				return true
-//		}
-//
-//		for (index, viewController) in viewControllers.enumerated() {
-//			if let navigationController = viewController as? UINavigationController,
-//				let mapViewController = navigationController.viewControllers. as? MapViewController,
-//				let userViewController = navigationController.viewControllers.last as? UserProfileViewController {
-//				mapViewController.stateController = stateController
-//
-//			}
-//
-//		}
 		SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 		center.requestAuthorization(options: [.alert, .sound]) { granted, error in
 			
 		}
-		locationManager.requestAlwaysAuthorization()
 		
-		locationManager.startMonitoringVisits()
-		locationManager.delegate = self
 		
-		locationManager.distanceFilter = 35 // receive updates for location changes for n meters and more
-		locationManager.allowsBackgroundLocationUpdates = true // allow location tracking in background
-		locationManager.startUpdatingLocation() // start listening
+		
+		//locationManager.startUpdatingLocation() // start listening
 		
 		defaults.getUserDefaults()
 		
@@ -159,19 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: CLLocationManagerDelegate {
-	func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
-		// create CLLocation from the coordinates of CLVisit
-		let clLocation = CLLocation(latitude: visit.coordinate.latitude, longitude: visit.coordinate.longitude)
-		
-		// get location description
-		
-		AppDelegate.geoCoder.reverseGeocodeLocation(clLocation) { placemarks, _ in
-			if let place = placemarks?.first {
-				let description = "\(place)"
-				self.newVisitReceived(visit, description: description)
-			}
-		}
-	}
+	
 	
 	func newVisitReceived(_ visit: CLVisit, description: String) {
 		// save location to disk

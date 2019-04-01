@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 import Contacts
-
+import CDYelpFusionKit
 
 
 class Landmark:  NSObject, MKAnnotation, Codable {
@@ -21,6 +21,7 @@ class Landmark:  NSObject, MKAnnotation, Codable {
 	let longitude: String
 	
 	
+	
 	init(title: String, name: String, type: String, imageUrl: String, latitude: String, longitude: String) {
 		self.title = title
 		self.name = name
@@ -28,6 +29,7 @@ class Landmark:  NSObject, MKAnnotation, Codable {
 		self.imageUrl = imageUrl
 		self.latitude = latitude
 		self.longitude = longitude
+		
 		
 		super.init()
 	}
@@ -42,6 +44,7 @@ class Landmark:  NSObject, MKAnnotation, Codable {
 		return name
 	}
 	
+
 	// Annotation right callout accessory opens this mapItem in Maps app
 	func mapItem() -> MKMapItem {
 		let addressDict = [CNPostalAddressStreetKey: subtitle!]
@@ -84,8 +87,5 @@ class Landmark:  NSObject, MKAnnotation, Codable {
 		return "skiMask"
 	}
 	
-	
-	
-	
-
 }
+

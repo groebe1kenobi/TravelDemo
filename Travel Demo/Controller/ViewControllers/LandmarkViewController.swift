@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CDYelpFusionKit
 
 class LandmarkViewController: UIViewController {
 
@@ -22,12 +23,18 @@ class LandmarkViewController: UIViewController {
 	}
 	
 	var landmark: Landmark?
+	private var dataSource: ReviewSiteDataSource?
+	var yelpObject: [CDYelpBusiness]?
 	
-	//let cdHelper = CoreDataHelper()
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		
+		tableView.rowHeight = UITableView.automaticDimension
+		tableView.estimatedRowHeight = 90
+		self.dataSource = ReviewSiteDataSource(tableView: tableView)
+		tableView.dataSource = dataSource
+		tableView.reloadData()
+		
     }
     
 	override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +43,6 @@ class LandmarkViewController: UIViewController {
 		ImageService.getImage(withURL: (landmark?.imageUrl)!) { image in
 			self.landmarkImageView.image = image
 		}
-		
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
@@ -45,17 +51,22 @@ class LandmarkViewController: UIViewController {
 	
 	@IBAction func addLandmarkButton(_ sender: Any) {
 		
+		
 		let alert = UIAlertController(title: "New Landmark", message: "Add Landmark to your list", preferredStyle: .alert)
+		
 		let addAction = UIAlertAction(title: "Add", style: .default) {
 			[unowned self] action in
 			guard let landmarkToAdd = self.landmark else {
 				return
 			}
 			
-			self.stateController.addLandmarkToSave(landmarkToAdd)
-			
-			//cdHelper.save(landmarkToAdd)
-			print("Added: \(landmarkToAdd)")
+			if self.stateController.landmarkIsSaved(landmarkToAdd) {
+				print("Not adding!")
+				return
+			} else {
+				print("Successfully added Landmark: \(landmarkToAdd.title!)")
+				self.stateController.addLandmarkToSave(landmarkToAdd)
+			}
 			
 		}
 		
@@ -69,9 +80,19 @@ class LandmarkViewController: UIViewController {
 		
 		
 		
-		print("Landmark \((landmark?.title)!) added to visited array")
+	
 	}
 	
 	
 	
+}
+
+extension StateController {
+	func landmarkIsSaved(_ landmark: Landmark) -> Bool {
+		if userLandmarks.contains(landmark) {
+			return true
+		}
+		
+		return false
+	}
 }

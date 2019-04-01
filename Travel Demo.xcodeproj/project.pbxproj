@@ -50,6 +50,10 @@
 		197C016D224D4D0700FBF481 /* LandmarkListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C016C224D4D0700FBF481 /* LandmarkListViewController.swift */; };
 		197C016F224D6CE200FBF481 /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C016E224D6CE200FBF481 /* ReusableIdentifier.swift */; };
 		197C0171224D6D6300FBF481 /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C0170224D6D6300FBF481 /* ConfigurableCell.swift */; };
+		197C0173224D75F100FBF481 /* ToVisitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C0172224D75F100FBF481 /* ToVisitViewController.swift */; };
+		197C0175224D830600FBF481 /* LocationSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C0174224D830600FBF481 /* LocationSingleton.swift */; };
+		197C0177224DAEC000FBF481 /* ReviewSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C0176224DAEC000FBF481 /* ReviewSiteCell.swift */; };
+		197C0179224DB17D00FBF481 /* ReviewSiteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197C0178224DB17D00FBF481 /* ReviewSiteDataSource.swift */; };
 		19DB16FC22446C62008A15DD /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB16FB22446C62008A15DD /* SplashViewController.swift */; };
 		19DB16FE22446E11008A15DD /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB16FD22446E11008A15DD /* MyColors.swift */; };
 		19E47C81223B3AAE00744CC2 /* UserDefaultsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */; };
@@ -122,6 +126,10 @@
 		197C016C224D4D0700FBF481 /* LandmarkListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListViewController.swift; sourceTree = "<group>"; };
 		197C016E224D6CE200FBF481 /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		197C0170224D6D6300FBF481 /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		197C0172224D75F100FBF481 /* ToVisitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToVisitViewController.swift; sourceTree = "<group>"; };
+		197C0174224D830600FBF481 /* LocationSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSingleton.swift; sourceTree = "<group>"; };
+		197C0176224DAEC000FBF481 /* ReviewSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSiteCell.swift; sourceTree = "<group>"; };
+		197C0178224DB17D00FBF481 /* ReviewSiteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSiteDataSource.swift; sourceTree = "<group>"; };
 		19DB16FB22446C62008A15DD /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		19DB16FD22446E11008A15DD /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
 		19E47C80223B3AAE00744CC2 /* UserDefaultsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExt.swift; sourceTree = "<group>"; };
@@ -248,6 +256,7 @@
 				1950629E2242FD56000A97C3 /* TabBar */,
 				19F13079223087F60022186A /* ViewControllers */,
 				19F13076223087A90022186A /* TableViews */,
+				197C0174224D830600FBF481 /* LocationSingleton.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -312,6 +321,8 @@
 				197C0168224D4A4800FBF481 /* LandmarkDataSource.swift */,
 				197C016E224D6CE200FBF481 /* ReusableIdentifier.swift */,
 				197C0170224D6D6300FBF481 /* ConfigurableCell.swift */,
+				197C0176224DAEC000FBF481 /* ReviewSiteCell.swift */,
+				197C0178224DB17D00FBF481 /* ReviewSiteDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -337,6 +348,7 @@
 				191F3398223ADFF700BD7813 /* LandmarkViewController.swift */,
 				19DB16FB22446C62008A15DD /* SplashViewController.swift */,
 				197C016C224D4D0700FBF481 /* LandmarkListViewController.swift */,
+				197C0172224D75F100FBF481 /* ToVisitViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -564,6 +576,7 @@
 				1977E12B220ACDD700770F79 /* PersistencyManager.swift in Sources */,
 				19F1307322306A930022186A /* DiscoverMenuTableViewCell.swift in Sources */,
 				191F3399223ADFF700BD7813 /* LandmarkViewController.swift in Sources */,
+				197C0177224DAEC000FBF481 /* ReviewSiteCell.swift in Sources */,
 				19DB16FE22446E11008A15DD /* MyColors.swift in Sources */,
 				195062A02242FD80000A97C3 /* GlobalTabBarController.swift in Sources */,
 				197C0171224D6D6300FBF481 /* ConfigurableCell.swift in Sources */,
@@ -583,12 +596,15 @@
 				197ABC41221629DC00A7E875 /* ImageService.swift in Sources */,
 				1950621B224007EB000A97C3 /* Yelp.swift in Sources */,
 				1950628B22414D0F000A97C3 /* Travel-Demo.xcdatamodeld in Sources */,
+				197C0179224DB17D00FBF481 /* ReviewSiteDataSource.swift in Sources */,
 				19402507222B1CD1004FB30B /* User.swift in Sources */,
 				19DB16FC22446C62008A15DD /* SplashViewController.swift in Sources */,
 				191F3397223AD03B00BD7813 /* CameraViewController.swift in Sources */,
 				197C014C2246EB4600FBF481 /* ToVisitTableViewController.swift in Sources */,
+				197C0173224D75F100FBF481 /* ToVisitViewController.swift in Sources */,
 				19F1307122306A810022186A /* DiscoverMenuTableViewController.swift in Sources */,
 				1940250D222DB8D1004FB30B /* FacebookAPIManger.swift in Sources */,
+				197C0175224D830600FBF481 /* LocationSingleton.swift in Sources */,
 				197C016D224D4D0700FBF481 /* LandmarkListViewController.swift in Sources */,
 				1977E122220AAAA500770F79 /* Landmark.swift in Sources */,
 				19402515222DCC7D004FB30B /* SignUpViewController.swift in Sources */,
