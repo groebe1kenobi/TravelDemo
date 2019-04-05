@@ -60,14 +60,15 @@ class LandmarkViewController: UIViewController {
 				return
 			}
 			
-			if self.stateController.landmarkIsSaved(landmarkToAdd) {
+			if StateController.shared.landmarkIsSaved(landmarkToAdd) {
 				print("Not adding!")
 				return
 			} else {
 				print("Successfully added Landmark: \(landmarkToAdd.title!)")
-				self.stateController.addLandmarkToSave(landmarkToAdd)
+				//self.stateController.addLandmarkToSave(landmarkToAdd)
+				StateController.shared.addLandmarkToSave(landmarkToAdd)
 				//self.stateController.updateLandmarks()
-				self.stateController.saveMyLandmarks()
+				//self.stateController.saveMyLandmarks()
 			}
 			
 		}

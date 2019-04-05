@@ -15,13 +15,14 @@ class LandmarkListViewController: UIViewController {
 	private var dataSource: LandmarkDataSource?
 	var landmarks2: [Landmark]?
 	var selectedLandmark: Landmark?
-	var stateController = StateController.shared
+	//var stateController = StateController.shared
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		tableView.estimatedRowHeight = 152
 		tableView.rowHeight = UITableView.automaticDimension
+		tableView.tableFooterView?.isHidden = true
 		if let landmarks = landmarks2  {
 			self.dataSource = LandmarkDataSource(tableView: tableView, landmarks: landmarks)
 		}

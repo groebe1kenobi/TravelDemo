@@ -34,11 +34,8 @@ class UserProfileViewController: UIViewController {
 		return viewController
 	}()
 	
-	var myLandmarks: [Landmark] {
-		return stateController.userLandmarks 
-	}
-	
-	//private var landmarkTableViewController: ToVisitTableViewController?
+
+	var myLandmarks: [Landmark]?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -59,6 +56,7 @@ class UserProfileViewController: UIViewController {
 		segControl.tintColor = my.lightPink
 		
 		//myLandmarks = LibraryAPI.shared.getSavedLandmarks()
+		//myLandmarks = stateController.getSavedLandmarks()
 		
 		ImageService.getImage(withURL: currentUser.fbProPicURL!) { image in
 			self.profilePicImageView.image = image

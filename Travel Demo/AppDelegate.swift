@@ -62,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		defaults.saveUserDefaults()
 		//LibraryAPI.shared.saveMyLandmarks()
-		stateController.saveMyLandmarks()
+		//stateController.saveMyLandmarks()
 	}
 
 	func applicationDidEnterBackground(_ application: UIApplication) {
@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 		
 		//LibraryAPI.shared.saveMyLandmarks()
-		self.stateController.saveMyLandmarks()
+		//self.stateController.saveMyLandmarks()
 	}
 
 	func applicationWillEnterForeground(_ application: UIApplication) {
@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Saves changes in the application's managed object context before the application terminates.
 		self.saveContext()
 		//LibraryAPI.shared.saveMyLandmarks()
-		self.stateController.saveMyLandmarks()
+		//self.stateController.saveMyLandmarks()
 	}
 	
 	// MARK: - Core Data stack

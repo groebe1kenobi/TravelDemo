@@ -15,7 +15,7 @@ class DiscoverMenuTableViewController: UITableViewController {
 	let cellSpacingHeight: CGFloat = 5
 	var stateController = StateController.shared
 	var landmarks: [Landmark] {
-		return stateController.allLandmarks 
+		return StateController.shared.allLandmarks 
 	}
 	
 	private let segueID = "menuToType"
@@ -42,7 +42,7 @@ class DiscoverMenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return 6
     }
 	
 	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -73,9 +73,9 @@ class DiscoverMenuTableViewController: UITableViewController {
 			
 		case 2:
 			cell.locationTypeLabel.text = "Nature"
-			cell.locationTypeLabel.textColor = my.green
+			cell.locationTypeLabel.textColor = my.lightGreen
 			let image = UIImage(named: "leaf")
-			cell.locationTypeIV.image = image?.tint(with: my.green)
+			cell.locationTypeIV.image = image?.tint(with: my.lightGreen)
 			
 		case 3:
 			cell.locationTypeLabel.text = "Entertainment"
@@ -87,6 +87,11 @@ class DiscoverMenuTableViewController: UITableViewController {
 			cell.locationTypeLabel.textColor = my.purple
 			let image = UIImage(named: "building")
 			cell.locationTypeIV.image = image?.tint(with: my.purple)
+		case 5:
+			cell.locationTypeLabel.text = "Free!"
+			cell.locationTypeLabel.textColor = my.green
+			let image = UIImage(named: "free")
+			cell.locationTypeIV.image = image?.tint(with: my.green)
 		default:
 			print("Should not get here")
 			
@@ -104,17 +109,17 @@ class DiscoverMenuTableViewController: UITableViewController {
 			let row = selectedIndex.row
 			switch row {
 			case 0:
-				destinationVC.landmarks2 = stateController.filter("Restaurant")
+				destinationVC.landmarks2 = StateController.shared.filter("Restaurant")
 			case 1:
-				destinationVC.landmarks2 = stateController.filter("Drink")
+				destinationVC.landmarks2 = StateController.shared.filter("Drink")
 			case 2:
-				destinationVC.landmarks2 = stateController.filter("Nature")
+				destinationVC.landmarks2 = StateController.shared.filter("Nature")
 			case 3:
-				destinationVC.landmarks2 = stateController.filter("Entertainment")
+				destinationVC.landmarks2 = StateController.shared.filter("Entertainment")
 			case 4:
-				destinationVC.landmarks2 = stateController.filter("Museum")
+				destinationVC.landmarks2 = StateController.shared.filter("Museum")
 			default:
-				destinationVC.landmarks2 = stateController.allLandmarks
+				destinationVC.landmarks2 = StateController.shared.allLandmarks
 			}
 			
 		}

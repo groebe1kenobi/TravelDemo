@@ -12,7 +12,7 @@ class ToVisitTableViewController: UITableViewController {
 
 	var stateController = StateController.shared
 	var landmarks: [Landmark] {
-		return stateController.userLandmarks
+		return StateController.shared.userLandmarks
 	}
 	//var landmarks = [Landmark]()
     override func viewDidLoad() {

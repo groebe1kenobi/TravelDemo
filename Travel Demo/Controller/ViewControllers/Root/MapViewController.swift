@@ -18,23 +18,19 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	@IBOutlet weak var cameraButton: UIButton!
 	@IBOutlet weak var tobBarView: UIView!
 	
+	var locationManager = CLLocationManager()
+	//var stateController = StateController.shared
 	
-	
-	var stateController = StateController.shared
-	//private var landmarks = [Landmark]()
 	var landmarks: [Landmark] {
-		return stateController.allLandmarks
+		return StateController.shared.allLandmarks
 	}
 	
 	let regionRadius: CLLocationDistance = 1000
 	let distanceOp = DistanceOperators()
-	let my = MyColors()
-	let initialLocation = CLLocation(latitude: 41.787663516, longitude: -87.576331028 )
 	let imagePicker = UIImagePickerController()
 
 	
 	var imageToSend: UIImage?
-	
 	var selectedLandmark: Landmark?
 	
 	
@@ -45,8 +41,18 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 		tobBarView.backgroundColor = my.purple
 	
 		
-		
-		centerMapOnLocation(location: initialLocation)
+		mapView.showsUserLocation = true
+		if CLLocationManager.locationServicesEnabled() == true {
+			if CLLocationManager.authorizationStatus() == .restricted || CLLocationManager.authorizationStatus() == .denied ||  CLLocationManager.authorizationStatus() == .notDetermined {
+					locationManager.requestWhenInUseAuthorization()
+			}
+			locationManager.desiredAccuracy = kCLLocationAccuracyBest
+			locationManager.delegate = self
+			locationManager.startUpdatingLocation()
+		} else {
+			print("Turn on location services!")
+		}
+		//centerMapOnLocation(location: initialLocation)
 		mapView.delegate = self
 		mapView.register(LandmarkAnnotationView.self,
 						 forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
@@ -70,11 +76,11 @@ class MapViewController: UIViewController, UIImagePickerControllerDelegate, UINa
 	}
 	
 	
-	func centerMapOnLocation(location: CLLocation) {
-		let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-												  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-		mapView.setRegion(coordinateRegion, animated: true)
-	}
+//	func centerMapOnLocation(location: CLLocation) {
+//		let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+//												  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+//		mapView.setRegion(coordinateRegion, animated: true)
+//	}
 	
 	@IBAction func openCameraButton(_ sender: UIButton) {
 		if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -157,9 +163,19 @@ extension MapViewController {
 }
 
 extension MapViewController: CLLocationManagerDelegate {
-	func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-		mapView.showsUserLocation = (status == .authorizedAlways)
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		self.locationManager.stopUpdatingLocation()
+		let region = MKCoordinateRegion(center:CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
+		self.mapView.setRegion(region, animated: true)
+		// add option to select map type
 	}
+	func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+		print("Unable to access your current location")
+		
+	}
+	
+	
+		
 }
 class DistanceOperators {
 	func getDistance(_ landmarkLoc: CLLocationCoordinate2D, _ userLoc: CLLocation) -> Double {

@@ -119,9 +119,9 @@ extension UserDefaults {
 			defaults.set(currentUser.lastName, forKey: StrConstant.lastName)
 		}
 		
-		if currentUser.proPic != nil {
-			defaults.set(currentUser.proPic, forKey: StrConstant.proPic )
-		} 
+//		if currentUser.proPic != nil {
+//			defaults.set(currentUser.proPic, forKey: StrConstant.proPic )
+//		}
 		
 		if let points = currentUser.points  {
 			defaults.set(points, forKey: StrConstant.points)
@@ -147,10 +147,10 @@ extension UserDefaults {
 			currentUser.email = email as? String
 		}
 		
-		if let proPic = defaults.object(forKey: StrConstant.proPic) {
-			currentUser.proPic = proPic as? UIImage
-			
-		}
+//		if let proPic = defaults.object(forKey: StrConstant.proPic) {
+//			currentUser.proPic = proPic as? UIImage
+//			
+//		}
 		
 		if let fbProPicURL = defaults.object(forKey: StrConstant.fbProPicURL) {
 			currentUser.fbProPicURL = fbProPicURL as? String 

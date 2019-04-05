@@ -22,7 +22,8 @@ class StateController {
 	}
 	
 	func getSavedLandmarks() -> [Landmark] {
-		return persistencyManager.getSavedLandmarks()
+		
+		return userLandmarks
 	}
 	
 	func addLandmarkToSave(_ landmark: Landmark) {

@@ -14,12 +14,16 @@ class LandmarkCell: UITableViewCell, ReusableIdentifier {
 	@IBOutlet var locationDistanceLabel: UILabel!
 	@IBOutlet var cardView: UIView!
 	@IBOutlet var locationImageView: UIImageView!
-	let my = MyColors()
+	@IBOutlet weak var descriptionLabel: UILabel!
+	
 }
 
 extension LandmarkCell: ConfigurableCell {
 	
 	func configure(object: Landmark) {
+		
+		let descHeight = descriptionLabel.optimalHeight
+		descriptionLabel.frame = CGRect(x: descriptionLabel.frame.origin.x, y: descriptionLabel.frame.origin.y, width: descriptionLabel.frame.width, height: descHeight)
 		
 		locationLabel.text = object.title
 		locationLabel.sizeToFit()
@@ -27,10 +31,14 @@ extension LandmarkCell: ConfigurableCell {
 		locationDistanceLabel.sizeToFit()
 		cardView.layer.cornerRadius = 5
 		cardView.layer.masksToBounds = true
-		cardView.layer.backgroundColor = my.blue.cgColor
+		//cardView.layer.backgroundColor = my.blue.cgColor
 		ImageService.getImage(withURL: object.imageUrl) { image in
 			if let image = image {
 				self.locationImageView.image = image
+				self.locationImageView.layer.cornerRadius = 10
+				self.locationImageView.clipsToBounds = true
+				self.locationImageView.layer.borderWidth = 3
+				self.locationImageView.layer.borderColor = my.purple.cgColor
 			}
 		}
 	
