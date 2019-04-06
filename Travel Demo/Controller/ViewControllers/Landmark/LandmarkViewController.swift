@@ -29,8 +29,8 @@ class LandmarkViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		
-		tableView.rowHeight = UITableView.automaticDimension
-		tableView.estimatedRowHeight = 90
+		tableView.rowHeight = 90
+		
 		self.dataSource = ReviewSiteDataSource(tableView: tableView)
 		tableView.dataSource = dataSource
 		tableView.reloadData()

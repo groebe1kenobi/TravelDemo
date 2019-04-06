@@ -32,13 +32,31 @@ extension LandmarkDataSource: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
+		let landmark = landmarks[indexPath.row]
+		var color: UIColor = my.purple
 		let cell = tableView.dequeueReusableCell(withIdentifier: LandmarkCell.reuseIdentifier, for: indexPath)
 		//let landmark = landmarks[indexPath.row]
 		
 		
 		cell.layer.borderWidth = 8.0
 		cell.layer.borderColor = my.purple.cgColor
-		cell.contentView.backgroundColor = my.lightOrange
+		
+		if landmark.type == "Sport" {
+			color = my.orange
+		} else if landmark.type == "Restaurant" {
+			color = my.lightOrange
+		} else if landmark.type == "Drink" {
+			color = my.lightPink
+		} else if landmark.type == "Nature" {
+			color = my.lightGreen
+		} else if landmark.type == "Museum" {
+			color = my.blue
+		} else if landmark.type == "Entertainment" {
+			color = my.pink
+		} else {
+			color = my.lightPurple
+		}
+		cell.contentView.backgroundColor = color
 		configure(cell: cell, indexPath: indexPath)
 		
 		
