@@ -42,15 +42,15 @@ extension LandmarkDataSource: UITableViewDataSource {
 		cell.layer.borderColor = my.purple.cgColor
 		
 		if landmark.type == "Sport" {
-			color = my.orange
+			color = my.blue
 		} else if landmark.type == "Restaurant" {
-			color = my.lightOrange
+			color = my.lightPurple
 		} else if landmark.type == "Drink" {
 			color = my.lightPink
 		} else if landmark.type == "Nature" {
 			color = my.lightGreen
 		} else if landmark.type == "Museum" {
-			color = my.blue
+			color = my.orange
 		} else if landmark.type == "Entertainment" {
 			color = my.pink
 		} else {

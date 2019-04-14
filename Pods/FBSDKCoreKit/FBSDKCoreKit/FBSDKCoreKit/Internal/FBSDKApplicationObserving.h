@@ -16,23 +16,23 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "FBSDKLoginCompletion.h"
+#import <Foundation/Foundation.h>
 
-@interface FBSDKLoginCompletionParameters ()
+NS_ASSUME_NONNULL_BEGIN
 
-@property (nonatomic, copy) NSString *accessTokenString;
+@protocol FBSDKApplicationObserving <NSObject>
 
-@property (nonatomic, copy) NSSet *permissions;
-@property (nonatomic, copy) NSSet *declinedPermissions;
+@optional
+- (void)applicationDidBecomeActive:(nullable UIApplication *)application;
+- (void)applicationDidEnterBackground:(nullable UIApplication *)application;
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(nullable NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions;
 
-@property (nonatomic, copy) NSString *appID;
-@property (nonatomic, copy) NSString *userID;
-
-@property (nonatomic, copy) NSError *error;
-
-@property (nonatomic, copy) NSDate *expirationDate;
-@property (nonatomic, copy) NSDate *dataAccessExpirationDate;
-
-@property (nonatomic, copy) NSString *challenge;
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(nullable NSString *)sourceApplication
+         annotation:(nullable id)annotation;
 
 @end
+
+NS_ASSUME_NONNULL_END

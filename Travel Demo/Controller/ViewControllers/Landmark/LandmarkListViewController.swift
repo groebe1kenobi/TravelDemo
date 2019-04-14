@@ -38,6 +38,7 @@ class LandmarkListViewController: UIViewController {
 		if let index = self.tableView.indexPathForSelectedRow {
 			self.tableView.deselectRow(at: index, animated: true)
 		}
+		
 	}
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "listToLandmark" {

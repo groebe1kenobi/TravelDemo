@@ -25,6 +25,7 @@ class DiscoverMenuTableViewController: UITableViewController {
         super.viewDidLoad()
 		tableView.delegate = self
 		tableView.dataSource = self
+		tableView.tableFooterView?.isHidden = true 
     }
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +43,7 @@ class DiscoverMenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 6
+        return 7
     }
 	
 	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -57,6 +58,9 @@ class DiscoverMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "typeCell", for: indexPath) as! DiscoverMenuTableViewCell
 		cell.locationTypeLabel.adjustsFontSizeToFitWidth = true
+		
+//		cell.layer.borderWidth = 8.0
+//		cell.layer.borderColor = my.orange.cgColor
 		
 		switch indexPath.row {
 		case 0:
@@ -92,13 +96,18 @@ class DiscoverMenuTableViewController: UITableViewController {
 			cell.locationTypeLabel.textColor = my.green
 			let image = UIImage(named: "free")
 			cell.locationTypeIV.image = image?.tint(with: my.green)
+		case 6:
+			cell.locationTypeLabel.text = "ALL"
+			cell.locationTypeLabel.textColor = my.blue
+			let image = UIImage(named: "skiMask")
+			cell.locationTypeIV.image = image?.tint(with: .black)
 		default:
 			print("Should not get here")
 			
 		}
 
 		
-		cell.layer.borderColor = my.blue.cgColor
+		//cell.layer.borderColor = my.blue.cgColor
         return cell
     }
 	
@@ -118,6 +127,10 @@ class DiscoverMenuTableViewController: UITableViewController {
 				destinationVC.landmarks2 = StateController.shared.filter("Entertainment")
 			case 4:
 				destinationVC.landmarks2 = StateController.shared.filter("Museum")
+			case 5:
+				destinationVC.landmarks2 = StateController.shared.filter("Nature")
+			case 6:
+				destinationVC.landmarks2 = []
 			default:
 				destinationVC.landmarks2 = StateController.shared.allLandmarks
 			}
