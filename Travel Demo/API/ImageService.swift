@@ -41,4 +41,6 @@ class ImageService {
 			downloadImage(withURL: urlStr, completion: completion)
 		}
 	}
+	
+
 }

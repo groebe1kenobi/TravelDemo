@@ -12,7 +12,7 @@ class ToVisitTableViewController: UITableViewController {
 
 	var stateController = StateController.shared
 	var landmarks: [Landmark] {
-		return stateController.userLandmarks
+		return StateController.shared.userLandmarks
 	}
 	//var landmarks = [Landmark]()
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class ToVisitTableViewController: UITableViewController {
 
 	
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "toVisitCell", for: indexPath) as! LandmarkListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "toVisitCell", for: indexPath) as! LandmarkCell
 		let validIndex = landmarks[indexPath.row].title
 		if validIndex != nil {
 			
