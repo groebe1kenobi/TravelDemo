@@ -11,6 +11,7 @@ import UIKit
 class ToVisitViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
+
 	private var dataSource: LandmarkDataSource?
 	var stateController = StateController.shared
 	

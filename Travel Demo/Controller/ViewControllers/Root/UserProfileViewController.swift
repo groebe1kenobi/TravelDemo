@@ -16,10 +16,12 @@ class UserProfileViewController: UIViewController {
 	@IBOutlet weak var segControl: UISegmentedControl!
 	@IBOutlet weak var containerView: UIView!
 	@IBOutlet weak var userName: UILabel!
+	@IBOutlet weak var toVisitViewBtn: UIButton!
+	@IBOutlet weak var progressViewButton: UIButton!
 	
 	var stateController = StateController.shared
 	
-	let my = MyColors()
+	//let my = MyColors()
 	private lazy var toVisitViewController: ToVisitViewController = {
 		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
 		let viewController = storyboard.instantiateViewController(withIdentifier: "ToVisit") as! ToVisitViewController
@@ -50,7 +52,7 @@ class UserProfileViewController: UIViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		navigationController?.setNavigationBarHidden(false, animated: animated)
+		navigationController?.setNavigationBarHidden(true, animated: animated)
 		
 		segControl.backgroundColor = my.blue
 		segControl.tintColor = my.lightPink
@@ -95,6 +97,11 @@ class UserProfileViewController: UIViewController {
 			remove(asChildViewController: toVisitViewController)
 			add(asChildViewController: statsViewController)
 		}
+	}
+	
+	@IBAction func toVisitBtnPressed(_ sender: Any) {
+	}
+	@IBAction func progressBtnPressed(_ sender: Any) {
 	}
 	
 	private func add(asChildViewController viewController: UIViewController) {
