@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1903C52A226D3F060056069F /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903C529226D3F060056069F /* SideMenuViewController.swift */; };
+		1903C52C226D3F4E0056069F /* SideMenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1903C52B226D3F4E0056069F /* SideMenuDataSource.swift */; };
 		191F3397223AD03B00BD7813 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F3396223AD03B00BD7813 /* CameraViewController.swift */; };
 		191F3399223ADFF700BD7813 /* LandmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191F3398223ADFF700BD7813 /* LandmarkViewController.swift */; };
 		193651842217710C000F54F8 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193651832217710C000F54F8 /* SideMenuTableViewCell.swift */; };
@@ -79,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1903C529226D3F060056069F /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		1903C52B226D3F4E0056069F /* SideMenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuDataSource.swift; sourceTree = "<group>"; };
 		191F3396223AD03B00BD7813 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		191F3398223ADFF700BD7813 /* LandmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkViewController.swift; sourceTree = "<group>"; };
 		193651832217710C000F54F8 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -324,6 +328,7 @@
 				197C0170224D6D6300FBF481 /* ConfigurableCell.swift */,
 				197C0176224DAEC000FBF481 /* ReviewSiteCell.swift */,
 				197C0178224DB17D00FBF481 /* ReviewSiteDataSource.swift */,
+				1903C52B226D3F4E0056069F /* SideMenuDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				1977E10E220AA0DB00770F79 /* MapViewController.swift */,
 				19F1307022306A810022186A /* DiscoverMenuTableViewController.swift */,
 				1940250A222DB3D0004FB30B /* UserProfileViewController.swift */,
+				1903C529226D3F060056069F /* SideMenuViewController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -587,6 +593,7 @@
 				197C015822498F0F00FBF481 /* UserStatsCollectionViewController.swift in Sources */,
 				197C0169224D4A4800FBF481 /* LandmarkDataSource.swift in Sources */,
 				19F13075223087820022186A /* LandmarkCell.swift in Sources */,
+				1903C52A226D3F060056069F /* SideMenuViewController.swift in Sources */,
 				1977E10F220AA0DB00770F79 /* MapViewController.swift in Sources */,
 				197C016F224D6CE200FBF481 /* ReusableIdentifier.swift in Sources */,
 				197C015E224ACB0200FBF481 /* TestLocation.swift in Sources */,
@@ -614,6 +621,7 @@
 				19402515222DCC7D004FB30B /* SignUpViewController.swift in Sources */,
 				19402513222DCC70004FB30B /* StartViewController.swift in Sources */,
 				193651842217710C000F54F8 /* SideMenuTableViewCell.swift in Sources */,
+				1903C52C226D3F4E0056069F /* SideMenuDataSource.swift in Sources */,
 				19402501222B1A60004FB30B /* FacebookLoginButton.swift in Sources */,
 				195F5BD2222B10FA001CF201 /* LoginViewController.swift in Sources */,
 				1977E12D220AD02600770F79 /* LibraryAPI.swift in Sources */,

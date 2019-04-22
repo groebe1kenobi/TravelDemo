@@ -16,7 +16,7 @@ class User {
 	var fbId: String?
 	var fbProPicURL: String?
 	var fbAccessToken: String?
-	var points: Int?
+	var points: Int = 100
 	var savedLandmarks: [Landmark]?
 	var cdLandmarks: [NSManagedObject] = []
 	var visitedLocations: [Landmark]?
@@ -27,6 +27,7 @@ class User {
 	var museumVisited: Int = 0
 	var foodVisited: Int = 0
 	var drinkVisited: Int = 0
+	var totalVisited: Int = 0
 	
 	func isProfilePicture() -> Bool {
 		if proPic != nil {

@@ -123,8 +123,10 @@ extension UserDefaults {
 //			defaults.set(currentUser.proPic, forKey: StrConstant.proPic )
 //		}
 		
-		if let points = currentUser.points  {
-			defaults.set(points, forKey: StrConstant.points)
+		if currentUser.points >= 100  {
+			defaults.set(currentUser.points, forKey: StrConstant.points)
+		} else {
+			defaults.set(100, forKey: StrConstant.points)
 		}
 		
 	}
@@ -165,7 +167,7 @@ extension UserDefaults {
 		}
 		
 		if let points = defaults.object(forKey: StrConstant.points) {
-			currentUser.points = points as? Int
+			currentUser.points = points as! Int
 		}
 		
 		
